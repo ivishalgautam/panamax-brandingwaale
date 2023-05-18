@@ -5,13 +5,16 @@ import { Menu, Transition } from "@headlessui/react";
 import { motion } from "framer-motion";
 
 import logo from "../assets/logo.png";
+import { useSelector } from "react-redux";
 
-const Navbar = ({ products }) => {
+const Navbar = () => {
+  const { products } = useSelector((store) => store.products);
+  console.log(products);
   const navList = [
     {
       id: 1,
       name: "home",
-      path: "/",
+      path: "/panamax",
       type: "link",
     },
     {
@@ -110,14 +113,14 @@ const Navbar = ({ products }) => {
     >
       {/* logo */}
       <figure className="logo w-48">
-        <Link to="/">
+        <Link to="/panamax">
           <img src={logo} alt="" className="w-full" />
         </Link>
       </figure>
 
       {/* desktop nav list */}
       <nav className="desktop hidden lg:block tracking-wide">
-        <ul className="flex items-center justify-center gap-4 relative z-10">
+        <ul className="flex items-center justify-center gap-4 relative z-50">
           {navList.map((menu, key) => {
             return menu.type !== "dropdown" ? (
               <Link
@@ -167,11 +170,11 @@ const Navbar = ({ products }) => {
                                   active
                                     ? "bg-primary text-white"
                                     : "text-gray-900"
-                                } group flex w-full items-center rounded-md px-2 py-2 text-sm`}
+                                } group flex w-full items-center rounded-md  text-sm`}
                               >
                                 <Link
-                                  to={`product/${submenu.path}`}
-                                  className="inline-block h-full w-full text-start capitalize"
+                                  to={`product/${submenu.id}`}
+                                  className="inline-block h-full w-full text-start capitalize px-2 py-2"
                                 >
                                   {submenu.title}
                                 </Link>
@@ -192,7 +195,7 @@ const Navbar = ({ products }) => {
       {/* mobile nav */}
       <motion.nav
         initial={{ opacity: 0 }}
-        animate={{ right: isNavOpened ? 0 : -1500, opacity: 1 }}
+        animate={{ right: isNavOpened ? "0%" : "100%", opacity: 1 }}
         transition={{ ease: "easeIn", duration: 0.2 }}
         className={`block md:hidden lg:hidden absolute top-full w-full h-screen bg-primary transition-all z-20`}
       >
@@ -278,7 +281,7 @@ const Navbar = ({ products }) => {
           >
             {filteredProducts?.map((product) => {
               return (
-                <Link to={`product/${product.path}`}>
+                <Link to={`product/${product.id}`}>
                   <li
                     key={product.id}
                     onClick={(e) => handleInputSuggestion(e)}

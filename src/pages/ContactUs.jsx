@@ -12,15 +12,18 @@ const ContactUs = () => {
 
   const onSubmit = (data) => console.log(data);
 
-  console.log(watch("example"), errors); // watch input value by passing the name of it
+  // console.log(watch("example"), errors); // watch input value by passing the name of it
   return (
-    <div className="p-8 h-[80vh] mx-4 md:mx-12">
-      <div className="h-full bg-white rounded-xl overflow-hidden grid grid-cols-2 p-4 relative after:absolute after:right-0 after:top-0 after:w-1/5 after:h-full after:bg-primary">
+    <div className="p-8 h-auto mx-4 md:mx-12">
+      <div className="h-full bg-white rounded-xl overflow-hidden grid md:grid-cols-2 gap-10 gap-y-12 py-8 px-12 relative after:absolute after:right-0 after:top-0 after:w-1/5 after:h-full after:bg-primary after:hidden after:md:block">
         {/* form */}
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="flex flex-col justify-between items-start h-full gap-6 ">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="col-span-2 md:col-span-1"
+        >
+          <div className="flex flex-col justify-center items-center h-full gap-6">
             {/* headings */}
-            <div>
+            <div className="text-start w-full">
               <h2 className="text-slate-950 text-3xl font-bold capitalize">
                 contact{" "}
                 <span className="text-primary text-shadow">panamax</span>
@@ -31,7 +34,7 @@ const ContactUs = () => {
             </div>
 
             {/* inputs */}
-            <div className="grid grid-cols-2 gap-x-6 gap-y-4">
+            <div className="grid grid-cols-2 gap-6 w-full">
               {/* name */}
               <div className="relative col-span-2 md:col-span-1">
                 <input
@@ -39,7 +42,7 @@ const ContactUs = () => {
                   name="name"
                   placeholder="Enter your name"
                   {...register("name")}
-                  className="border border-[#EEEEEE] text-sm p-2 rounded-md"
+                  className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                 />
               </div>
               {/* email */}
@@ -54,7 +57,7 @@ const ContactUs = () => {
                   })}
                   className={`border ${
                     errors.email ? "border-red-700" : "border-[#EEEEEE]"
-                  }  text-sm p-2 rounded-md`}
+                  }  text-sm p-2 rounded-md w-full`}
                 />
                 {errors.email && errors?.email?.type === "required" ? (
                   <span className="absolute top-full left-1 text-xs text-red-700">
@@ -74,7 +77,7 @@ const ContactUs = () => {
                   type="text"
                   name="phone"
                   placeholder="Enter your contact no."
-                  className="border border-[#EEEEEE] text-sm p-2 rounded-md"
+                  className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                   {...register("phone", {
                     required: true,
                     pattern: /^[6-9]\d{9}$/,
@@ -97,7 +100,7 @@ const ContactUs = () => {
                 <input
                   type="text"
                   placeholder="company"
-                  className="border border-[#EEEEEE] text-sm p-2 rounded-md"
+                  className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                 />
               </div>
               {/* message */}
@@ -114,14 +117,28 @@ const ContactUs = () => {
             </div>
 
             {/* cta and info */}
-            <div>
-              <input type="submit" className="btn-primary cursor-pointer" />
+            <div className="w-full">
+              <input
+                type="submit"
+                className="btn-primary cursor-pointer w-full"
+              />
             </div>
           </div>
         </form>
 
         {/* maps */}
-        <div></div>
+        <div className="relative z-20 flex-box-center col-span-2 md:col-span-1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10483.74731842555!2d77.30566071299634!3d28.463682969310977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1684386457209!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            className="rounded-xl w-full"
+            // width="400"
+            height="350"
+            title="map"
+          ></iframe>
+        </div>
       </div>
     </div>
   );
