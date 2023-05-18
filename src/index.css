@@ -1,13 +1,76 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Segoe UI", sans-serif;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #fff1f1;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+@layer components {
+  .flex-box-center {
+    @apply flex items-center justify-center;
+  }
+  .flex-box-start {
+    @apply flex items-center justify-start;
+  }
+  .flex-box-between {
+    @apply flex items-center justify-between;
+  }
+  .flex-box-around {
+    @apply flex items-center justify-around;
+  }
+  .flex-box-evenly {
+    @apply flex items-center justify-evenly;
+  }
+  .flex-box-col-start {
+    @apply flex flex-col items-start justify-center;
+  }
+  .flex-box-col-center {
+    @apply flex flex-col items-center justify-center;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2 bg-primary text-white border border-primary rounded-md hover:rounded-full transition-all ease-in-out hover:ease-in-out duration-[2s];
+  }
+  .btn-secondary {
+    @apply px-4 py-2 bg-white text-secondary border border-white rounded-md hover:rounded-full transition-all ease-in-out hover:ease-in-out duration-[2s];
+  }
+
+  .text-shadow {
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+}
+
+p {
+  font-size: 14px;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+}
+svg {
+  height: 100%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: red !important;
 }
