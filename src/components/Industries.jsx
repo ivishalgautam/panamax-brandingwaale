@@ -18,7 +18,7 @@ const Industries = () => {
       <div className="flex-box-center flex-wrap gap-5 px-4 md:px-12 lg:px-16">
         {Array.from({ length: 9 }).map((item, key) => {
           return (
-            <Link key={key}>
+            <Link to={"/industries"} key={key}>
               <div
                 className="relative shadow-xl rounded-xl overflow-hidden"
                 onMouseOver={() => setHoveredIndex(key)}

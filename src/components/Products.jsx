@@ -28,6 +28,7 @@ const Products = () => {
             640: { slidesPerView: 2 },
             900: { slidesPerView: 2.5 },
           }}
+          className="bg-transparent"
         >
           {Array.from({ length: 3 }).map((item, key) => {
             return (
@@ -40,7 +41,7 @@ const Products = () => {
                       className="h-full w-full object-cover object-right  rounded-lg"
                     />
                   </figure>
-                  <h2 className="border-l-2 border-primary pl-2 text-white font-[600] text-lg mt-3">
+                  <h2 className="border-l-2 border-primary  text-white font-[600] text-lg mt-3">
                     PVC Insulated Tape
                   </h2>
                 </div>

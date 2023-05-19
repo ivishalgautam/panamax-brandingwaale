@@ -199,17 +199,17 @@ const Navbar = () => {
         transition={{ ease: "easeIn", duration: 0.2 }}
         className={`block md:hidden lg:hidden absolute top-full w-full h-screen bg-primary transition-all z-20`}
       >
-        <ul className="flex-box-col-between gap-2 w-full h-full">
+        <ul className="flex-box-col-start gap-2 w-full h-full">
           {navList.map((menu, key) => {
             return menu.type !== "dropdown" ? (
               <li
                 key={key}
-                className="w-full text-center border-b border-red-700 py-2 text-lg font-bold"
+                className="w-full text-start border-b border-red-700 py-2 px-4 text-lg font-bold"
                 onClick={(e) => handleListClick(e)}
               >
                 <Link
                   to={menu.path}
-                  className="text-d capitalize inline-block h-full w-full py-2"
+                  className="text-d capitalize inline-block py-2"
                 >
                   {menu.name}
                 </Link>
@@ -217,10 +217,10 @@ const Navbar = () => {
             ) : (
               <li
                 key={key}
-                className="relative w-full py-2 text-center capitalize border-b border-red-700 cursor-pointer"
+                className="relative w-full py-2 px-4 text-start capitalize border-b border-red-700 cursor-pointer"
                 onClick={() => handleClick(menu.id)}
               >
-                <div className="flex-box-center py-2 text-lg font-bold">
+                <div className="flex-box-start py-2 text-lg font-bold">
                   {menu.name}
                   <span className="inline-block">
                     <svg
@@ -239,18 +239,21 @@ const Navbar = () => {
                 </div>
 
                 <ul
-                  className={`grid ${
+                  className={` ${
                     activeIndex === menu.id ? "block" : "hidden"
-                  } transition-all bg-white w-full`}
+                  } transition-all w-full px-4`}
                 >
                   {menu.submenu?.map((submenu, key) => {
                     return (
-                      <li key={key} className="text-lg">
+                      <li
+                        key={key}
+                        className="text-white text-start text-sm mb-2"
+                      >
                         <Link
                           to={submenu.path}
-                          className="inline-block h-full w-full "
+                          className="inline-block h-full w-full"
                         >
-                          {submenu.name}
+                          {submenu.title}
                         </Link>
                       </li>
                     );

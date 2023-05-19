@@ -14,6 +14,7 @@ import heroImage from "./assets/hero-image.png";
 import { Provider } from "react-redux";
 import { store } from "./store/store";
 import Try from "./pages/Try";
+import IndustriesPage from "./pages/IndustriesPage";
 
 const products = [
   {
@@ -149,6 +150,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <Route path="/Try" element={<Try />} />
             <Route path="/contact-us" element={<ContactUs />} />
             <Route path="/blog/:id" element={<BlogPage blogs={blogs} />} />
+            <Route path="/industries" element={<IndustriesPage />} />
           </Routes>
         </div>
       </BrowserRouter>

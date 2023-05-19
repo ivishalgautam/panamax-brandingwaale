@@ -106,11 +106,11 @@ const ContactUs = () => {
               {/* message */}
               <div className="col-span-2">
                 <textarea
-                  name="message"
+                  name="product"
                   id="message"
                   // cols="30"
                   rows="4"
-                  placeholder="Message..."
+                  placeholder="Product"
                   className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full"
                 ></textarea>
               </div>
