@@ -15,7 +15,7 @@ const BlogPage = ({ blogs }) => {
   const { title, desc, image, postedOn } = blog[0];
   const { name, userImg, profession } = blog[0].approvedBy[0];
 
-  const shareUrl = "https://magnitecorp.com/panamax/";
+  const shareUrl = "https://panamax.magnitecorp.com/";
   return (
     <div className="grid grid-cols-12 px-4 md:px-12 mt-4 gap-4 mb-4">
       {/* blog */}

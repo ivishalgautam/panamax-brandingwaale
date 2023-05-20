@@ -22,37 +22,20 @@ const Hero = () => {
           modules={[Pagination]}
           slidesPerView={1}
           pagination={{ clickable: true }}
-          className="h-full w-full"
         >
-          <SwiperSlide className="h-full w-full">
-            <figure className="rounded-2xl h-full w-full overflow-hidden">
-              <img
-                src={heroImage}
-                alt=""
-                className="object-cover object-center h-full w-full"
-              />
-            </figure>
-          </SwiperSlide>
-
-          <SwiperSlide className="h-full w-full">
-            <figure className="rounded-2xl h-full w-full overflow-hidden">
-              <img
-                src={heroImage}
-                alt=""
-                className="object-cover object-center h-full w-full"
-              />
-            </figure>
-          </SwiperSlide>
-
-          <SwiperSlide className="h-full w-full">
-            <figure className="rounded-2xl h-full w-full overflow-hidden">
-              <img
-                src={heroImage}
-                alt=""
-                className="object-cover object-center h-full w-full"
-              />
-            </figure>
-          </SwiperSlide>
+          {Array.from({ length: 3 }).map((_, key) => {
+            return (
+              <SwiperSlide className="">
+                <figure className="rounded-2xl h-full w-full overflow-hidden">
+                  <img
+                    src={heroImage}
+                    alt=""
+                    className="object-cover object-center h-full w-full"
+                  />
+                </figure>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </motion.div>
 

@@ -1,20 +1,38 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useForm } from "react-hook-form";
+import { useDispatch, useSelector } from "react-redux";
+import { closeModal } from "../store/features/modalSlice";
 
-export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
+export default function Modal({ productTitle }) {
+  console.log(productTitle);
   const {
     register,
     handleSubmit,
     watch,
     formState: { errors },
   } = useForm();
+  console.log(errors);
 
   const onSubmit = (data) => console.log(data);
+
+  let { isOpen } = useSelector((state) => state.modal);
+  let dispatch = useDispatch();
+
+  const handleClose = (e) => {
+    if (errors.email && errors.phone) return;
+
+    dispatch(closeModal());
+  };
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
-        <Dialog as="div" className="relative z-10" onClose={closeModal}>
+        <Dialog
+          as="div"
+          className="relative z-10"
+          onClose={() => dispatch(closeModal())}
+        >
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
@@ -39,6 +57,7 @@ export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
                 leaveTo="opacity-0 scale-95"
               >
                 <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                  {/* headings */}
                   <Dialog.Title
                     as="h3"
                     className="text-3xl leading-6 font-thin capitalize text-center text-slate-950"
@@ -53,16 +72,14 @@ export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
                   </Dialog.Title>
                   <div className="mt-2">
                     <form
-                      onSubmit={handleSubmit(onSubmit)}
-                      className="col-span-2 md:col-span-1"
+                      onSubmit={handleSubmit(handleClose)}
+                      className="col-span-1"
                     >
-                      <div className="flex flex-col justify-center items-center h-full gap-6">
-                        {/* headings */}
-
+                      <div className="flex flex-col justify-center items-center h-full gap-y-6">
                         {/* inputs */}
-                        <div className="grid grid-cols-2 gap-6 w-full">
+                        <div className="gap-y-4 w-full grid grid-cols-1">
                           {/* name */}
-                          <div className="relative col-span-2 md:col-span-1">
+                          <div className="relative ">
                             <input
                               type="text"
                               name="name"
@@ -72,7 +89,7 @@ export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
                             />
                           </div>
                           {/* email */}
-                          <div className="relative col-span-2 md:col-span-1">
+                          <div className="relative md:col-span-1">
                             <input
                               type="text"
                               name="email"
@@ -101,7 +118,7 @@ export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
                             )}
                           </div>
                           {/* phone number */}
-                          <div className="relative col-span-2 md:col-span-1">
+                          <div className="relative md:col-span-1">
                             <input
                               type="text"
                               name="phone"
@@ -125,24 +142,28 @@ export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
                               ""
                             )}
                           </div>
+
                           {/* company */}
-                          <div className="relative col-span-2 md:col-span-1">
+                          <div className="relative">
                             <input
                               type="text"
                               placeholder="company"
                               className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                             />
                           </div>
-                          {/* message */}
-                          <div className="col-span-2">
-                            <textarea
+
+                          {/* product */}
+                          <div className="">
+                            <input
+                              disabled
                               name="product"
                               id="message"
                               // cols="30"
                               rows="4"
                               placeholder="Product"
-                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full"
-                            ></textarea>
+                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full capitalize cursor-not-allowed"
+                              value={productTitle}
+                            />
                           </div>
                         </div>
 
@@ -151,7 +172,7 @@ export default function Modal({ isOpen, setIsOpen, openModal, closeModal }) {
                           <button
                             type="submit"
                             className="btn-primary cursor-pointer w-full"
-                            onClick={closeModal}
+                            onClick={handleClose}
                           >
                             Submit
                           </button>

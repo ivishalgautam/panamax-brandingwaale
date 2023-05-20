@@ -170,8 +170,8 @@ const Map = () => {
           }}
           hoverComponent={({ value }) => {
             return (
-              <div>
-                <div>{value.name}</div>
+              <div className="pointer-events-none cursor-pointer">
+                {value.name}
               </div>
             );
           }}

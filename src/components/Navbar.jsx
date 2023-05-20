@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import logo from "../assets/logo.png";
 import { useSelector } from "react-redux";
+import AutoCompleteBox from "./AutoCompleteBox";
 
 const Navbar = () => {
   const { products } = useSelector((store) => store.products);
@@ -14,7 +15,7 @@ const Navbar = () => {
     {
       id: 1,
       name: "home",
-      path: "/panamax",
+      path: "/",
       type: "link",
     },
     {
@@ -83,12 +84,6 @@ const Navbar = () => {
     navigate(`/search/${inputVal}`);
   };
 
-  const handleInputSuggestion = (e) => {
-    setInputVal(e.target.innerText);
-    navigate(`/search/${inputVal}`);
-    setInputVal("");
-  };
-
   const handleClick = (id) => {
     if (activeIndex === id) {
       setActiveIndex(null);
@@ -113,7 +108,7 @@ const Navbar = () => {
     >
       {/* logo */}
       <figure className="logo w-48">
-        <Link to="/panamax">
+        <Link to="/">
           <img src={logo} alt="" className="w-full" />
         </Link>
       </figure>
@@ -250,8 +245,9 @@ const Navbar = () => {
                         className="text-white text-start text-sm mb-2"
                       >
                         <Link
-                          to={submenu.path}
+                          to={`product/${submenu.id}`}
                           className="inline-block h-full w-full"
+                          onClick={() => setIsNavOpened(false)}
                         >
                           {submenu.title}
                         </Link>
@@ -277,25 +273,12 @@ const Navbar = () => {
           <button className=" bg-white text-primary h-[30px] w-8  m-[1px] rounded-md flex items-center justify-center absolute right-0 top-0">
             <BsSearch size={20} />
           </button>
-          <motion.ul
-            initial={{ top: "-100%", opacity: 0 }}
-            animate={{ top: "100%", opacity: 1 }}
-            className="search-suggestion absolute top-full left-0 mt-1 z-10 rounded-md "
-          >
-            {filteredProducts?.map((product) => {
-              return (
-                <Link to={`product/${product.id}`}>
-                  <li
-                    key={product.id}
-                    onClick={(e) => handleInputSuggestion(e)}
-                    className="bg-primary text-white text-sm px-4 py-2 border-b cursor-pointer capitalize rounded-md"
-                  >
-                    {product.title}
-                  </li>
-                </Link>
-              );
-            })}
-          </motion.ul>
+          {/* autocomplete box */}
+          <AutoCompleteBox
+            filteredProducts={filteredProducts}
+            inputVal={inputVal}
+            setInputVal={setInputVal}
+          />
         </form>
       </div>
 

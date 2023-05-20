@@ -137,7 +137,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Navbar products={products} />
         <div className="min-h-screen">
           <Routes>
-            <Route path="/panamax" element={<App blogs={blogs} />} />
+            <Route path="/" element={<App blogs={blogs} />} />
             <Route
               path="/search/:query"
               element={<SearchPage products={products} />}

@@ -4,8 +4,11 @@ import maskingTape from "../assets/masking-tape.jpeg";
 import { RiSendPlaneFill } from "react-icons/ri";
 
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 import "swiper/css";
-import "../swiper.css";
+import "swiper/css/pagination";
+
+// import "../swiper.css";
 import { useSelector } from "react-redux";
 
 const IndustriesPage = () => {
@@ -17,34 +20,25 @@ const IndustriesPage = () => {
   return (
     <div className="bg-white">
       <div className="bg-white p-8 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
-        <Swiper slidesPerView={1} className="col-span-2 md:col-span-1">
-          <SwiperSlide>
-            <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
-              <img
-                src={image}
-                alt=""
-                className="rounded-2xl flex-1 h-full w-full object-center object-cover"
-              />
-            </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-            <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
-              <img
-                src={image}
-                alt=""
-                className="rounded-2xl flex-1 h-full w-full object-center object-cover"
-              />
-            </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-            <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
-              <img
-                src={image}
-                alt=""
-                className="rounded-2xl flex-1 h-full w-full object-center object-cover"
-              />
-            </figure>
-          </SwiperSlide>
+        <Swiper
+          slidesPerView={1}
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          className="col-span-2 md:col-span-1"
+        >
+          {Array.from({ length: 3 }).map((_, key) => {
+            return (
+              <SwiperSlide key={key}>
+                <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
+                  <img
+                    src={image}
+                    alt=""
+                    className="rounded-2xl flex-1 h-full w-full object-center object-cover"
+                  />
+                </figure>
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
 
         <div className="col-span-2 md:col-span-1 py-4">
@@ -59,7 +53,7 @@ const IndustriesPage = () => {
             <span className="font-bold capitalize">standard lenght -</span>{" "}
             50Mtr
           </p>
-          <button className="btn-primary translate-y-9 capitalize mt-3">
+          <button className="btn-primary translate-y-9 capitalize">
             send enquiry{" "}
             <span className="ml-1">
               <RiSendPlaneFill className="inline" size={20} />
@@ -69,12 +63,14 @@ const IndustriesPage = () => {
       </div>
 
       {/* industry product range */}
-      <div className="mt-16 py-4">
-        <h2 className="text-3xl font-bold text-primary text-shadow capitalize text-center">
+      <div className="mt-16 py-8">
+        <h2 className="text-3xl font-bold text-primary text-shadow capitalize text-center mb-10">
           industries product range
         </h2>
         <Swiper
           // slidesPerView={4}
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
           spaceBetween={10}
           breakpoints={{
             320: { slidesPerView: 1 },
@@ -84,11 +80,11 @@ const IndustriesPage = () => {
             1024: { slidesPerView: 4 },
           }}
         >
-          <div className="px-4 md:px-10 lg:px-12 my-4 py-10 flex-box-center gap-4 flex-wrap md:flex-nowrap mt-8">
+          <div className="px-4 md:px-10 lg:px-12 my-4 py-10 flex-box-center gap-4 flex-wrap md:flex-nowrap">
             {Array.from({ length: 10 }).map((_, key) => {
               return (
                 <SwiperSlide key={key} className="productSlides">
-                  <div className="flex-box-col-between gap-4 bg-white p-4 pb-10 border rounded-xl shadow-md relative z-10">
+                  <div className="flex-box-col-between gap-4 bg-white p-4 pb-10 border rounded-xl shadow-md relative z-10 m-6">
                     <figure className=" w-[250px] rounded-xl overflow-hidden">
                       <img
                         src={maskingTape}

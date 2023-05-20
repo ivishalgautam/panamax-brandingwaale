@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import image from "../assets/hero-image.png";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { FiSettings } from "react-icons/fi";
 import { TbFridge } from "react-icons/tb";
@@ -9,6 +9,7 @@ import ProductDetails from "../components/ProductDetails";
 import { Swiper, SwiperSlide } from "swiper/react";
 import tapeVideo from "../assets/videos/tape.mp4";
 import Modal from "../components/Modal";
+import { openModal } from "../store/features/modalSlice";
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -18,19 +19,12 @@ const ProductPage = () => {
   console.log(filteredProduct);
   const { title, desc, descList } = filteredProduct[0];
 
-  let [isOpen, setIsOpen] = useState(false);
-
-  function closeModal() {
-    setIsOpen(false);
-  }
-
-  function openModal() {
-    setIsOpen(true);
-  }
+  let { isOpen } = useSelector((state) => state.modal);
+  let dispatch = useDispatch();
 
   return (
     <div className="bg-white overflow-hidden">
-      <div className="bg-white p-8 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
+      <div className="bg-white p-8 px-4 md:px-10 lg:px-12 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
         <Swiper slidesPerView={1} className="col-span-2 md:col-span-1">
           <SwiperSlide>
             <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
@@ -73,7 +67,12 @@ const ProductPage = () => {
             <span className="font-bold capitalize">standard lenght -</span>{" "}
             50Mtr
           </p>
-          <button className="btn-primary capitalize mt-3" onClick={openModal}>
+          <button
+            className="btn-primary capitalize mt-3"
+            onClick={() => {
+              dispatch(openModal());
+            }}
+          >
             send enquiry{" "}
             <span className="ml-1">
               <RiSendPlaneFill className="inline" size={20} />
@@ -82,12 +81,7 @@ const ProductPage = () => {
         </div>
       </div>
 
-      <Modal
-        isOpen={isOpen}
-        closeModal={closeModal}
-        openModal={openModal}
-        setIsOpen={setIsOpen}
-      />
+      <Modal productTitle={filteredProduct[0].title} />
 
       {/* product specs */}
       <div className="bg-white px-4 md:px-4 lg:px-12 py-8">
@@ -141,7 +135,10 @@ const ProductPage = () => {
         <div className="flex-box-center gap-6 flex-wrap md:flex-nowrap">
           {Array.from({ length: 5 }).map((_, key) => {
             return (
-              <div className="rounded-2xl bg-white flex-box-col-center gap-y-2 border shadow-md p-4 w-[180px]">
+              <div
+                key={key}
+                className="rounded-2xl bg-white flex-box-col-center gap-y-2 border shadow-md p-4 w-[180px]"
+              >
                 <FiSettings size={30} className="text-primary mb-2" />
                 <h2 className="border-t-2 border-dashed border-gray-300 pt-2">
                   Automotive
