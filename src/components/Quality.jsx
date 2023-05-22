@@ -32,19 +32,9 @@ const data = [
 const Quality = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleMouseEnter = () => {
-    document.querySelector(".practices").classList.add("text-white");
-  };
-  const handleMouseLeave = () => {
-    document.querySelector(".practices").classList.remove("text-white");
-  };
   return (
-    <div className="bg-white w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 px-4 md:px-12 py-12 mt-10">
-      <div
-        className="hover:bg-primary px-1 py-2 hover:text-white rounded-xl transition-all"
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      >
+    <section className="bg-white w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 px-4 md:px-12 py-12 mt-10">
+      <div className="px-1 py-2 rounded-xl transition-all">
         <h2 className="text-primary capitalize text-3xl font-thin">
           doing{" "}
           <span className="font-bold italic text-shadow capitalize inline-block">
@@ -84,7 +74,7 @@ const Quality = () => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

@@ -12,12 +12,16 @@ import Certificates from "./Certificates";
 import Events from "./Events";
 import Clients from "./Clients";
 import { FadeInWhenVisible } from "../utils/FadeInWhenInView";
+import { Helmet } from "react-helmet-async";
 
 const HomePage = ({ blogs }) => {
   const container = useRef(null);
 
   return (
     <div ref={container} className="bg-pink-light">
+      <Helmet>
+        <title>Panamax</title>
+      </Helmet>
       <Hero />
       <FadeInWhenVisible>
         <About />

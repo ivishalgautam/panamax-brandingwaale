@@ -3,7 +3,7 @@ import DatamapsIndia from "react-datamaps-india";
 
 const Map = () => {
   return (
-    <div className="px-4 md:px-12 flex flex-col lg:flex-row h-screen my-10 gap-4">
+    <section className="px-4 md:px-12 flex flex-col lg:flex-row h-screen my-10 gap-4">
       {/* content */}
       <div className="flex-box-center lg:items-start flex-col">
         <h3 className="text-3xl font-thin text-primary capitalize">
@@ -177,7 +177,7 @@ const Map = () => {
           }}
         />
       </div>
-    </div>
+    </section>
   );
 };
 

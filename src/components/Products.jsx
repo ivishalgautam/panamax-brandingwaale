@@ -4,7 +4,7 @@ import heroImage from "../assets/hero-image.png";
 
 const Products = () => {
   return (
-    <div className="bg-secondary w-full grid grid-cols-9 px-8 py-12 gap-4">
+    <section className="bg-secondary w-full grid grid-cols-9 px-8 py-12 gap-4">
       <div className="col-span-9 md:col-span-3 flex-box-col-start">
         <h2 className="text-white font-thin text-3xl capitalize">
           our{" "}
@@ -50,7 +50,7 @@ const Products = () => {
           })}
         </Swiper>
       </div>
-    </div>
+    </section>
   );
 };
 

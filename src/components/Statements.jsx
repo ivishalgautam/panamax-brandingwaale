@@ -3,7 +3,7 @@ import { BiBarChartAlt2 } from "react-icons/bi";
 
 const Statements = () => {
   return (
-    <div className="bg-white px-4 py-8">
+    <section className="bg-white px-4 py-8">
       <h2 className="text-3xl font-thin text-primary capitalize mb-12 text-center">
         our <span className="italic font-bold text-shadow">statements</span>
       </h2>
@@ -42,7 +42,7 @@ const Statements = () => {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

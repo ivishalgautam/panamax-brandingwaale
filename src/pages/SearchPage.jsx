@@ -8,7 +8,7 @@ const SearchPage = ({ products }) => {
   );
   console.log(filteredProducts);
   return (
-    <div className="container mx-auto h-full flex flex-col items-center justify-center">
+    <section className="container mx-auto h-full flex flex-col items-center justify-center">
       {filteredProducts.map(({ id, title, desc }) => {
         return (
           <div key={id}>
@@ -17,7 +17,7 @@ const SearchPage = ({ products }) => {
           </div>
         );
       })}
-    </div>
+    </section>
   );
 };
 

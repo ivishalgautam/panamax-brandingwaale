@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, NavLink, useParams } from "react-router-dom";
 import image from "../assets/hero-image.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { FiSettings } from "react-icons/fi";
+import { AiFillHome } from "react-icons/ai";
+import { VscChevronRight } from "react-icons/vsc";
 import { TbFridge } from "react-icons/tb";
 import ProductDetails from "../components/ProductDetails";
 import { Swiper, SwiperSlide } from "swiper/react";
 import tapeVideo from "../assets/videos/tape.mp4";
 import Modal from "../components/Modal";
 import { openModal } from "../store/features/modalSlice";
+import { Helmet } from "react-helmet-async";
 
 const ProductPage = () => {
   const { productId } = useParams();
@@ -23,7 +26,28 @@ const ProductPage = () => {
   let dispatch = useDispatch();
 
   return (
-    <div className="bg-white overflow-hidden">
+    <section className="bg-white overflow-hidden">
+      <Helmet>
+        <title>Product</title>
+      </Helmet>
+      <div className="breadcommon">
+        <h2 className="text-[36px] font-bold text-primary relative z-10 capitalize">
+          {title}
+        </h2>
+        <ul className="breadLinks flex-box-start text-white relative z-10 gap-1">
+          <li>
+            <AiFillHome className="inline-block" /> <Link to="/">Home</Link>
+          </li>
+          <VscChevronRight className="inline-block" />
+          <li>
+            <Link to="/">Product</Link>
+          </li>
+          <VscChevronRight className="inline-block" />
+          <li>
+            <NavLink>{title}</NavLink>
+          </li>
+        </ul>
+      </div>
       <div className="bg-white p-8 px-4 md:px-10 lg:px-12 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
         <Swiper slidesPerView={1} className="col-span-2 md:col-span-1">
           <SwiperSlide>
@@ -198,7 +222,7 @@ const ProductPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

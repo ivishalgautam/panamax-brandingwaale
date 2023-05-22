@@ -15,7 +15,7 @@ const ProductDetails = () => {
   const { title, desc } = filteredProduct[0];
   console.log(productId);
   return (
-    <div className="bg-white p-8 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
+    <section className="bg-white p-8 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
       <Swiper slidesPerView={1} className="col-span-2 md:col-span-1">
         <SwiperSlide>
           <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
@@ -64,7 +64,7 @@ const ProductDetails = () => {
           </span>
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

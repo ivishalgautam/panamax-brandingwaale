@@ -7,7 +7,7 @@ const Industries = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="w-full">
+    <section className="w-full">
       <h2 className="font-thin text-primary text-3xl text-center my-8">
         Industries{" "}
         <span className="inline-block font-bold italic text-shadow">
@@ -24,7 +24,7 @@ const Industries = () => {
                 onMouseOver={() => setHoveredIndex(key)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
-                <figure className="w-[300px] h-[320px] relative z-0 before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-t before:from-black hover:before:from-primary before:z-10">
+                <figure className="w-[250px] h-[300px] relative z-0 before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-t before:from-black hover:before:from-primary before:z-10">
                   <img
                     src={heroImage}
                     alt=""
@@ -50,7 +50,7 @@ const Industries = () => {
           );
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ import { delay } from "framer-motion";
 
 const Testimonial = () => {
   return (
-    <div className="px-10 py-9 flex-box-center">
+    <section className="px-10 py-9 flex-box-center">
       <Swiper
         autoplay={true}
         spaceBetween={20}
@@ -45,7 +45,7 @@ const Testimonial = () => {
           );
         })}
       </Swiper>
-    </div>
+    </section>
   );
 };
 

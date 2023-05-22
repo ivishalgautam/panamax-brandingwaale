@@ -4,7 +4,7 @@ import msmeLogo from "../assets/msme-logo.webp";
 
 const Certificates = () => {
   return (
-    <div className="py-12 px-4 md:px-12">
+    <section className="py-12 px-4 md:px-12">
       <h2 className="text-3xl text-primary font-thin text-center capitalize mb-8">
         {" "}
         our <span className="font-bold italic text-shadow">
@@ -45,7 +45,7 @@ const Certificates = () => {
           </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

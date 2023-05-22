@@ -37,7 +37,7 @@ const navList = [
 ];
 const Footer = () => {
   return (
-    <div className="bg-secondary w-full px-4 md:px-12">
+    <footer className="bg-secondary w-full px-4 md:px-12">
       {/* logo and address */}
       <div className="flex-box-center flex-wrap max-w-[1200px] mx-auto bg-white rounded-b-xl">
         {/* logo */}
@@ -86,7 +86,7 @@ const Footer = () => {
       </div>
 
       {/* navigation and form */}
-      <div className="grid grid-cols-4 mt-4 max-w-[1200px] mx-auto gap-y-4">
+      <div className="grid grid-cols-4 mt-6 max-w-[1200px] mx-auto gap-y-8">
         <div className="col-span-4 lg:col-span-3 text-white flex-box-start flex-col items-center md:flex-row gap-4 md:gap-10">
           <div className="grid grid-cols-4 w-full gap-8 md:gap-0">
             {/* quick link */}
@@ -214,7 +214,7 @@ const Footer = () => {
         {/* copyright */}
         <p className="text-sm text-white">Copyright 2023 All right Reserved</p>
       </div>
-    </div>
+    </footer>
   );
 };
 

@@ -181,3 +181,12 @@
     </div>
   </div>
 </form>;
+
+<button
+  type="submit"
+  name="submit"
+  // value="Send Enquiry"
+  className="theme-btn1 submit"
+>
+  send enquiry
+</button>;

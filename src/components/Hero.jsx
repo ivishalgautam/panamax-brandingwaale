@@ -11,7 +11,7 @@ import heroImage from "../assets/hero-image.png";
 
 const Hero = () => {
   return (
-    <div className=" grid grid-cols-1 lg:grid-cols-9 mt-8 px-4 md:px-12 gap-4">
+    <section className="grid grid-cols-1 lg:grid-cols-9 mt-8 px-4 sm:px-8 md:px-12 gap-4">
       <motion.div
         initial={{ x: -1000, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -25,7 +25,7 @@ const Hero = () => {
         >
           {Array.from({ length: 3 }).map((_, key) => {
             return (
-              <SwiperSlide className="">
+              <SwiperSlide key={key}>
                 <figure className="rounded-2xl h-full w-full overflow-hidden">
                   <img
                     src={heroImage}
@@ -72,7 +72,7 @@ const Hero = () => {
         </form>
         <button className="btn-primary">Send Enquiry</button>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

@@ -4,12 +4,12 @@ import eventImg from "../assets/event-speaker.webp";
 
 const Events = () => {
   return (
-    <div className="p-4 md:p-16 bg-white">
+    <section className="p-4 md:p-16 bg-white">
       <h2 className="text-3xl font-thin text-primary text-center capitalize mb-10">
         recent <span className="font-bold italic text-shadow">events</span>
       </h2>
       <div className="flex-box-center gap-4 flex-wrap lg:flex-nowrap gap-y-8">
-        <div className="flex-box-center flex-wrap sm:flex-nowrap rounded-xl border p-2 relative">
+        <div className="flex-box-center flex-wrap sm:flex-nowrap rounded-xl border relative gap-4 p-4">
           <div className="absolute -top-6 left-2 text-primary text-sm bg-white rounded-md font-bold py-1 px-2 capitalize">
             22 <br /> may
           </div>
@@ -34,7 +34,7 @@ const Events = () => {
           </div>
         </div>
 
-        <div className="flex-box-center flex-wrap sm:flex-nowrap rounded-xl border p-2 relative">
+        <div className="flex-box-center flex-wrap sm:flex-nowrap rounded-xl border relative gap-4 p-4">
           <div className="absolute -top-6 left-2 text-primary text-sm bg-white rounded-md font-bold py-1 px-2 capitalize">
             22 <br /> may
           </div>
@@ -59,7 +59,7 @@ const Events = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
