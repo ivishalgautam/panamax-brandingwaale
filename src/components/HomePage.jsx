@@ -7,10 +7,6 @@ import Industries from "./Industries";
 import Quality from "./Quality";
 import Blogs from "./Blogs";
 import Products from "./Products";
-import Statements from "./Statements";
-import Certificates from "./Certificates";
-import Events from "./Events";
-import Clients from "./Clients";
 import { FadeInWhenVisible } from "../utils/FadeInWhenInView";
 import { Helmet } from "react-helmet-async";
 
@@ -40,18 +36,6 @@ const HomePage = ({ blogs }) => {
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Blogs blogs={blogs} />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Clients />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Statements />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Certificates />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Events />
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Footer />

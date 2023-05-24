@@ -16,6 +16,7 @@ import { Provider } from "react-redux";
 import { store } from "./store/store";
 import Try from "./pages/Try";
 import IndustriesPage from "./pages/IndustriesPage";
+import ProductsPage from "./pages/ProductsPage";
 
 const products = [
   {
@@ -153,6 +154,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/blog/:id" element={<BlogPage blogs={blogs} />} />
               <Route path="/industries" element={<IndustriesPage />} />
+              <Route path="/products" element={<ProductsPage />} />
             </Routes>
           </div>
         </BrowserRouter>

@@ -1,7 +1,70 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import heroImage from "../assets/hero-image.png";
+// import heroImage from "../assets/hero-image.png";
+import img1 from "../assets/Indusrty-Images/1-01.jpg";
+import img2 from "../assets/Indusrty-Images/1-02.jpg";
+import img3 from "../assets/Indusrty-Images/1-03.jpg";
+import img4 from "../assets/Indusrty-Images/1-04.jpg";
+import img5 from "../assets/Indusrty-Images/1-05.jpg";
+import img6 from "../assets/Indusrty-Images/1-06.jpg";
+import img7 from "../assets/Indusrty-Images/1-07.jpg";
+import img8 from "../assets/Indusrty-Images/1-08.jpg";
+import img9 from "../assets/Indusrty-Images/1-09.jpg";
+import img10 from "../assets/Indusrty-Images/1-10.jpg";
+import img11 from "../assets/Indusrty-Images/1-11.jpg";
+import img12 from "../assets/Indusrty-Images/1-12.jpg";
+
+let industryImages = [
+  {
+    path: img1,
+    title: "Shipping & Logistics",
+  },
+  {
+    path: img2,
+    title: "Electrical",
+  },
+  {
+    path: img3,
+    title: "Automotive",
+  },
+  {
+    path: img4,
+    title: "Healthcare",
+  },
+  {
+    path: img5,
+    title: "HVAC",
+  },
+  {
+    path: img6,
+    title: "Label",
+  },
+  {
+    path: img7,
+    title: "Aerospace & Aviation",
+  },
+  {
+    path: img8,
+    title: "Packaging",
+  },
+  {
+    path: img9,
+    title: "Paper Mill",
+  },
+  {
+    path: img10,
+    title: "Printing",
+  },
+  {
+    path: img11,
+    title: "White Goods",
+  },
+  {
+    path: img12,
+    title: "Wireharness",
+  },
+];
 
 const Industries = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -16,7 +79,7 @@ const Industries = () => {
       </h2>
 
       <div className="flex-box-center flex-wrap gap-5 px-4 md:px-12 lg:px-16">
-        {Array.from({ length: 9 }).map((item, key) => {
+        {industryImages.map((item, key) => {
           return (
             <Link to={"/industries"} key={key}>
               <div
@@ -26,24 +89,24 @@ const Industries = () => {
               >
                 <figure className="w-[250px] h-[300px] relative z-0 before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-t before:from-black hover:before:from-primary before:z-10">
                   <img
-                    src={heroImage}
+                    src={item.path}
                     alt=""
                     className="w-full h-full object-cover object-center"
                   />
                 </figure>
-                <button
+                {/* <button
                   className={` ${
                     hoveredIndex === key ? "opacity-100" : "opacity-0"
                   } absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 btn-primary rounded-xl transition-none`}
                 >
                   View More
-                </button>
+                </button> */}
                 <h2
                   className={`py-2 absolute ${
                     hoveredIndex === key ? "bottom-8" : "bottom-4"
                   } w-2/3 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none rounded-full border border-white text-white transition-all`}
                 >
-                  Automotive Industry
+                  {item.title}
                 </h2>
               </div>
             </Link>

@@ -11,7 +11,7 @@ const Map = () => {
           <span className="font-bold text-shadow italic">best practices</span>{" "}
           for best qualities
         </h3>
-        <p className="text-sm mt-4">
+        <p className="text-lg mt-4">
           Lodam Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a
@@ -170,7 +170,7 @@ const Map = () => {
           }}
           hoverComponent={({ value }) => {
             return (
-              <div className="pointer-events-none cursor-pointer">
+              <div className="pointer-events-none cursor-none">
                 {value.name}
               </div>
             );

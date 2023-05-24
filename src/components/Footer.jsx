@@ -87,7 +87,7 @@ const Footer = () => {
 
       {/* navigation and form */}
       <div className="grid grid-cols-4 mt-6 max-w-[1200px] mx-auto gap-y-8">
-        <div className="col-span-4 lg:col-span-3 text-white flex-box-start flex-col items-center md:flex-row gap-4 md:gap-10">
+        <div className="col-span-4 lg:col-span-3 text-white flex-box-start flex-col items-start md:flex-row gap-4 md:gap-10">
           <div className="grid grid-cols-4 w-full gap-8 md:gap-0">
             {/* quick link */}
             <div className="col-span-4 md:col-span-1">
@@ -115,7 +115,7 @@ const Footer = () => {
               </h2>
               {/* categories */}
               <div className="flex-box-start gap-4 flex-wrap md:flex-nowrap">
-                <ul>
+                <ul className="flex-1">
                   {navList.map((item, key) => {
                     return (
                       <li
@@ -128,7 +128,7 @@ const Footer = () => {
                   })}
                 </ul>
 
-                <ul>
+                <ul className="flex-1">
                   {navList.map((item, key) => {
                     return (
                       <li
@@ -141,7 +141,7 @@ const Footer = () => {
                   })}
                 </ul>
 
-                <ul>
+                <ul className="flex-1">
                   {navList.map((item, key) => {
                     return (
                       <li
@@ -154,7 +154,7 @@ const Footer = () => {
                   })}
                 </ul>
 
-                <ul>
+                <ul className="flex-1">
                   {navList.map((item, key) => {
                     return (
                       <li
@@ -171,11 +171,11 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="col-span-4 lg:col-span-1 mt-8 md:mt-0 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-4 md:gap-10">
+        <div className="col-span-4 lg:col-span-1 mt-8 md:mt-0 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-2 md:gap-10">
           <h2 className="text-2xl font-bold text-secondary text-shadow">
             Enquire Now
           </h2>
-          <form className="flex items-center justify-center flex-col gap-2 w-full shadow-sm">
+          <form className="flex items-center justify-center flex-col gap-2 w-full">
             <input
               type="text"
               placeholder="Contact Number"
@@ -191,8 +191,8 @@ const Footer = () => {
               placeholder="Contact Number"
               className="border rounded-lg py-2 px-4 text-sm w-full"
             />
+            <button className="btn-secondary">Send Enquiry</button>
           </form>
-          <button className="btn-secondary">Send Enquiry</button>
         </div>
       </div>
 

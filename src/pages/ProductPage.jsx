@@ -3,226 +3,330 @@ import { Link, NavLink, useParams } from "react-router-dom";
 import image from "../assets/hero-image.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { FiSettings } from "react-icons/fi";
 import { AiFillHome } from "react-icons/ai";
 import { VscChevronRight } from "react-icons/vsc";
-import { TbFridge } from "react-icons/tb";
-import ProductDetails from "../components/ProductDetails";
+import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import tapeVideo from "../assets/videos/tape.mp4";
 import Modal from "../components/Modal";
 import { openModal } from "../store/features/modalSlice";
 import { Helmet } from "react-helmet-async";
+import { motion } from "framer-motion";
+import "../swiper.css";
+import Footer from "../components/Footer";
 
 const ProductPage = () => {
+  let slice = 5;
+  const [showMore, setShowMore] = useState(false);
+  const [showFeatures, setShowFeatures] = useState(slice);
+  const [showApplications, setShowApplications] = useState(slice);
+
   const { productId } = useParams();
   const { products } = useSelector((store) => store.products);
 
   const filteredProduct = products.filter((e) => e.id === +productId);
-  console.log(filteredProduct);
-  const { title, desc, descList } = filteredProduct[0];
-
-  let { isOpen } = useSelector((state) => state.modal);
+  // console.log(filteredProduct);
+  const {
+    title,
+    about,
+    features,
+    description,
+    applications,
+    industrialUses,
+    productImg,
+  } = filteredProduct[0];
   let dispatch = useDispatch();
 
-  return (
-    <section className="bg-white overflow-hidden">
-      <Helmet>
-        <title>Product</title>
-      </Helmet>
-      <div className="breadcommon">
-        <h2 className="text-[36px] font-bold text-primary relative z-10 capitalize">
-          {title}
-        </h2>
-        <ul className="breadLinks flex-box-start text-white relative z-10 gap-1">
-          <li>
-            <AiFillHome className="inline-block" /> <Link to="/">Home</Link>
-          </li>
-          <VscChevronRight className="inline-block" />
-          <li>
-            <Link to="/">Product</Link>
-          </li>
-          <VscChevronRight className="inline-block" />
-          <li>
-            <NavLink>{title}</NavLink>
-          </li>
-        </ul>
-      </div>
-      <div className="bg-white p-8 px-4 md:px-10 lg:px-12 rounded-lg grid grid-cols-2 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block">
-        <Swiper slidesPerView={1} className="col-span-2 md:col-span-1">
-          <SwiperSlide>
-            <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
-              <img
-                src={image}
-                alt=""
-                className="rounded-2xl flex-1 h-full w-full object-center object-cover"
-              />
-            </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-            <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
-              <img
-                src={image}
-                alt=""
-                className="rounded-2xl flex-1 h-full w-full object-center object-cover"
-              />
-            </figure>
-          </SwiperSlide>
-          <SwiperSlide>
-            <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
-              <img
-                src={image}
-                alt=""
-                className="rounded-2xl flex-1 h-full w-full object-center object-cover"
-              />
-            </figure>
-          </SwiperSlide>
-        </Swiper>
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2,
+      },
+    },
+  };
 
-        <div className="col-span-2 md:col-span-1 py-4">
-          <h3 className="text-2xl font-bold text-gray-900 capitalize border-l-[3px] mb-4 border-primary pl-2">
+  const item = {
+    hidden: { y: "100", opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
+  };
+
+  return (
+    <>
+      <motion.section
+        variants={container}
+        initial="hidden"
+        animate="visible"
+        className="bg-white overflow-hidden"
+      >
+        <Helmet>
+          <title>Product</title>
+        </Helmet>
+
+        {/* breadcrumb */}
+        <motion.div variants={item} className="breadcommon">
+          <h2 className="text-[36px] font-bold text-primary relative z-10 capitalize">
             {title}
-          </h3>
-          <p>{desc}</p>
-          <p className="mt-2">
+          </h2>
+          <ul className="breadLinks flex-box-start text-white relative z-10 gap-1">
+            <li>
+              <AiFillHome className="inline-block" /> <Link to="/">Home</Link>
+            </li>
+            <VscChevronRight className="inline-block" />
+            <li>
+              <Link to="/">Product</Link>
+            </li>
+            <VscChevronRight className="inline-block" />
+            <li>
+              <NavLink>{title}</NavLink>
+            </li>
+          </ul>
+        </motion.div>
+
+        {/* banner */}
+        <motion.div
+          variants={item}
+          className="bg-white p-8 px-4 md:px-10 lg:px-12 rounded-lg grid grid-cols-12 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block"
+        >
+          <Swiper slidesPerView={1} className="col-span-2 md:col-span-5">
+            <SwiperSlide>
+              <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
+                <img
+                  src={productImg}
+                  alt=""
+                  className="rounded-2xl object-contain !h-auto "
+                />
+              </figure>
+            </SwiperSlide>
+            <SwiperSlide>
+              <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
+                <img
+                  src={productImg}
+                  alt=""
+                  className="rounded-2xl flex-1 h-full w-full object-center object-cover"
+                />
+              </figure>
+            </SwiperSlide>
+            <SwiperSlide>
+              <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
+                <img
+                  src={productImg}
+                  alt=""
+                  className="rounded-2xl flex-1 h-full w-full object-center object-cover"
+                />
+              </figure>
+            </SwiperSlide>
+          </Swiper>
+
+          <div className="col-span-2 md:col-span-7 py-4 flex-box-col-start items-start">
+            <h3 className="text-2xl font-bold text-gray-900 capitalize border-l-[3px] mb-4 border-primary pl-2">
+              {title}
+            </h3>
+            <div>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: showMore ? about : about.substring(0, 290),
+                }}
+                className="inline"
+              />
+              <button
+                onClick={() => {
+                  setShowMore(!showMore);
+                }}
+                className="text-primary text-sm font-bold ml-2"
+              >
+                {showMore ? " show less" : " show more..."}
+              </button>
+            </div>
+            {/* <p className="mt-2">
             <span className="font-bold capitalize">Color :</span> Creamish
           </p>
           <p className="">
             <span className="font-bold capitalize">standard lenght -</span>{" "}
             50Mtr
-          </p>
-          <button
-            className="btn-primary capitalize mt-3"
-            onClick={() => {
-              dispatch(openModal());
-            }}
-          >
-            send enquiry{" "}
-            <span className="ml-1">
-              <RiSendPlaneFill className="inline" size={20} />
-            </span>
-          </button>
-        </div>
-      </div>
+          </p> */}
+            <button
+              className="btn-primary capitalize mt-3 py-1"
+              onClick={() => {
+                dispatch(openModal());
+              }}
+            >
+              send enquiry{" "}
+              <span className="">
+                <RiSendPlaneFill className="inline" size={15} />
+              </span>
+            </button>
+          </div>
+        </motion.div>
 
-      <Modal productTitle={filteredProduct[0].title} />
+        <Modal productTitle={filteredProduct[0].title} />
 
-      {/* product specs */}
-      <div className="bg-white px-4 md:px-4 lg:px-12 py-8">
-        <div className="bg-pink-light rounded-xl overflow-hidden px-12 py-10">
-          <ul className="pt-10 border-t-2 border-dashed border-gray-300 relative">
-            <div className="text-white bg-primary rounded-full px-4 py-1 absolute -top-4 left-1/2 -translate-x-1/2 after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:w-5 after:h-5 after:bg-primary z-10 after:-z-[1]">
-              Despcription
-            </div>
-            {descList.map((list, key) => {
-              return (
-                <li className="mb-1 list-disc" key={key}>
-                  {list}
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </div>
-
-      {/* product application */}
-      <div className="bg-white my-10 relative overflow-hidden pt-14 pb-4 after:absolute after:-top-1 after:right-0 after:h-[300%] after:w-1/3 after:bg-pink-light after:rotate-[45deg]">
-        <h2 className="text-3xl font-thin text-primary capitalize text-center">
-          product{" "}
-          <span className="font-bold italic text-shadow"> application</span>
-        </h2>
-
-        <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 gap-10 relative z-10">
-          <div className="col-span-12 md:col-span-8">
-            <ul className="pt-8 border-gray-300 pl-4">
-              {descList.map((list, key) => {
+        {/* product specs */}
+        <motion.div
+          variants={item}
+          className="bg-white px-4 md:px-4 lg:px-12 py-8"
+        >
+          {/* description */}
+          <div className="bg-pink-light rounded-xl overflow-hidden px-12 py-10">
+            <ul className="pt-10 border-t-2 border-dashed border-gray-300 relative">
+              <div className="text-white bg-primary rounded-full px-4 py-1 absolute -top-4 left-1/2 -translate-x-1/2 after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:w-5 after:h-5 after:bg-primary z-10 after:-z-[1]">
+                Description
+              </div>
+              {description?.map((item, key) => {
                 return (
                   <li className="mb-1 list-disc" key={key}>
-                    {list}
+                    {item}
                   </li>
                 );
               })}
             </ul>
           </div>
-          <div className="col-span-12 md:col-span-4 rounded-xl overflow-hidden">
-            <img
-              src={image}
-              alt=""
-              className="w-full h-full object-cover object-right"
-            />
-          </div>
-        </div>
-      </div>
 
-      {/* video section */}
-      <div className="my-20 px-4">
-        <div className="flex-box-center gap-6 flex-wrap md:flex-nowrap">
-          {Array.from({ length: 5 }).map((_, key) => {
+          {/* features */}
+          <div className="mt-10">
+            <h2 className="text-3xl text-primary font-thin capitalize text-center my-6">
+              product{" "}
+              <span className="font-bold italic text-shadow">features</span>
+            </h2>
+            <table className="table-auto border-separate border-spacing-y-4 px-4">
+              {features?.slice(0, showFeatures).map((feature, key) => {
+                return (
+                  <tr className="even:bg-gray-100" key={key}>
+                    <th className="align-top text-start p-2 rounded-l">
+                      {feature.name}
+                    </th>
+                    <td className="p-2 rounded-r text-sm">{feature.about}</td>
+                  </tr>
+                );
+              })}
+            </table>
+            <button
+              className="text-primary mx-auto w-full font-bold flex-box-col-center"
+              onClick={() =>
+                setShowFeatures((prev) =>
+                  features.length > prev
+                    ? prev + features.length - slice
+                    : prev - (features.length - slice)
+                )
+              }
+            >
+              {features.length <= showFeatures ? (
+                <>
+                  <BsChevronUp /> show less
+                </>
+              ) : (
+                <>
+                  show more <BsChevronDown />
+                </>
+              )}
+            </button>
+          </div>
+        </motion.div>
+
+        {/* product application */}
+        <motion.div
+          variants={item}
+          className="bg-white my-10 relative overflow-hidden pt-14 pb-4 after:absolute after:-top-[1.25rem] after:right-0 after:h-[300%] after:w-1/3 after:bg-pink-light after:rotate-[50deg]"
+        >
+          <h2 className="text-3xl font-thin text-primary capitalize text-center">
+            product{" "}
+            <span className="font-bold italic text-shadow"> application</span>
+          </h2>
+
+          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 gap-10 relative z-10">
+            <div className="col-span-12 md:col-span-8">
+              <ul className="pt-8 border-gray-300 pl-4">
+                {applications?.slice(0, showApplications).map((item, key) => {
+                  return (
+                    <li className="mb-1 list-disc last:inline" key={key}>
+                      {item.about}
+                    </li>
+                  );
+                })}
+                <button
+                  className="text-primary font-bold w-full flex-box-col-center"
+                  onClick={() =>
+                    setShowApplications((prev) =>
+                      applications.length > prev
+                        ? prev + applications.length - slice
+                        : prev - (applications.length - slice)
+                    )
+                  }
+                >
+                  {applications.length <= showApplications ? (
+                    <>
+                      <BsChevronUp /> show less
+                    </>
+                  ) : (
+                    <>
+                      show more <BsChevronDown />
+                    </>
+                  )}
+                </button>
+              </ul>
+            </div>
+            <div className="col-span-12 md:col-span-4 rounded-xl overflow-hidden flex-box-center">
+              <img src={image} alt="" className="w-full !h-auto" />
+            </div>
+          </div>
+        </motion.div>
+        {/* icons */}
+        <div className="flex-box-center mt-4 gap-6 flex-wrap relative z-10 px-4 md:px-10 lg:px-20 gap-y-20">
+          {applications.map((item, key) => {
             return (
               <div
                 key={key}
-                className="rounded-2xl bg-white flex-box-col-center gap-y-2 border shadow-md p-4 w-[180px]"
+                className="rounded-2xl bg-white flex-box-col-between gap-y-1 w-[180px] h-[120px]"
               >
-                <FiSettings size={30} className="text-primary mb-2" />
-                <h2 className="border-t-2 border-dashed border-gray-300 pt-2">
-                  Automotive
-                </h2>
+                <figure className="p-4 rounded-lg box-shadow-card">
+                  <img src={item.icon} alt="" className="w-[50px]" />
+                </figure>
+                <h2 className="pt-2 text-center text-sm">{item.name}</h2>
               </div>
             );
           })}
         </div>
-        <video
-          src={tapeVideo}
-          controls={true}
-          className="aspect-video bg-gray-500 mx-auto w-[1048px] rounded-2xl mt-10"
-        ></video>
-      </div>
 
-      {/* industries */}
-      <div className="my-20">
-        <h2 className="font-thin text-3xl text-primary capitalize text-center">
-          using{" "}
-          <span className="font-bold italic text-shadow"> industries</span>
-        </h2>
-        <div className="mt-10 flex-box-center flex-wrap md:flex-nowrap gap-4">
-          <div className="border border-[#EEEEEE] rounded-xl px-4 py-2">
-            <TbFridge
-              size={40}
-              className="-translate-y-7 mx-auto bg-white text-primary"
-            />
-            <span className="capitalize text-lg">automotive</span>
+        {/* video section */}
+        <motion.div variants={item} className="hidden my-20 px-4">
+          <video
+            src={tapeVideo}
+            controls={true}
+            className="aspect-video bg-gray-500 mx-auto w-[1048px] rounded-2xl mt-10 shadow-2xl"
+          ></video>
+        </motion.div>
+
+        {/* industries */}
+        <motion.div variants={item} className="my-20 px-4 md:px-10 lg:px-12">
+          <h2 className="font-thin text-3xl text-primary capitalize text-center">
+            using{" "}
+            <span className="font-bold italic text-shadow"> industries</span>
+          </h2>
+          <div className="mt-10 flex-box-center flex-wrap gap-4">
+            {industrialUses?.map((item, key) => {
+              return (
+                <div
+                  key={key}
+                  className="rounded-xl px-4 py-2 w-[200px] h-[150px] flex flex-col items-center justify-around box-shadow-card"
+                >
+                  <img src={item.icon} alt="" className="w-[50px]" />
+                  <span className="capitalize text-center text-sm">
+                    {item.name}
+                  </span>
+                </div>
+              );
+            })}
           </div>
-          <div className="border border-[#EEEEEE] rounded-xl px-4 py-2">
-            <TbFridge
-              size={40}
-              className="-translate-y-7 mx-auto bg-white text-primary"
-            />
-            <span className="capitalize text-lg">automotive</span>
-          </div>
-          <div className="border border-[#EEEEEE] rounded-xl px-4 py-2">
-            <TbFridge
-              size={40}
-              className="-translate-y-7 mx-auto bg-white text-primary"
-            />
-            <span className="capitalize text-lg">automotive</span>
-          </div>
-          <div className="border border-[#EEEEEE] rounded-xl px-4 py-2">
-            <TbFridge
-              size={40}
-              className="-translate-y-7 mx-auto bg-white text-primary"
-            />
-            <span className="capitalize text-lg">automotive</span>
-          </div>
-          <div className="border border-[#EEEEEE] rounded-xl px-4 py-2">
-            <TbFridge
-              size={40}
-              className="-translate-y-7 mx-auto bg-white text-primary"
-            />
-            <span className="capitalize text-lg">automotive</span>
-          </div>
-        </div>
-      </div>
-    </section>
+        </motion.div>
+      </motion.section>
+      <Footer />
+    </>
   );
 };
 

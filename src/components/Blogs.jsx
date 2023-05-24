@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 
 const Blogs = ({ blogs }) => {
   return (
-    <section className="bg-white mt-14 px-4 md:px-16 py-10">
+    <section className="bg-white mt-14 px-4 md:px-16 py-20">
       <h2 className="font-thin text-3xl text-primary text-center mb-4">
         Our{" "}
         <span className="inline-block italic font-bold text-shadow">Blogs</span>
       </h2>
-      <div className="flex-box-center flex-wrap lg:flex-nowrap gap-4 gap-y-12 py-4 px-2 md:px-8">
+      <div className="flex-box-center flex-wrap lg:flex-nowrap gap-8 gap-y-12 py-4 px-2 md:px-8">
         {blogs.map(({ id, title, desc, image, postedOn }) => {
           return (
             <Link key={id} to={`/blog/${id}`}>

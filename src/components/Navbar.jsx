@@ -10,7 +10,7 @@ import AutoCompleteBox from "./AutoCompleteBox";
 
 const Navbar = () => {
   const { products } = useSelector((store) => store.products);
-  console.log(products);
+  // console.log(products);
   const navList = [
     {
       id: 1,
@@ -115,7 +115,7 @@ const Navbar = () => {
 
       {/* desktop nav list */}
       <nav className="desktop hidden lg:block tracking-wide">
-        <ul className="flex items-center justify-center gap-4 relative z-50">
+        <ul className="flex items-center justify-center gap-4 relative z-50 ">
           {navList.map((menu, key) => {
             return menu.type !== "dropdown" ? (
               <Link
@@ -154,8 +154,8 @@ const Navbar = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute left-0 mt-2 w-56 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
-                    <div className="px-1 py-1 ">
+                  <Menu.Items className="absolute left-0 mt-2 w-96 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+                    <div className="p-2 grid grid-cols-2 gap-2 ">
                       {menu?.submenu?.map((submenu) => {
                         return (
                           <Menu.Item key={submenu.id}>
@@ -169,9 +169,9 @@ const Navbar = () => {
                               >
                                 <Link
                                   to={`product/${submenu.id}`}
-                                  className="inline-block h-full w-full text-start capitalize px-2 py-2"
+                                  className="inline-block h-full w-full text-start capitalize px-2 py-2 text-sm capitalize"
                                 >
-                                  {submenu.title}
+                                  {submenu.title.toLowerCase()}
                                 </Link>
                               </button>
                             )}
