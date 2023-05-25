@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { closeModal } from "../store/features/modalSlice";
 
 export default function Modal({ productTitle }) {
-  console.log(productTitle);
+  // console.log(productTitle);
   const {
     register,
     handleSubmit,
