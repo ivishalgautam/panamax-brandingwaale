@@ -1,31 +1,64 @@
 import React, { useState } from "react";
-import { RiTimerFill } from "react-icons/ri";
+import { GiSandsOfTime, GiSpectacleLenses } from "react-icons/gi";
+import { BsBriefcase, BsDeviceSsd, BsHeadphones } from "react-icons/bs";
+import { BiSupport } from "react-icons/bi";
 
 const data = [
   {
     id: 1,
     title: "Ontime",
     desc: "We ensure on-time delivery, providing reliable and punctual delivering services to meet customer deadlines and expectations.",
+    icon: (
+      <GiSandsOfTime
+        size={50}
+        className="justify-start justify-self start !h-auto mt-1 relative z-10 text-primary"
+      />
+    ),
   },
   {
     id: 2,
     title: "Experience",
     desc: "With years of experience in the adhesive tape manufacturing industry, we bring extensive knowledge, expertise, and a proven track record of delivering high-quality products.",
+    icon: (
+      <BsBriefcase
+        size={50}
+        className="justify-start justify-self start !h-auto mt-1 relative z-10 text-primary"
+      />
+    ),
   },
   {
     id: 3,
     title: "Technical",
     desc: "We hold a significant technical advantage in the tape industry, leveraging advanced technologies and innovative solutions for superior performance and reliability.",
+    icon: (
+      <BsDeviceSsd
+        size={50}
+        className="justify-start justify-self start !h-auto mt-1 relative z-10 text-primary"
+      />
+    ),
   },
   {
     id: 4,
     title: "Transparency",
     desc: "We prioritize transparency, fostering open communication and providing customers with clear and accurate information throughout their engagement.",
+    icon: (
+      <GiSpectacleLenses
+        size={50}
+        className="justify-start justify-self start !h-auto mt-1 relative z-10 text-primary"
+      />
+    ),
   },
   {
     id: 5,
     title: "End to end",
     desc: "We provides comprehensive end-to-end support, guiding and assisting customers at every stage of their tape-related needs for a seamless experience.",
+    icon: (
+      <BsHeadphones
+        size={50}
+        fill="#ffffff"
+        className="justify-start justify-self start !h-auto mt-1 relative z-10 text-primary"
+      />
+    ),
   },
 ];
 
@@ -56,17 +89,14 @@ const Quality = () => {
           <div
             className={`grid grid-cols-6 gap-2 px-3 py-4 rounded-xl cursor-pointer relative before:absolute before:top-0 before:left-0 before:h-full before:w-full before:bg-primary  before:rounded-2xl ${
               hoveredIndex === item.id
-                ? "before:scale-100 text-white"
+                ? "before:scale-100 !text-white"
                 : "before:scale-0"
-            }   before:transition-transform before:duration-500 before:ease-in-out overflow-hidden`}
+            }   before:transition-transform before:duration-500 before:ease-in-out overflow-hidden why-card`}
             onMouseEnter={() => setHoveredIndex(item.id)}
             onMouseLeave={() => setHoveredIndex(5)}
             key={item.id}
           >
-            <RiTimerFill
-              size={100}
-              className="justify-start justify-self start !h-auto mt-1 relative z-10"
-            />
+            {item.icon}
             <div className="col-span-5 relative z-10">
               <h2
                 className={`${

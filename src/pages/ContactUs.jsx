@@ -85,7 +85,7 @@ const ContactUs = () => {
                       required
                     />
                   </div>
-                  <div className="relative col-span-2 md:col-span-1">
+                  <div className="relative col-span-2 ">
                     <input
                       className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                       type="text"

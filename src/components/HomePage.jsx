@@ -25,9 +25,9 @@ const HomePage = ({ blogs }) => {
       <FadeInWhenVisible>
         <Products />
       </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Map />
-      </FadeInWhenVisible>
+      {/* <FadeInWhenVisible> */}
+      {/* <Map /> */}
+      {/* </FadeInWhenVisible> */}
       <FadeInWhenVisible>
         <Quality />
       </FadeInWhenVisible>

@@ -12,7 +12,7 @@ export default function Modal({ productTitle }) {
     watch,
     formState: { errors },
   } = useForm();
-  console.log(errors);
+  // console.log(errors);
 
   const onSubmit = (data) => console.log(data);
 

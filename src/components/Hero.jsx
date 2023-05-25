@@ -70,30 +70,43 @@ const Hero = () => {
         initial={{ x: 1000, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="col-span-1 lg:col-span-3 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-4"
+        className="col-span-1 lg:col-span-3 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-4 box-shadow-card"
       >
         <h2 className="text-2xl font-bold text-primary text-shadow">
           Enquire Now
         </h2>
-        <form className="flex items-center justify-center flex-col gap-4 w-full">
+        <form
+          method="post"
+          action="https://magnitecorp.com/panamax-backend/form.php"
+          className="flex items-center justify-center flex-col gap-4 w-full"
+        >
           <input
             type="text"
-            placeholder="Contact Number"
+            name="name"
+            placeholder="Full Name"
+            required
             className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
           />
           <input
-            type="text"
-            placeholder="Contact Number"
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
             className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
           />
           <input
-            type="text"
-            placeholder="Contact Number"
+            type="tel"
+            name="number"
+            placeholder="Phone Number"
+            required
             className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
           />
+
           <input
             type="text"
-            placeholder="Product You Want"
+            name="company"
+            placeholder="Company"
+            required
             className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
           />
         </form>

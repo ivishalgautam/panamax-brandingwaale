@@ -15,7 +15,7 @@ const About = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           ref={ref}
-          className="px-2 md:px-8 lg:px-10 col-span-7"
+          className="px-2 md:px-8 lg:px-10 col-span-12 md:col-span-7"
         >
           <h2 className="text-2xl font-bold ">
             About{" "}
@@ -47,10 +47,14 @@ const About = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
           ref={ref}
-          className="flex-box-center col-span-5"
+          className="flex-box-center col-span-12 md:col-span-5 w-full"
         >
           <figure>
-            <img src={heroImage} alt="" className="w-[85%] " />
+            <img
+              src={heroImage}
+              alt=""
+              className="sm:w-full lg:w-[85%] rounded-xl"
+            />
           </figure>
         </motion.div>
       </section>

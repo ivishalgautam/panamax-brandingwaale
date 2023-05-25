@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  BsFillTelephoneFill,
+  BsFillEnvelopeFill,
+  BsPinMapFill,
+} from "react-icons/bs";
 
 import logo from "../assets/logo.png";
 import building from "../assets/building.png";
+import { useSelector } from "react-redux";
 
 const navList = [
   {
@@ -14,71 +20,56 @@ const navList = [
     name: "about",
     path: "/about",
   },
-  {
-    name: "products",
-    path: "/products",
-  },
-  {
-    name: "solutions",
-    path: "/solutions",
-  },
-  {
-    name: "clientele",
-    path: "/clientele",
-  },
+  // {
+  //   name: "products",
+  //   path: "/products",
+  // },
   {
     name: "contact",
     path: "/contact",
   },
-  {
-    name: "privacy policy",
-    path: "/privacy-policy",
-  },
 ];
 const Footer = () => {
+  const { products } = useSelector((store) => store.products);
   return (
-    <footer className="bg-secondary w-full px-4 md:px-12">
+    <footer className="bg-gradient-to-r from-[#001234] to-[#000123] w-full px-4 md:px-12">
       {/* logo and address */}
-      <div className="flex-box-center flex-wrap max-w-[1200px] mx-auto bg-white rounded-b-xl">
+      <div className="flex-box-evenly flex-wrap max-w-[1200px] mx-auto bg-white rounded-b-xl">
         {/* logo */}
         <figure className="w-52">
           <img src={logo} alt="" />
         </figure>
 
         {/* address */}
-        <div className="flex-box-center flex-wrap gap-y-4 pb-4">
-          <div className="flex items-center justify-center gap-2 px-4 border-l border-[#777777]">
+        <div className="flex-box-start flex-wrap gap-y-4 pb-4">
+          <div className="flex items-center justify-center gap-2 px-4 border-none md:border-l border-[#777777]">
             <figure className="w-8">
-              <img src={building} alt="" />
+              <BsFillEnvelopeFill size={50} />
             </figure>
             <div className="">
-              <p className="text-xs text-gray-500">Meet us at</p>
-              <h2 className="font-bold text-sm">
-                G -23, Bawana, Delhi - 110039
-              </h2>
+              <p className="text-xs text-gray-500">Mail us at:</p>
+              <h2 className="font-bold text-sm">info@panamax.co.in</h2>
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 px-4 border-l border-[#777777]">
+          <div className="flex items-center justify-center gap-2 px-4 border-none md:border-l border-[#777777]">
             <figure className="w-8">
-              <img src={building} alt="" />
+              <BsFillTelephoneFill size={50} />
             </figure>
             <div className="">
-              <p className="text-xs text-gray-500">Meet us at</p>
-              <h2 className="font-bold text-sm">
-                G -23, Bawana, Delhi - 110039
-              </h2>
+              <p className="text-xs text-gray-500">Call us at:</p>
+              <h2 className="font-bold text-sm">18009992049</h2>
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 px-4 border-l border-[#777777]">
+          <div className="flex items-center justify-center gap-2 px-4 border-none md:border-l border-[#777777]">
             <figure className="w-8">
-              <img src={building} alt="" />
+              <BsPinMapFill size={50} />
             </figure>
             <div className="">
-              <p className="text-xs text-gray-500">Meet us at</p>
+              <p className="text-xs text-gray-500">Address:</p>
               <h2 className="font-bold text-sm">
-                G -23, Bawana, Delhi - 110039
+                Panamax House <br /> 594-595/154 Pooth Khurd
               </h2>
             </div>
           </div>
@@ -86,82 +77,48 @@ const Footer = () => {
       </div>
 
       {/* navigation and form */}
-      <div className="grid grid-cols-4 mt-6 max-w-[1200px] mx-auto gap-y-8">
+      <div className="grid grid-cols-4 mt-6 mx-auto max-w-[1200px] gap-y-8">
         <div className="col-span-4 lg:col-span-3 text-white flex-box-start flex-col items-start md:flex-row gap-4 md:gap-10">
-          <div className="grid grid-cols-4 w-full gap-8 md:gap-0">
-            {/* quick link */}
-            <div className="col-span-4 md:col-span-1">
-              <h2 className="text-xl mb-4 relative before:absolute before:top-0 before:left-0 before:w-8 before:h-1 before:rounded-full before:bg-primary">
-                Quick Links
-              </h2>
-              <ul>
-                {navList.map((item, key) => {
-                  return (
-                    <li
-                      key={key}
-                      className="capitalize text-sm md:text-md lg:text-[14px]"
-                    >
-                      <Link to={item.path}>{item.name}</Link>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
-
+          <div className="grid grid-cols-12 w-full gap-8 md:gap-0">
             {/* product categories */}
-            <div className="col-span-4 md:col-span-3">
+            <div className="col-span-12">
               <h2 className="text-xl mb-4 relative before:absolute before:top-0 before:left-0 before:w-8 before:h-1 before:rounded-full before:bg-primary">
                 Product Categories
               </h2>
               {/* categories */}
-              <div className="flex-box-start gap-4 flex-wrap md:flex-nowrap">
-                <ul className="flex-1">
-                  {navList.map((item, key) => {
+              <div className="grid grid-cols-1 md:grid-cols-3  items-start gap-4 gap-y-6 ">
+                <ul className="">
+                  {products.slice(0, 10).map((item, key) => {
                     return (
                       <li
                         key={key}
-                        className="capitalize text-sm md:text-md lg:text-[14px]"
+                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1"
                       >
-                        <Link to={item.path}>{item.name}</Link>
+                        <Link to={`product/${item.id}`}>{item.name}</Link>
                       </li>
                     );
                   })}
                 </ul>
-
-                <ul className="flex-1">
-                  {navList.map((item, key) => {
+                <ul className="">
+                  {products.slice(10, 20).map((item, key) => {
                     return (
                       <li
                         key={key}
-                        className="capitalize text-sm md:text-md lg:text-[14px]"
+                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1"
                       >
-                        <Link to={item.path}>{item.name}</Link>
+                        <Link to={`product/${item.id}`}>{item.name}</Link>
                       </li>
                     );
                   })}
                 </ul>
-
-                <ul className="flex-1">
-                  {navList.map((item, key) => {
+                <ul className="">
+                  {products.slice(20, 30).map((item, key) => {
                     return (
                       <li
                         key={key}
-                        className="capitalize text-sm md:text-md lg:text-[14px]"
+                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1"
                       >
-                        <Link to={item.path}>{item.name}</Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-
-                <ul className="flex-1">
-                  {navList.map((item, key) => {
-                    return (
-                      <li
-                        key={key}
-                        className="capitalize text-sm md:text-md lg:text-[14px]"
-                      >
-                        <Link to={item.path}>{item.name}</Link>
+                        <Link to={`product/${item.id}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -170,34 +127,47 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className="col-span-4 lg:col-span-1 mt-8 md:mt-0 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-2 md:gap-10">
+        {/* form */}
+        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-2 md:gap-4">
           <h2 className="text-2xl font-bold text-secondary text-shadow">
             Enquire Now
           </h2>
           <form className="flex items-center justify-center flex-col gap-2 w-full">
             <input
               type="text"
-              placeholder="Contact Number"
+              name="name"
+              placeholder="Full Name"
+              required
+              className="border rounded-lg py-2 px-4 text-sm w-full"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              required
+              className="border rounded-lg py-2 px-4 text-sm w-full"
+            />
+            <input
+              type="tel"
+              name="number"
+              placeholder="Phone Number"
+              required
               className="border rounded-lg py-2 px-4 text-sm w-full"
             />
             <input
               type="text"
-              placeholder="Contact Number"
+              name="company"
+              placeholder="Company"
+              required
               className="border rounded-lg py-2 px-4 text-sm w-full"
             />
-            <input
-              type="text"
-              placeholder="Contact Number"
-              className="border rounded-lg py-2 px-4 text-sm w-full"
-            />
-            <button className="btn-secondary">Send Enquiry</button>
+            <button className="btn-secondary mt-2">Send Enquiry</button>
           </form>
         </div>
       </div>
 
       {/* social links */}
-      <div className="flex-box-center gap-2 md:flex-box-between flex-wrap max-w-[1200px] mx-auto border-t border-[#1C4BAA] py-2 mt-8">
+      <div className="flex-box-center gap-2 md:flex-box-between flex-wrap max-w-[1200px] mx-auto border-t border-[#00051c] py-2 mt-8">
         {/* socials */}
         <div className="flex-box-center gap-2">
           <span className="flex-box-center bg-white w-8 h-8 rounded-full">
@@ -210,6 +180,19 @@ const Footer = () => {
             <FaLinkedinIn size={15} className="m-auto text-secondary" />
           </span>
         </div>
+
+        <ul className="flex-box-center gap-2">
+          {navList.map((item, key) => {
+            return (
+              <li
+                key={key}
+                className="capitalize text-sm md:text-md lg:text-[14px] mb-1 text-white"
+              >
+                <Link to={item.path}>{item.name}</Link>
+              </li>
+            );
+          })}
+        </ul>
 
         {/* copyright */}
         <p className="text-sm text-white">Copyright 2023 All right Reserved</p>

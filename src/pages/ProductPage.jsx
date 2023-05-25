@@ -71,10 +71,10 @@ const ProductPage = () => {
 
         {/* breadcrumb */}
         <motion.div variants={item} className="breadcommon">
-          <h2 className="text-[36px] font-bold text-primary relative z-10 capitalize">
+          <h2 className="text-[24px] font-bold text-primary relative z-10 capitalize ">
             {title}
           </h2>
-          <ul className="breadLinks flex-box-start text-white relative z-10 gap-1">
+          <ul className="breadLinks flex-box-start text-white text-xs md:text-sm relative z-10 gap-1">
             <li>
               <AiFillHome className="inline-block" /> <Link to="/">Home</Link>
             </li>
@@ -83,7 +83,7 @@ const ProductPage = () => {
               <Link to="/">Product</Link>
             </li>
             <VscChevronRight className="inline-block" />
-            <li>
+            <li className="">
               <NavLink>{title}</NavLink>
             </li>
           </ul>
@@ -94,13 +94,13 @@ const ProductPage = () => {
           variants={item}
           className="bg-white p-8 px-4 md:px-10 lg:px-12 rounded-lg grid grid-cols-12 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block"
         >
-          <Swiper slidesPerView={1} className="col-span-2 md:col-span-5">
+          <Swiper slidesPerView={1} className="col-span-12 md:col-span-5">
             <SwiperSlide>
               <figure className="col-span-2 md:col-span-1 relative z-10 h-full w-full">
                 <img
                   src={productImg}
                   alt=""
-                  className="rounded-2xl object-contain !h-auto "
+                  className="rounded-2xl object-contain !h-auto"
                 />
               </figure>
             </SwiperSlide>
@@ -109,7 +109,7 @@ const ProductPage = () => {
                 <img
                   src={productImg}
                   alt=""
-                  className="rounded-2xl flex-1 h-full w-full object-center object-cover"
+                  className="rounded-2xl object-contain !h-auto"
                 />
               </figure>
             </SwiperSlide>
@@ -118,20 +118,20 @@ const ProductPage = () => {
                 <img
                   src={productImg}
                   alt=""
-                  className="rounded-2xl flex-1 h-full w-full object-center object-cover"
+                  className="rounded-2xl object-contain !h-auto"
                 />
               </figure>
             </SwiperSlide>
           </Swiper>
 
-          <div className="col-span-2 md:col-span-7 py-4 flex-box-col-start items-start">
+          <div className="col-span-12 md:col-span-7 py-4 flex-box-col-start items-start">
             <h3 className="text-2xl font-bold text-gray-900 capitalize border-l-[3px] mb-4 border-primary pl-2">
               {title}
             </h3>
             <div>
               <p
                 dangerouslySetInnerHTML={{
-                  __html: showMore ? about : about.substring(0, 290),
+                  __html: showMore ? about : about.substring(0, 700),
                 }}
                 className="inline"
               />
@@ -195,16 +195,18 @@ const ProductPage = () => {
               <span className="font-bold italic text-shadow">features</span>
             </h2>
             <table className="table-auto border-separate border-spacing-y-4 px-4">
-              {features?.slice(0, showFeatures).map((feature, key) => {
-                return (
-                  <tr className="even:bg-gray-100" key={key}>
-                    <th className="align-top text-start p-2 rounded-l">
-                      {feature.name}
-                    </th>
-                    <td className="p-2 rounded-r text-sm">{feature.about}</td>
-                  </tr>
-                );
-              })}
+              <tbody>
+                {features?.slice(0, showFeatures).map((feature, key) => {
+                  return (
+                    <tr className="even:bg-gray-100" key={key}>
+                      <th className="align-top text-start p-2 rounded-l">
+                        {feature.name}
+                      </th>
+                      <td className="p-2 rounded-r text-sm">{feature.about}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
             </table>
             <button
               className="text-primary mx-auto w-full font-bold flex-box-col-center"
@@ -239,12 +241,12 @@ const ProductPage = () => {
             <span className="font-bold italic text-shadow"> application</span>
           </h2>
 
-          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 gap-10 relative z-10">
-            <div className="col-span-12 md:col-span-8">
-              <ul className="pt-8 border-gray-300 pl-4">
+          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 gap-10 relative z-10 ">
+            <div className="col-span-12 md:col-span-12">
+              <ul className="pt-8 px-4">
                 {applications?.slice(0, showApplications).map((item, key) => {
                   return (
-                    <li className="mb-1 list-disc last:inline" key={key}>
+                    <li className="mb-2 list-disc" key={key}>
                       {item.about}
                     </li>
                   );
@@ -271,13 +273,14 @@ const ProductPage = () => {
                 </button>
               </ul>
             </div>
-            <div className="col-span-12 md:col-span-4 rounded-xl overflow-hidden flex-box-center">
+            {/* below section hidden might show later */}
+            <div className="hidden col-span-12 md:col-span-4 rounded-xl overflow-hidden flex-box-center">
               <img src={image} alt="" className="w-full !h-auto" />
             </div>
           </div>
         </motion.div>
         {/* icons */}
-        <div className="flex-box-center mt-4 gap-6 flex-wrap relative z-10 px-4 md:px-10 lg:px-20 gap-y-20">
+        <div className="flex-box-center mt-4 gap-6 flex-wrap relative z-10 px-4 md:px-10 lg:px-20 gap-y-20 hidden">
           {applications.map((item, key) => {
             return (
               <div
@@ -305,7 +308,7 @@ const ProductPage = () => {
         {/* industries */}
         <motion.div variants={item} className="my-20 px-4 md:px-10 lg:px-12">
           <h2 className="font-thin text-3xl text-primary capitalize text-center">
-            using{" "}
+            used by{" "}
             <span className="font-bold italic text-shadow"> industries</span>
           </h2>
           <div className="mt-10 flex-box-center flex-wrap gap-4">

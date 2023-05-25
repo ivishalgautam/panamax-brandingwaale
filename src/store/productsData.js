@@ -1,4 +1,3 @@
-import { MdOutlinePower } from "react-icons/md";
 // for applications
 import color_coding from "../assets/icons/color_coding.png";
 import idenfication from "../assets/icons/idenfication.png";
@@ -10,8 +9,6 @@ import installation from "../assets/icons/installation.png";
 import production_design from "../assets/icons/production_design.png";
 import sports from "../assets/icons/sports.png";
 import diy from "../assets/icons/diy.png";
-
-// for industries
 import electric from "../assets/icons/electric.png";
 import automotive from "../assets/icons/automotive.png";
 import aerospace from "../assets/icons/aerospace.png";
@@ -22,6 +19,49 @@ import quality_control from "../assets/icons/quality_control.png";
 import construction from "../assets/icons/construction.png";
 import automation from "../assets/icons/automation.png";
 import hazardous from "../assets/icons/hazardous.png";
+import hvac from "../assets/icons/hvac.png";
+import appliance from "../assets/icons/Appliance.png";
+import film from "../assets/icons/Film-Production.png";
+import furniture from "../assets/icons/Furniture-manufacturing.png";
+import electronicManufacturing from "../assets/icons/electronic-maufacturing.png";
+import baking from "../assets/icons/Baking-Industry.png";
+import cabinetry from "../assets/icons/Cabinetry-Joinery.png";
+import chemical from "../assets/icons/chemical-proccessign.png";
+import chemistry from "../assets/icons/chemistry-packing.png";
+import ecommerce from "../assets/icons/ecommerce.png";
+import educational from "../assets/icons/Educational-Institutions.png";
+import wiring from "../assets/icons/electric-wiring.png";
+import emergencyRepair from "../assets/icons/emergency-repair.png";
+import exihibition from "../assets/icons/exhibition-installations.png";
+import fabrication from "../assets/icons/Fabrication.png";
+import food_beverage from "../assets/icons/Food-Beverage-Industry.png";
+import food_processing from "../assets/icons/Food-Processing.png";
+import Glass_Mirrors from "../assets/icons/Glass-Mirrors.png";
+import gym from "../assets/icons/Gymnasiums-Sports-Facilities.png";
+import hospitality from "../assets/icons/Hospitality-Sector.png";
+import hydraulic from "../assets/icons/Hydraulic-Pneumatic-Systems.png";
+import industrialFacilities from "../assets/icons/Industrial-Facilities.png";
+import labCleanrooms from "../assets/icons/Lab-Cleanrooms.png";
+import industrialPackaging from "../assets/icons/Manufacturing-Industrial-Packaging.png";
+import medicalEquip from "../assets/icons/Medical-Equipment.png";
+import newsPaper from "../assets/icons/newspaper-printing.png";
+import packagingShipping from "../assets/icons/Packaging-shipping.png";
+import powder from "../assets/icons/Powder-coating.png";
+import priceTag from "../assets/icons/price-tag.png";
+import printingCircuit from "../assets/icons/Printing-Circuit-board-pcb.png";
+import renovationRemodelling from "../assets/icons/Renovation-Remodelling.png";
+import residentialConstruction from "../assets/icons/Residential-Construction.png";
+import retail from "../assets/icons/Retail-Commercial-Spaces.png";
+import laboratary from "../assets/icons/Scientific-Laboratory-Equipment.png";
+import skylights from "../assets/icons/Skylights-Canopies.png";
+import soundproofing from "../assets/icons/Soundproofing.png";
+import storageTank from "../assets/icons/storage-tank.png";
+import telecommunications from "../assets/icons/Telecommunications.png";
+import television from "../assets/icons/Television-Production.png";
+import textile from "../assets/icons/Textile-Apparel-Industry.png";
+import transportation from "../assets/icons/Transportation-Logistics.png";
+import wasteWater from "../assets/icons/waste-water.png";
+import woodWorking from "../assets/icons/Woodworking-Workshops.png";
 
 // products
 import maskingTape from "../assets/product-images/masking-tape.jpg";
@@ -91,11 +131,12 @@ const productsData = [
   {
     id: 1,
     title: "Masking tape",
+    name: "Masking tape",
     path: "masking-tape",
     productImg: img1,
     image: maskingTape,
     about:
-      "Masking tape is a versatile adhesive tape that is designed to be easily applied and removed without leaving behind residue or damaging surfaces. It consists of a thin strip of paper or thin plastic film coated with a pressure-sensitive adhesive.<br><br>What sets masking tape apart is its unique ability to temporarily protect surfaces during painting, construction, or other projects. Its primary purpose is to create clean, straight lines and prevent paint or other materials from bleeding or smudging onto adjacent areas. It adheres firmly to surfaces such as walls, trim, glass, and metal, providing a reliable barrier against unwanted paint or adhesive seepage.<br><br>Beyond its use in painting, masking tape finds applications in various industries and DIY projects. It can be employed for labeling, bundling, light packaging, and even in arts and crafts. Its gentle adhesive properties make it suitable for delicate surfaces, allowing for precise and damage-free masking.      Masking tape's distinguishing feature lies in its easy removal without leaving residue or causing damage, making it a convenient and practical solution for temporary masking needs. Its flexibility and compatibility with a wide range of surfaces make it an essential tool for professionals, hobbyists, and homeowners alike, providing an efficient and clean masking solution for a multitude of projects.",
+      "Masking tape is a versatile adhesive tape that is designed to be easily applied and removed without leaving behind residue or damaging surfaces. It consists of a thin strip of paper or thin plastic film coated with a pressure-sensitive adhesive.<br>What sets masking tape apart is its unique ability to temporarily protect surfaces during painting, construction, or other projects. Its primary purpose is to create clean, straight lines and prevent paint or other materials from bleeding or smudging onto adjacent areas. It adheres firmly to surfaces such as walls, trim, glass, and metal, providing a reliable barrier against unwanted paint or adhesive seepage.<br>Beyond its use in painting, masking tape finds applications in various industries and DIY projects. It can be employed for labeling, bundling, light packaging, and even in arts and crafts. Its gentle adhesive properties make it suitable for delicate surfaces, allowing for precise and damage-free masking.      Masking tape's distinguishing feature lies in its easy removal without leaving residue or causing damage, making it a convenient and practical solution for temporary masking needs. Its flexibility and compatibility with a wide range of surfaces make it an essential tool for professionals, hobbyists, and homeowners alike, providing an efficient and clean masking solution for a multitude of projects.",
     description: [
       "A must have product for Carpenters, Painters and Fabricators.",
       "The best product for Paint Masking, Door Painting, Laminate Pasting, House Decoration, Construction Sites and Car Body Repairing and Painting Work efc.",
@@ -165,19 +206,19 @@ const productsData = [
         name: "Art and Design",
         about:
           "Masking tape is a popular tool for artists and designers. It can be used to create geometric patterns, outlines, or guide lines on canvases or surfaces. Its clean removal makes it ideal for temporary art installations or exhibitions.",
-        icon: repairing,
+        icon: arts,
       },
       {
         name: "Home Renovations",
         about:
           "During home renovations, masking tape serves as a handy tool. It can be used to mark areas for cutting or drilling, secure plastic sheeting for dust protection, or create temporary guidelines for installing tiles or wallpaper.",
-        icon: safety_marking,
+        icon: renovationRemodelling,
       },
       {
         name: "Gift Wrapping and Packaging",
         about:
           "Masking tape adds a unique touch to gift wrapping and packaging. It can be used to create decorative borders, secure ribbons or bows, or even create custom designs on wrapping paper or boxes. Its versatility allows for endless creative possibilities.",
-        icon: arts,
+        icon: packagingShipping,
       },
       {
         name: "Temporary Fixes and Repairs",
@@ -189,17 +230,17 @@ const productsData = [
         name: "Photography and Filmmaking",
         about:
           "In the realm of photography and filmmaking, masking tape plays a crucial role. It can be used to secure lighting equipment, mark positions for actors or props, or create temporary backdrops or set designs.",
-        icon: production_design,
+        icon: film,
       },
     ],
     industrialUses: [
       {
         name: "Automotive Industry",
-        icon: electric,
+        icon: automotive,
       },
       {
         name: "Electronics Manufacturing",
-        icon: automotive,
+        icon: electronicManufacturing,
       },
       {
         name: "Aerospace Industry",
@@ -207,15 +248,15 @@ const productsData = [
       },
       {
         name: "Construction and Building",
-        icon: industrial_equipment,
+        icon: construction,
       },
       {
         name: "Powder Coating and Surface Finishing",
-        icon: warehouse,
+        icon: powder,
       },
       {
         name: "Furniture Manufacturing",
-        icon: pipes,
+        icon: furniture,
       },
       {
         name: "PCB (Printed Circuit Board) Production",
@@ -223,18 +264,19 @@ const productsData = [
       },
       {
         name: "Glass and Window Industry",
-        icon: construction,
+        icon: Glass_Mirrors,
       },
     ],
   },
   {
     id: 2,
     title: "PRE-MASKING TAPE",
+    name: "Pre-Masking tape",
     path: "pre-masking-tape",
     productImg: img2,
     image: preMasking,
     about:
-      "Pre-masking tape, also known as pre-taped masking film or pre-taped masking paper, is a specialized type of tape used in various painting and construction applications. It is designed to simplify the process of masking off areas that need protection from paint or other coatings.<br><br>Unlike traditional masking tapes that come as separate rolls and need to be applied alongside a protective covering, pre-masking tape combines the advantages of both masking tape and protective film/paper. It consists of a strip of masking tape attached to a roll of plastic film or paper, forming a convenient, all-in-one solution.<br><br>The unique feature of pre-masking tape lies in its efficiency and time-saving properties. By incorporating the tape and protective film/paper together, it eliminates the need for separate steps of applying tape and then covering it with a protective material. This innovative design enables users to mask off areas quickly and effectively, reducing labor and ensuring clean, crisp paint lines.",
+      "Pre-masking tape, also known as pre-taped masking film or pre-taped masking paper, is a specialized type of tape used in various painting and construction applications. It is designed to simplify the process of masking off areas that need protection from paint or other coatings.<br>Unlike traditional masking tapes that come as separate rolls and need to be applied alongside a protective covering, pre-masking tape combines the advantages of both masking tape and protective film/paper. It consists of a strip of masking tape attached to a roll of plastic film or paper, forming a convenient, all-in-one solution.<br>The unique feature of pre-masking tape lies in its efficiency and time-saving properties. By incorporating the tape and protective film/paper together, it eliminates the need for separate steps of applying tape and then covering it with a protective material. This innovative design enables users to mask off areas quickly and effectively, reducing labor and ensuring clean, crisp paint lines.",
     description: [
       "Pre masking tape is an effortless solution to mask /cover automotive parts and large painted areas in the bus body, to protect against paint/scratches or any other object.",
       "It is a multi purpose masker tape with its application in painting,industrial and automotive.",
@@ -287,13 +329,13 @@ const productsData = [
         name: "Painting and refinishing",
         about:
           "They are applied to surfaces such as walls, ceilings, furniture, or trim to create clean paint lines and prevent paint bleed-through. ",
-        icon: color_coding,
+        icon: furniture,
       },
       {
         name: "DIY home improvement",
         about:
           "They are used for tasks such as painting walls, cabinets, or furniture, where achieving neat and clean paint lines is crucial. ",
-        icon: idenfication,
+        icon: diy,
       },
       {
         name: "Arts and crafts",
@@ -311,19 +353,19 @@ const productsData = [
         name: "Automotive customization",
         about:
           " They allow automotive enthusiasts and professionals to add personalization and unique detailing to cars, motorcycles, or other vehicles with confidence.",
-        icon: safety_marking,
+        icon: automotive,
       },
       {
         name: "Temporary surface protection",
         about:
           " They can be applied to surfaces such as windows, glass, or countertops during construction, renovation, or remodeling projects to safeguard them from paint splatters, dust, or scratches.",
-        icon: arts,
+        icon: renovationRemodelling,
       },
       {
         name: "Industrial marking and labeling",
         about:
           "They can be used to create temporary lines, grids, or markers on floors, walls, or equipment, providing visual guidance or safety indicators in warehouses, factories, or production facilities.",
-        icon: installation,
+        icon: industrialFacilities,
       },
       {
         name: "Stage and Production Design",
@@ -355,7 +397,7 @@ const productsData = [
       },
       {
         name: "Electronics manufacturing",
-        icon: electric,
+        icon: electronicManufacturing,
       },
       {
         name: "Industrial painting and refinishing",
@@ -363,7 +405,7 @@ const productsData = [
       },
       {
         name: "Construction and architectural projects",
-        icon: warehouse,
+        icon: construction,
       },
       {
         name: "Marine industry",
@@ -371,18 +413,19 @@ const productsData = [
       },
       {
         name: "Industrial surface protection",
-        icon: quality_control,
+        icon: industrialFacilities,
       },
     ],
   },
   {
     id: 5,
     title: "THB Acrylic Foam Tape",
+    name: "THB Acrylic",
     path: "THB-Acrylic-Foam-Tape",
     productImg: img5,
     image: tbh,
     about:
-      "TBH Acrylic Foam Tape is a high-performance adhesive tape known for its exceptional bonding strength and durability. It is made of a closed-cell acrylic foam with adhesive on both sides, providing a strong bond between two surfaces. The unique composition of the tape allows it to conform to irregularities and create a reliable seal, even in challenging conditions.<br><br>TBH Acrylic Foam Tape offers several key benefits. First, it provides excellent adhesion to various substrates, including metals, plastics, glass, and painted surfaces. It is resistant to temperature changes, UV radiation, moisture, and chemicals, ensuring long-lasting performance in diverse environments.The tape is commonly used in automotive, construction, and industrial applications. It can be used for attaching exterior trim, mounting emblems and badges, bonding panels, and sealing joints. Its high strength and durability make it ideal for applications that require a secure and long-lasting bond.",
+      "TBH Acrylic Foam Tape is a high-performance adhesive tape known for its exceptional bonding strength and durability. It is made of a closed-cell acrylic foam with adhesive on both sides, providing a strong bond between two surfaces. The unique composition of the tape allows it to conform to irregularities and create a reliable seal, even in challenging conditions.<br>TBH Acrylic Foam Tape offers several key benefits. First, it provides excellent adhesion to various substrates, including metals, plastics, glass, and painted surfaces. It is resistant to temperature changes, UV radiation, moisture, and chemicals, ensuring long-lasting performance in diverse environments.The tape is commonly used in automotive, construction, and industrial applications. It can be used for attaching exterior trim, mounting emblems and badges, bonding panels, and sealing joints. Its high strength and durability make it ideal for applications that require a secure and long-lasting bond.",
     description: [
       "Mounted frims, emblems & body side moldings are fixed with high performance adhesive fapes & die-cut. Various grades of acrylic foam tapes & PE foam fopes & their dis-cufs are available in various.",
       "Thickness : 0.2mm, 0.4mm, 0.5mm, 0.6mm, 0.8mm, 1.2mm, 1.5mm.",
@@ -445,7 +488,7 @@ const productsData = [
         name: "Sealing and Gasketing",
         about:
           "It is utilized for sealing and gasketing applications in HVAC systems, appliances, and enclosures",
-        icon: idenfication,
+        icon: hvac,
       },
       {
         name: "Vibration Damping",
@@ -457,13 +500,13 @@ const productsData = [
         name: "Thermal Insulation",
         about:
           "It is used in appliances, electronics, and HVAC systems to prevent heat loss or gain.",
-        icon: repairing,
+        icon: hvac,
       },
       {
         name: "Cushioning and Padding",
         about:
           "It is used in packaging, furniture manufacturing, and protective applications to provide shock absorption and protect delicate or fragile items during transit or handling.",
-        icon: safety_marking,
+        icon: packagingShipping,
       },
       {
         name: "Weather proofing",
@@ -475,7 +518,7 @@ const productsData = [
         name: "Electrical Insulation",
         about:
           "It is used to insulate wires, cables, and electrical components to prevent electrical leakage and ensure safe operation.",
-        icon: installation,
+        icon: electricalInsulation,
       },
       {
         name: "Panel Bonding",
@@ -487,7 +530,7 @@ const productsData = [
         name: "Surface Protection",
         about:
           "The tape is used for surface protection during manufacturing, transportation, and installation processes.",
-        icon: production_design,
+        icon: transportation,
       },
       {
         name: "Product Assembly",
@@ -499,15 +542,15 @@ const productsData = [
     industrialUses: [
       {
         name: "Automotive Industry",
-        icon: electric,
-      },
-      {
-        name: "Construction and Building",
         icon: automotive,
       },
       {
+        name: "Construction and Building",
+        icon: construction,
+      },
+      {
         name: "Electronics and Appliances",
-        icon: aerospace,
+        icon: appliance,
       },
       {
         name: "Aerospace and Aviation",
@@ -515,7 +558,7 @@ const productsData = [
       },
       {
         name: "Manufacturing and Assembly",
-        icon: warehouse,
+        icon: electronicManufacturing,
       },
       {
         name: "Renewable Energy",
@@ -527,21 +570,22 @@ const productsData = [
       },
       {
         name: "HVAC and Plumbing",
-        icon: construction,
+        icon: hvac,
       },
       {
         name: "Transportation and Logistics",
-        icon: construction,
+        icon: transportation,
       },
       {
         name: "Medical and Healthcare",
-        icon: construction,
+        icon: medicalEquip,
       },
     ],
   },
   {
     id: 3,
     title: "NANO-SIL TAPE",
+    name: "Nano-Sil tape",
     path: "Nano-Sil-tape",
     productImg: img3,
     image: nanoSil,
@@ -623,7 +667,7 @@ const productsData = [
         name: "Gift Wrapping and Packaging",
         about:
           "Nano-Sil tape can add an extra touch of creativity to your gift wrapping and packaging. You can use it to create decorative accents, seal gift boxes, or secure wrapping paper. Its bright colors and easy handling make gift wrapping a fun and personalized experience.",
-        icon: safety_marking,
+        icon: packagingShipping,
       },
       {
         name: "Fashion and Accessories",
@@ -668,6 +712,7 @@ const productsData = [
   {
     id: 4,
     title: "Mirror-mounting Tape",
+    name: "Mirror mounting tape",
     path: "mirror-mounting-tape",
     productImg: img4,
     image: mirrorMounting,
@@ -734,7 +779,7 @@ const productsData = [
         name: "Home Decor",
         about:
           "Mirror mounting tape is commonly used in home décor projects. It allows for quick and easy installation of mirrors on walls, doors, and furniture. Whether you're creating a decorative accent or adding functionality to a space, mirror mounting tape ensures a secure and hassle-free attachment.",
-        icon: diy,
+        icon: Glass_Mirrors,
       },
       {
         name: "Arts and Crafts",
@@ -746,13 +791,13 @@ const productsData = [
         name: "Retail Displays",
         about:
           "In the retail industry, mirror mounting tape plays a vital role in creating captivating displays. It allows retailers to showcase products with strategically placed mirrors, enhancing visibility and aesthetics. The tape's strong bonding ability ensures that the mirrors remain firmly attached, even in high-traffic retail environments.",
-        icon: securing,
+        icon: retail,
       },
       {
         name: "Photography and Filmmaking",
         about:
           "Mirror mounting tape finds applications in photography and filmmaking setups. It enables the secure placement of mirrors for reflective effects, lighting adjustments, and unique visual compositions. The tape's versatility and adhesive strength ensure stable mirror positioning during shooting.",
-        icon: repairing,
+        icon: film,
       },
       {
         name: "Event Design and Decor",
@@ -764,19 +809,19 @@ const productsData = [
         name: "Hospitality and Entertainment Venues",
         about:
           "Mirror mounting tape is utilized in hotels, restaurants, theaters, and entertainment venues for various purposes. It helps mount mirrors in dressing rooms, backstage areas, and public spaces, providing convenience and functionality. The tape's reliable adhesion ensures that mirrors stay securely mounted, even in busy hospitality environments.",
-        icon: arts,
+        icon: hospitality,
       },
       {
         name: "Fitness Studios and Gyms",
         about:
           "Mirror mounting tape is often used in fitness studios and gyms to mount large mirrors on walls. It allows individuals to observe and correct their exercise form, promoting safety and proper technique. The tape's strong adhesive properties ensure that the mirrors withstand vibrations and movement during workouts.",
-        icon: installation,
+        icon: gym,
       },
     ],
     industrialUses: [
       {
         name: "Interior Design and Decor",
-        icon: construction,
+        icon: residentialConstruction,
       },
       {
         name: "Display and Signage",
@@ -788,34 +833,35 @@ const productsData = [
       },
       {
         name: "Manufacturing and Assembly",
-        icon: aerospace,
+        icon: electronicManufacturing,
       },
       {
         name: "Hospitality and Entertainment",
-        icon: warehouse,
+        icon: hospitality,
       },
       {
         name: "Medical and Healthcare",
-        icon: pipes,
+        icon: medicalEquip,
       },
       {
         name: "Home Improvement and Renovation",
-        icon: pipes,
+        icon: renovationRemodelling,
       },
       {
         name: "Electronics and Appliances",
-        icon: pipes,
+        icon: appliance,
       },
     ],
   },
   {
     id: 6,
     title: "PMX'5000",
+    name: "PMX 5000",
     path: "pmx-5000",
     productImg: img6,
     image: pmx,
     about:
-      "PMX Double-sided tape is a specialized adhesive tape that features adhesive on both sides, allowing it to bond two surfaces together. It is commonly used in various applications where a strong and reliable bond is required. PMX Double-sided tape typically consists of a thin layer of adhesive sandwiched between two release liners, which are removed during the application process.<br><br>This tape is known for its high adhesive strength and versatility. It can be used on a wide range of materials, including metals, plastics, glass, and wood. The adhesive used in PMX Double-sided tape is often acrylic-based, providing excellent bonding properties and resistance to temperature changes, moisture, and UV exposure.<br><br>The unique design of PMX Double-sided tape makes it suitable for various applications, such as mounting objects, joining materials, and securing components. It is commonly used in industries such as manufacturing, construction, automotive, signage, and crafts.",
+      "PMX Double-sided tape is a specialized adhesive tape that features adhesive on both sides, allowing it to bond two surfaces together. It is commonly used in various applications where a strong and reliable bond is required. PMX Double-sided tape typically consists of a thin layer of adhesive sandwiched between two release liners, which are removed during the application process.<br>This tape is known for its high adhesive strength and versatility. It can be used on a wide range of materials, including metals, plastics, glass, and wood. The adhesive used in PMX Double-sided tape is often acrylic-based, providing excellent bonding properties and resistance to temperature changes, moisture, and UV exposure.<br>The unique design of PMX Double-sided tape makes it suitable for various applications, such as mounting objects, joining materials, and securing components. It is commonly used in industries such as manufacturing, construction, automotive, signage, and crafts.",
     description: [
       "High adhesive industrial tape",
       "High intensity up fo 180°C heat resistance and double sided tissue fap.",
@@ -888,7 +934,7 @@ const productsData = [
         name: "Graphic and Signage Installation",
         about:
           "PMX Double-sided tapes are widely employed in graphic and signage installation. They offer a strong bond and excellent adhesion to various surfaces, making them ideal for mounting signs, posters, banners, and graphics. These tapes ensure easy and hassle-free installation while providing a clean and professional appearance.",
-        icon: arts,
+        icon: exihibition,
       },
       {
         name: "Paper and Stationery",
@@ -906,7 +952,7 @@ const productsData = [
         name: "Home Improvement and Decor",
         about:
           "PMX Double-sided tapes find application in home improvement and decor projects. They are used for mounting mirrors, attaching hooks and fixtures, securing lightweight objects to walls or surfaces, and even temporary carpet installation. PMX Double-sided tapes provide convenience and ease of use for various household applications.",
-        icon: production_design,
+        icon: furniture,
       },
       {
         name: "Exhibition and Trade Show Displays",
@@ -918,13 +964,13 @@ const productsData = [
         name: "Automotive Interior Applications",
         about:
           "PMX Double-sided tapes are utilized in automotive interiors for various applications. They are commonly used for attaching trim pieces, securing upholstery materials, mounting interior panels, and bonding dashboard components. These tapes provide reliable adhesion and contribute to the overall aesthetics and functionality of the vehicle interior.",
-        icon: installation,
+        icon: automotive,
       },
       {
         name: "Textile and Apparel",
         about:
           "PMX Double-sided tapes are used in the textile and apparel industry for temporary fabric bonding, hemming, and seam sealing. They provide a quick and secure solution for temporary alterations, temporary hems, or attaching fabric accessories without the need for sewing. PMX Double-sided tapes offer convenience and flexibility in garment and textile applications.",
-        icon: installation,
+        icon: textile,
       },
       {
         name: "Electronic Device Repairs",
@@ -936,7 +982,7 @@ const productsData = [
         name: "Medical and Healthcare Applications",
         about:
           "PMX Double-sided tapes find application in the medical and healthcare field. They are used for securing medical dressings, attaching electrodes, and mounting sensors in wearable medical devices. These tapes offer gentle adhesion and conformability, ensuring patient comfort and reliable attachment.",
-        icon: installation,
+        icon: medicalEquip,
       },
     ],
     industrialUses: [
@@ -958,15 +1004,15 @@ const productsData = [
       },
       {
         name: "Packaging Industry",
-        icon: warehouse,
+        icon: industrialPackaging,
       },
       {
         name: "Manufacturing and Assembly",
-        icon: pipes,
+        icon: electronicManufacturing,
       },
       {
         name: "Furniture and Woodworking Industry",
-        icon: pipes,
+        icon: woodWorking,
       },
       {
         name: "DIY and Crafts",
@@ -974,22 +1020,23 @@ const productsData = [
       },
       {
         name: "Medical and Healthcare Industry",
-        icon: diy,
+        icon: medicalEquip,
       },
       {
         name: "Textile and Apparel Industry",
-        icon: diy,
+        icon: textile,
       },
     ],
   },
   {
     id: 7,
     title: "Electrical insulation tape",
+    name: "Electrical insulation tape",
     path: "electrical-insulation-tape",
     productImg: img7,
     image: electricalInsulation,
     about:
-      "Electrical insulation tape, also known as electrical tape or insulating tape, is a specialized type of adhesive tape designed to provide insulation and protection for electrical wires and components. It is made of a thin, flexible material, typically vinyl or rubber, which is coated with an adhesive on one side.<br><br>The primary purpose of electrical insulation tape is to prevent the flow of electrical current between conductive materials, thus reducing the risk of electrical shocks, short circuits, and other electrical hazards. It creates a barrier between exposed wires and surrounding objects or surfaces, helping to maintain the integrity of electrical systems.",
+      "Electrical insulation tape, also known as electrical tape or insulating tape, is a specialized type of adhesive tape designed to provide insulation and protection for electrical wires and components. It is made of a thin, flexible material, typically vinyl or rubber, which is coated with an adhesive on one side.<br>The primary purpose of electrical insulation tape is to prevent the flow of electrical current between conductive materials, thus reducing the risk of electrical shocks, short circuits, and other electrical hazards. It creates a barrier between exposed wires and surrounding objects or surfaces, helping to maintain the integrity of electrical systems.",
     description: [
       "Reliable self-extinguishing electrical insulation tape.",
       "Insulation & protection fo wire of electrical appliances & machines.",
@@ -1079,7 +1126,7 @@ const productsData = [
         name: "Outdoor Applications",
         about:
           "It can be used to protect exposed electrical connections, repair outdoor wiring, or secure temporary installations in outdoor settings.",
-        icon: installation,
+        icon: wiring,
       },
       {
         name: "Automotive Wiring",
@@ -1113,11 +1160,11 @@ const productsData = [
       },
       {
         name: "Telecommunications",
-        icon: warehouse,
+        icon: telecommunications,
       },
       {
         name: "Manufacturing and Industrial Equipment",
-        icon: pipes,
+        icon: industrial_equipment,
       },
       {
         name: "Renewable Energy Sector",
@@ -1140,11 +1187,12 @@ const productsData = [
   {
     id: 8,
     title: "Dry wall joint tape",
+    name: "Dry wall joint tape",
     path: "dry-wall-joint-tape",
     productImg: img8,
     image: dryWall,
     about:
-      "Drywall joint tape is made of a strong, self-adhesive fiberglass mesh material that is highly durable and resistant to tearing. Its unique construction allows it to bond securely with the drywall surface, creating a solid and long-lasting joint. The tape is typically applied over the joints where two drywall panels meet, such as corners, seams, and edges.<br><br>The primary purpose of drywall joint tape is to prevent cracks and visible seams from appearing in the finished wall. It helps to distribute the stress and movement that occurs as the drywall expands and contracts over time, minimizing the risk of cracks or separation at the joints. By reinforcing the joints, it ensures a smooth and professional-looking surface.<br><br>Drywall joint tape is easy to apply and can be used with various types of joint compounds. It provides a strong foundation for the application of the compound, allowing for a seamless blend between the taped joints and the rest of the drywall surface. The tape's mesh structure allows the compound to adhere effectively, resulting in a smooth and flat finish.",
+      "Drywall joint tape is made of a strong, self-adhesive fiberglass mesh material that is highly durable and resistant to tearing. Its unique construction allows it to bond securely with the drywall surface, creating a solid and long-lasting joint. The tape is typically applied over the joints where two drywall panels meet, such as corners, seams, and edges.<br>The primary purpose of drywall joint tape is to prevent cracks and visible seams from appearing in the finished wall. It helps to distribute the stress and movement that occurs as the drywall expands and contracts over time, minimizing the risk of cracks or separation at the joints. By reinforcing the joints, it ensures a smooth and professional-looking surface.<br>Drywall joint tape is easy to apply and can be used with various types of joint compounds. It provides a strong foundation for the application of the compound, allowing for a seamless blend between the taped joints and the rest of the drywall surface. The tape's mesh structure allows the compound to adhere effectively, resulting in a smooth and flat finish.",
     description: [
       "Fibre glass mesh for strong joints.",
       "Eliminates plaster & bubbles.",
@@ -1226,7 +1274,7 @@ const productsData = [
         name: "Skim Coating",
         about:
           "It can be used in skim coating applications, where a thin layer of joint compound is applied over the entire surface to create a smooth finish. ",
-        icon: safety_marking,
+        icon: powder,
       },
       {
         name: "Texture Matching",
@@ -1244,7 +1292,7 @@ const productsData = [
         name: "Soundproofing",
         about:
           "It can be utilized to enhance the acoustic performance of walls and ceilings.",
-        icon: sports,
+        icon: soundproofing,
       },
       {
         name: "Moisture Barrier",
@@ -1256,27 +1304,27 @@ const productsData = [
         name: "Temporary Surface Protection",
         about:
           "It can be used for temporary surface protection during construction or renovation projects.",
-        icon: automotive,
+        icon: renovationRemodelling,
       },
       {
         name: "DIY Crafts and Projects",
         about:
           "Drywall joint tapes can be repurposed for various DIY crafts and projects, can be used for bookbinding, creating textured surfaces in art projects.",
-        icon: installation,
+        icon: diy,
       },
     ],
     industrialUses: [
       {
         name: "Commercial Construction",
-        icon: electric,
+        icon: construction,
       },
       {
         name: "Residential Construction",
-        icon: automotive,
+        icon: residentialConstruction,
       },
       {
         name: "Renovation and Remodeling",
-        icon: construction,
+        icon: renovationRemodelling,
       },
       {
         name: "Interior Design",
@@ -1284,7 +1332,7 @@ const productsData = [
       },
       {
         name: "Soundproofing",
-        icon: warehouse,
+        icon: soundproofing,
       },
       {
         name: "Fire Resistance",
@@ -1292,30 +1340,31 @@ const productsData = [
       },
       {
         name: "Industrial Facilities",
-        icon: pipes,
+        icon: industrialFacilities,
       },
       {
         name: "Educational Institutions",
-        icon: diy,
+        icon: educational,
       },
       {
         name: "Hospitality Sector",
-        icon: diy,
+        icon: hospitality,
       },
       {
         name: "Institutional Facilities",
-        icon: electric,
+        icon: educational,
       },
     ],
   },
   {
     id: 9,
     title: "PTFE THREAD SEAL TAPE",
+    name: "PTFE thread seal tape",
     path: "PTFE-thread-seal-tape",
     productImg: img9,
     image: ptfe,
     about:
-      "PTFE thread seal tape, also known as plumber's tape or Teflon tape, is a specialized type of adhesive tape used in plumbing and pipe fitting applications. It is made from polytetrafluoroethylene (PTFE), a high-performance synthetic fluoropolymer known for its excellent chemical resistance and low friction properties.<br><br>PTFE thread seal tape is specifically designed to create a tight and reliable seal between threaded pipe fittings, preventing leaks and ensuring a secure connection. It is typically applied by wrapping it tightly around the threads of pipes and fittings before assembly.<br><br>The unique properties of PTFE thread seal tape provide several advantages. Firstly, it offers exceptional resistance to a wide range of chemicals, making it suitable for use with various plumbing systems and fluid types. Secondly, its low friction coefficient allows for smooth and easy tightening of threaded connections without galling or damaging the threads. Additionally, PTFE thread seal tape is highly durable and can withstand high temperatures and pressures commonly encountered in plumbing applications.<br><br>One of the key benefits of using PTFE thread seal tape is its versatility. It can be used with various pipe materials, including metal, plastic, and rubber, making it a universal sealing solution. Moreover, it can effectively seal both water and gas connections, making it suitable for a wide range of plumbing installations.",
+      "PTFE thread seal tape, also known as plumber's tape or Teflon tape, is a specialized type of adhesive tape used in plumbing and pipe fitting applications. It is made from polytetrafluoroethylene (PTFE), a high-performance synthetic fluoropolymer known for its excellent chemical resistance and low friction properties.<br>PTFE thread seal tape is specifically designed to create a tight and reliable seal between threaded pipe fittings, preventing leaks and ensuring a secure connection. It is typically applied by wrapping it tightly around the threads of pipes and fittings before assembly.<br>The unique properties of PTFE thread seal tape provide several advantages. Firstly, it offers exceptional resistance to a wide range of chemicals, making it suitable for use with various plumbing systems and fluid types. Secondly, its low friction coefficient allows for smooth and easy tightening of threaded connections without galling or damaging the threads. Additionally, PTFE thread seal tape is highly durable and can withstand high temperatures and pressures commonly encountered in plumbing applications.<br>One of the key benefits of using PTFE thread seal tape is its versatility. It can be used with various pipe materials, including metal, plastic, and rubber, making it a universal sealing solution. Moreover, it can effectively seal both water and gas connections, making it suitable for a wide range of plumbing installations.",
     description: [
       "Thread seal ape (also known as pte, teflon tape, or  plumber’ tape).",
       "Commonly used in plumbing for sealing pipe threads. Thread seal fape lubricates for @ deeper sealing of the threads",
@@ -1386,7 +1435,7 @@ const productsData = [
         name: "HVAC (Heating, Ventilation, and Air Conditioning)",
         about:
           "These tapes are widely used in HVAC systems for sealing threaded connections in pipes, ducts, and equipment.",
-        icon: safety_marking,
+        icon: hvac,
       },
       {
         name: "Irrigation Systems",
@@ -1398,13 +1447,13 @@ const productsData = [
         name: "Manufacturing and Assembly",
         about:
           "Thesel tapes are used in manufacturing and assembly processes that involve threaded connections.",
-        icon: diy,
+        icon: electronicManufacturing,
       },
       {
         name: "Chemical Processing",
         about:
           "Used for sealing connections in pipelines, valves, and tanks that handle corrosive or aggressive chemicals.",
-        icon: sports,
+        icon: chemical,
       },
       {
         name: "Marine Industry",
@@ -1422,7 +1471,7 @@ const productsData = [
         name: "Food Processing",
         about:
           "These tapes are suitable for use in food processing facilities, where hygienic conditions are crucial.",
-        icon: installation,
+        icon: food_processing,
       },
     ],
     industrialUses: [
@@ -1432,180 +1481,182 @@ const productsData = [
       },
       {
         name: "Hydraulic and Pneumatic Systems",
-        icon: automotive,
+        icon: hydraulic,
       },
       {
         name: "Electrical Wiring and Connections",
-        icon: construction,
+        icon: wiring,
       },
       {
         name: "Chemical Processing",
-        icon: aerospace,
+        icon: chemical,
       },
       {
         name: "Food and Beverage Industry",
-        icon: warehouse,
+        icon: food_processing,
       },
       {
         name: "HVAC Systems",
-        icon: pipes,
+        icon: hvac,
       },
       {
         name: "Water and Wastewater Treatment",
-        icon: pipes,
+        icon: wasteWater,
       },
       {
         name: "Scientific and Laboratory Equipment",
-        icon: diy,
+        icon: laboratary,
       },
     ],
   },
   // img
-  {
-    id: 10,
-    title: "PACKSEAL TAPE (BAG SEALING TAPE)",
-    path: "packseal-tape",
-    productImg: "",
-    image: "",
-    about:
-      "Packseal Tape, also known as Bag Sealing Tape, is a specialized adhesive tape used for sealing bags, pouches, and packages. It is designed to provide a secure and reliable seal, ensuring the contents of the bag are protected from moisture, dust, and tampering.<br>This tape is typically made from a durable and flexible material such as polypropylene or polyethylene, which offers excellent adhesion to various bag surfaces. It features a strong adhesive backing on one side that adheres firmly to the bag, creating a tight seal that prevents the bag from opening or spilling its contents.<br>The unique properties of Packseal Tape make it suitable for a wide range of applications, including packaging and sealing of food products, pharmaceuticals, electronics, hardware, and various industrial goods. It is commonly used in retail stores, warehouses, manufacturing facilities, and shipping centers to ensure the integrity and security of packaged items during storage, transportation, and display.",
-    description: [
-      "Biggest Range of Bag Sealing Tapes.",
-      "Complete Solution for your Packaging Requirements.",
-      "We provide customized bag sealing fopes with Logo and Brand Name.",
-      "Many ranges are ROHS Compliant and Environment Friendly.",
-      "An ISO 9001-2008 Certified Product.",
-    ],
-    features: [
-      {
-        name: "Strong Adhesion",
-        about:
-          "Packseal Tape is designed with a strong adhesive backing that provides excellent adhesion to various bag surfaces. It securely bonds to the bag material, creating a reliable seal that keeps the contents protected.",
-      },
-      {
-        name: "Moisture Resistance",
-        about:
-          "One of the key features of Packseal Tape is its moisture resistance. It forms a barrier against moisture, preventing water or other liquids from entering the bag. This feature is particularly important for packaging items that are sensitive to moisture, such as food products or electronics.",
-      },
-      {
-        name: "Tamper-Evident",
-        about:
-          "Packseal Tape is designed to provide tamper-evident properties. Once applied, it creates a visible seal that shows if the bag has been tampered with or opened. This feature adds an extra layer of security and ensures the integrity of the packaged items.",
-      },
-      {
-        name: "Flexibility",
-        about:
-          "The tape is made from flexible materials like polypropylene or polyethylene, allowing it to conform to the shape of the bag or pouch. This flexibility ensures a secure seal even on irregular or uneven surfaces.",
-      },
-      {
-        name: "Flexible and Conformable",
-        about:
-          "These tapes are flexible and easily conform to the shape of threaded fittings, ensuring a tight and secure seal. Their flexibility enables them to adapt to various pipe sizes and irregularities, providing consistent sealing performance.",
-      },
-      {
-        name: "Easy Application",
-        about:
-          "Packseal Tape is easy to apply, either by hand or with the help of a bag-sealing machine. It offers smooth and consistent unwinding from the roll, enabling quick and efficient sealing.",
-      },
-      {
-        name: "Versatility",
-        about:
-          "Packseal Tape is suitable for a wide range of bag sealing applications. It can be used for sealing food products, pharmaceuticals, hardware, electronics, and various industrial goods. Its versatility makes it a popular choice in retail, manufacturing, and shipping industries.",
-      },
-    ],
-    applications: [
-      {
-        name: "Food Packaging",
-        about:
-          "Packseal Tape is commonly used in the food industry for sealing bags, pouches, and containers containing perishable and non-perishable food items. ",
-        icon: diy,
-      },
-      {
-        name: "Household Storage",
-        about:
-          "It is an ideal choice for sealing bags used for storing and organizing various household items such as clothing, bedding, toys, and seasonal decorations. ",
-        icon: automotive,
-      },
-      {
-        name: "Travel and Outdoor Activities",
-        about:
-          "It is handy for sealing bags or pouches used during travel or outdoor activities.",
-        icon: color_coding,
-      },
-      {
-        name: "Arts and Crafts",
-        about:
-          "It is commonly used for sealing and protecting artwork, mounting photographs, and creating custom packaging for handmade products.",
-        icon: safety_marking,
-      },
-      {
-        name: "Shipping and Mailing",
-        about:
-          "It is extensively used for sealing packages, envelopes, and boxes for shipping and mailing purposes.",
-        icon: production_design,
-      },
-      {
-        name: "Industrial and Warehouse Operations",
-        about:
-          "It is utilized in industrial and warehouse settings for sealing bags, pallets, and containers holding various goods and materials.",
-        icon: diy,
-      },
-      {
-        name: "Retail and Packaging",
-        about:
-          " It is widely used in retail environments for sealing product packaging, gift bags, and promotional materials. ",
-        icon: sports,
-      },
-      {
-        name: "Medical and Healthcare",
-        about:
-          "It is employed in medical and healthcare facilities for sealing specimen bags, medical supplies, and sterilization packaging. ",
-        icon: installation,
-      },
-    ],
-    industrialUses: [
-      {
-        name: "Food Packaging",
-        icon: electric,
-      },
-      {
-        name: "Pharmaceutical Packaging",
-        icon: automotive,
-      },
-      {
-        name: "Retail and E-commerce",
-        icon: construction,
-      },
-      {
-        name: "Manufacturing and Industrial Packaging",
-        icon: aerospace,
-      },
-      {
-        name: "Agricultural and Horticultural Packaging",
-        icon: warehouse,
-      },
-      {
-        name: "Chemical and Hazardous Material Packaging",
-        icon: pipes,
-      },
-      {
-        name: "Logistics and Shipping",
-        icon: pipes,
-      },
-      {
-        name: "Scientific and Laboratory Equipment",
-        icon: diy,
-      },
-    ],
-  },
+  // {
+  //   id: 10,
+  //   title: "PACKSEAL TAPE (BAG SEALING TAPE)",
+  //   name: "Packseal tape",
+  //   path: "packseal-tape",
+  //   productImg: "",
+  //   image: "",
+  //   about:
+  //     "Packseal Tape, also known as Bag Sealing Tape, is a specialized adhesive tape used for sealing bags, pouches, and packages. It is designed to provide a secure and reliable seal, ensuring the contents of the bag are protected from moisture, dust, and tampering.<br>This tape is typically made from a durable and flexible material such as polypropylene or polyethylene, which offers excellent adhesion to various bag surfaces. It features a strong adhesive backing on one side that adheres firmly to the bag, creating a tight seal that prevents the bag from opening or spilling its contents.<br>The unique properties of Packseal Tape make it suitable for a wide range of applications, including packaging and sealing of food products, pharmaceuticals, electronics, hardware, and various industrial goods. It is commonly used in retail stores, warehouses, manufacturing facilities, and shipping centers to ensure the integrity and security of packaged items during storage, transportation, and display.",
+  //   description: [
+  //     "Biggest Range of Bag Sealing Tapes.",
+  //     "Complete Solution for your Packaging Requirements.",
+  //     "We provide customized bag sealing fopes with Logo and Brand Name.",
+  //     "Many ranges are ROHS Compliant and Environment Friendly.",
+  //     "An ISO 9001-2008 Certified Product.",
+  //   ],
+  //   features: [
+  //     {
+  //       name: "Strong Adhesion",
+  //       about:
+  //         "Packseal Tape is designed with a strong adhesive backing that provides excellent adhesion to various bag surfaces. It securely bonds to the bag material, creating a reliable seal that keeps the contents protected.",
+  //     },
+  //     {
+  //       name: "Moisture Resistance",
+  //       about:
+  //         "One of the key features of Packseal Tape is its moisture resistance. It forms a barrier against moisture, preventing water or other liquids from entering the bag. This feature is particularly important for packaging items that are sensitive to moisture, such as food products or electronics.",
+  //     },
+  //     {
+  //       name: "Tamper-Evident",
+  //       about:
+  //         "Packseal Tape is designed to provide tamper-evident properties. Once applied, it creates a visible seal that shows if the bag has been tampered with or opened. This feature adds an extra layer of security and ensures the integrity of the packaged items.",
+  //     },
+  //     {
+  //       name: "Flexibility",
+  //       about:
+  //         "The tape is made from flexible materials like polypropylene or polyethylene, allowing it to conform to the shape of the bag or pouch. This flexibility ensures a secure seal even on irregular or uneven surfaces.",
+  //     },
+  //     {
+  //       name: "Flexible and Conformable",
+  //       about:
+  //         "These tapes are flexible and easily conform to the shape of threaded fittings, ensuring a tight and secure seal. Their flexibility enables them to adapt to various pipe sizes and irregularities, providing consistent sealing performance.",
+  //     },
+  //     {
+  //       name: "Easy Application",
+  //       about:
+  //         "Packseal Tape is easy to apply, either by hand or with the help of a bag-sealing machine. It offers smooth and consistent unwinding from the roll, enabling quick and efficient sealing.",
+  //     },
+  //     {
+  //       name: "Versatility",
+  //       about:
+  //         "Packseal Tape is suitable for a wide range of bag sealing applications. It can be used for sealing food products, pharmaceuticals, hardware, electronics, and various industrial goods. Its versatility makes it a popular choice in retail, manufacturing, and shipping industries.",
+  //     },
+  //   ],
+  //   applications: [
+  //     {
+  //       name: "Food Packaging",
+  //       about:
+  //         "Packseal Tape is commonly used in the food industry for sealing bags, pouches, and containers containing perishable and non-perishable food items. ",
+  //       icon: packagingShipping,
+  //     },
+  //     {
+  //       name: "Household Storage",
+  //       about:
+  //         "It is an ideal choice for sealing bags used for storing and organizing various household items such as clothing, bedding, toys, and seasonal decorations. ",
+  //       icon: automotive,
+  //     },
+  //     {
+  //       name: "Travel and Outdoor Activities",
+  //       about:
+  //         "It is handy for sealing bags or pouches used during travel or outdoor activities.",
+  //       icon: color_coding,
+  //     },
+  //     {
+  //       name: "Arts and Crafts",
+  //       about:
+  //         "It is commonly used for sealing and protecting artwork, mounting photographs, and creating custom packaging for handmade products.",
+  //       icon: safety_marking,
+  //     },
+  //     {
+  //       name: "Shipping and Mailing",
+  //       about:
+  //         "It is extensively used for sealing packages, envelopes, and boxes for shipping and mailing purposes.",
+  //       icon: production_design,
+  //     },
+  //     {
+  //       name: "Industrial and Warehouse Operations",
+  //       about:
+  //         "It is utilized in industrial and warehouse settings for sealing bags, pallets, and containers holding various goods and materials.",
+  //       icon: diy,
+  //     },
+  //     {
+  //       name: "Retail and Packaging",
+  //       about:
+  //         " It is widely used in retail environments for sealing product packaging, gift bags, and promotional materials. ",
+  //       icon: packagingShipping,
+  //     },
+  //     {
+  //       name: "Medical and Healthcare",
+  //       about:
+  //         "It is employed in medical and healthcare facilities for sealing specimen bags, medical supplies, and sterilization packaging. ",
+  //       icon: medicalEquip,
+  //     },
+  //   ],
+  //   industrialUses: [
+  //     {
+  //       name: "Food Packaging",
+  //       icon: packagingShipping,
+  //     },
+  //     {
+  //       name: "Pharmaceutical Packaging",
+  //       icon: automotive,
+  //     },
+  //     {
+  //       name: "Retail and E-commerce",
+  //       icon: retail,
+  //     },
+  //     {
+  //       name: "Manufacturing and Industrial Packaging",
+  //       icon: electronicManufacturing,
+  //     },
+  //     {
+  //       name: "Agricultural and Horticultural Packaging",
+  //       icon: industrialPackaging,
+  //     },
+  //     {
+  //       name: "Chemical and Hazardous Material Packaging",
+  //       icon: packagingShipping,
+  //     },
+  //     {
+  //       name: "Logistics and Shipping",
+  //       icon: pipes,
+  //     },
+  //     {
+  //       name: "Scientific and Laboratory Equipment",
+  //       icon: laboratary,
+  //     },
+  //   ],
+  // },
   {
     id: 11,
     title: "PLATE MOUNTING TAPE FOR FLEXO-GRAPHIC PRINTING",
+    name: "Plate mounting tape",
     path: "plate-mounting-tape",
     productImg: img11,
     image: plateMounting,
     about:
-      "Plate mounting tape for flexographic printing is a specialized adhesive tape used in the process of mounting printing plates onto cylinders or sleeves in flexographic printing machines. It plays a crucial role in achieving precise and accurate printing results.<br><br>Flexographic printing is a high-speed printing technique commonly used for packaging materials, labels, and other flexible substrates. The plate mounting tape serves as a bonding agent between the printing plate and the cylinder, ensuring a secure and stable attachment during the printing process. It helps to maintain proper registration and transfer ink onto the substrate with precision.<br><br>The unique properties of plate mounting tape make it suitable for flexographic printing applications. It typically consists of a foam or film backing coated with a high-strength adhesive on both sides. The foam or film layer provides cushioning and compensates for any irregularities on the cylinder's surface, allowing for even contact and consistent printing results.",
+      "Plate mounting tape for flexographic printing is a specialized adhesive tape used in the process of mounting printing plates onto cylinders or sleeves in flexographic printing machines. It plays a crucial role in achieving precise and accurate printing results.<br>Flexographic printing is a high-speed printing technique commonly used for packaging materials, labels, and other flexible substrates. The plate mounting tape serves as a bonding agent between the printing plate and the cylinder, ensuring a secure and stable attachment during the printing process. It helps to maintain proper registration and transfer ink onto the substrate with precision.<br>The unique properties of plate mounting tape make it suitable for flexographic printing applications. It typically consists of a foam or film backing coated with a high-strength adhesive on both sides. The foam or film layer provides cushioning and compensates for any irregularities on the cylinder's surface, allowing for even contact and consistent printing results.",
     description: [
       "Panamax Plate Mounting Tape for letter press & Flexo-Graphic Printing.",
       "Perfect Product of Carpet Fixing, Plate Mounting in Flexo Printing.",
@@ -1660,7 +1711,7 @@ const productsData = [
         name: "Flexible Packaging",
         about:
           "The tape is applied in the printing of flexible packaging materials, such as plastic bags, pouches, wrappers, and laminates.",
-        icon: diy,
+        icon: industrialPackaging,
       },
       {
         name: "Labels and Stickers",
@@ -1672,47 +1723,47 @@ const productsData = [
         name: "Corrugated Box Printing",
         about:
           "The tape is  used for shipping, storage, and display purposes. ",
-        icon: color_coding,
+        icon: printingCircuit,
       },
       {
         name: "Tags and Tickets",
         about:
           " It is utilized in the production of tags, tickets, and price labels for various industries, including retail, logistics, and event management.",
-        icon: safety_marking,
+        icon: priceTag,
       },
       {
         name: "Paper and Paperboard Printing",
         about:
           " The tape is employed in the printing of paper and paperboard materials, such as stationery, books, magazines, and promotional materials.",
-        icon: production_design,
+        icon: printingCircuit,
       },
       {
         name: "Film and Foil Printing",
         about:
           "It is used for printing on films and foils, including plastic films, aluminum foils, and metallic substrates. ",
-        icon: diy,
+        icon: newsPaper,
       },
       {
         name: "Newspaper Printing",
         about:
           "The tape is utilized in the newspaper industry for printing newspapers, journals, and periodicals",
-        icon: sports,
+        icon: newsPaper,
       },
       {
         name: "Specialty Printing",
         about:
           "Plate mounting tape finds application in specialty printing areas, such as printing on textured surfaces, holographic films, and unique substrates. ",
-        icon: installation,
+        icon: printingCircuit,
       },
     ],
     industrialUses: [
       {
         name: "Packaging and Labeling",
-        icon: electric,
+        icon: packagingShipping,
       },
       {
         name: "Flexible Packaging",
-        icon: automotive,
+        icon: industrialPackaging,
       },
       {
         name: "Folding Cartons",
@@ -1720,34 +1771,35 @@ const productsData = [
       },
       {
         name: "Corrugated Board Printing",
-        icon: aerospace,
+        icon: printingCircuit,
       },
       {
         name: "Tags and Labels",
-        icon: warehouse,
+        icon: priceTag,
       },
       {
         name: "Flexible Film Printing",
-        icon: pipes,
+        icon: film,
       },
       {
         name: "Newspaper Printing",
-        icon: pipes,
+        icon: newsPaper,
       },
       {
         name: "Specialty Printing",
-        icon: diy,
+        icon: newsPaper,
       },
     ],
   },
   {
     id: 12,
     title: "PTFE fiber glass cloth tape",
+    name: "PTFE fiber tape",
     path: "PTFE-fiber-glass-cloth",
     productImg: img12,
     image: ptfeFiber,
     about:
-      "PTFE (Polytetrafluoroethylene) fiberglass cloth tape and belts are specialized materials that combine the exceptional properties of PTFE and fiberglass to create a versatile and high-performance adhesive product. Here is a unique brief content explaining PTFE fiberglass cloth tape and belts<br><br>PTFE fiberglass cloth tape is a self-adhesive tape that consists of a PTFE-coated fiberglass fabric backing with a high-performance silicone adhesive. The combination of PTFE and fiberglass results in a tape that offers exceptional heat resistance, excellent release properties, and durability.<br><br>PTFE fiberglass belts are conveyor belts made from a PTFE-coated fiberglass fabric material. These belts are used in various industries for conveying and processing materials under extreme temperature and demanding conditions.",
+      "PTFE (Polytetrafluoroethylene) fiberglass cloth tape and belts are specialized materials that combine the exceptional properties of PTFE and fiberglass to create a versatile and high-performance adhesive product. Here is a unique brief content explaining PTFE fiberglass cloth tape and belts<br>PTFE fiberglass cloth tape is a self-adhesive tape that consists of a PTFE-coated fiberglass fabric backing with a high-performance silicone adhesive. The combination of PTFE and fiberglass results in a tape that offers exceptional heat resistance, excellent release properties, and durability.<br>PTFE fiberglass belts are conveyor belts made from a PTFE-coated fiberglass fabric material. These belts are used in various industries for conveying and processing materials under extreme temperature and demanding conditions.",
     description: [
       "Garment manufacturers for fusing presses.",
       "Milk, Ghee, and Dairy products.",
@@ -1787,7 +1839,7 @@ const productsData = [
         name: "Flexible Packaging",
         about:
           "The tape is applied in the printing of flexible packaging materials, such as plastic bags, pouches, wrappers, and laminates.",
-        icon: diy,
+        icon: industrialPackaging,
       },
       {
         name: "Labels and Stickers",
@@ -1799,47 +1851,47 @@ const productsData = [
         name: "Corrugated Box Printing",
         about:
           "The tape is  used for shipping, storage, and display purposes. ",
-        icon: color_coding,
+        icon: printingCircuit,
       },
       {
         name: "Tags and Tickets",
         about:
           " It is utilized in the production of tags, tickets, and price labels for various industries, including retail, logistics, and event management.",
-        icon: safety_marking,
+        icon: priceTag,
       },
       {
         name: "Paper and Paperboard Printing",
         about:
           " The tape is employed in the printing of paper and paperboard materials, such as stationery, books, magazines, and promotional materials.",
-        icon: production_design,
+        icon: printingCircuit,
       },
       {
         name: "Film and Foil Printing",
         about:
           "It is used for printing on films and foils, including plastic films, aluminum foils, and metallic substrates. ",
-        icon: diy,
+        icon: film,
       },
       {
         name: "Newspaper Printing",
         about:
           "The tape is utilized in the newspaper industry for printing newspapers, journals, and periodicals",
-        icon: sports,
+        icon: newsPaper,
       },
       {
         name: "Specialty Printing",
         about:
           "Plate mounting tape finds application in specialty printing areas, such as printing on textured surfaces, holographic films, and unique substrates. ",
-        icon: installation,
+        icon: printingCircuit,
       },
     ],
     industrialUses: [
       {
         name: "Packaging and Labeling",
-        icon: electric,
+        icon: industrialPackaging,
       },
       {
         name: "Flexible Packaging",
-        icon: automotive,
+        icon: packagingShipping,
       },
       {
         name: "Folding Cartons",
@@ -1847,34 +1899,35 @@ const productsData = [
       },
       {
         name: "Corrugated Board Printing",
-        icon: aerospace,
+        icon: printingCircuit,
       },
       {
         name: "Tags and Labels",
-        icon: warehouse,
+        icon: priceTag,
       },
       {
         name: "Flexible Film Printing",
-        icon: pipes,
+        icon: film,
       },
       {
         name: "Newspaper Printing",
-        icon: pipes,
+        icon: newsPaper,
       },
       {
         name: "Specialty Printing",
-        icon: diy,
+        icon: printingCircuit,
       },
     ],
   },
   {
     id: 13,
     title: "STRUCTURAL GLAZING TAPE",
+    name: "Structural glazing tape",
     path: "structural-gazing-tape",
     productImg: img13,
     image: structuralGazing,
     about:
-      "Structural glazing tape is a specialized adhesive tape designed for bonding and sealing glass panels in structural glazing applications. It is specifically engineered to provide exceptional adhesion, weather resistance, and durability, making it an essential component in modern architectural designs.<br><br>Structural glazing tape is typically made of high-performance materials such as silicone or acrylic, which offer excellent flexibility and adhesive properties. The tape is applied to the perimeter of the glass panel, creating a strong bond between the glass and the surrounding frame or structure.<br><br>This type of tape is commonly used in the construction industry for various applications, including curtain walls, skylights, glass facades, and other structural glazing systems. It helps create a seamless and visually appealing appearance by eliminating the need for visible fasteners or mechanical fixings.",
+      "Structural glazing tape is a specialized adhesive tape designed for bonding and sealing glass panels in structural glazing applications. It is specifically engineered to provide exceptional adhesion, weather resistance, and durability, making it an essential component in modern architectural designs.<br>Structural glazing tape is typically made of high-performance materials such as silicone or acrylic, which offer excellent flexibility and adhesive properties. The tape is applied to the perimeter of the glass panel, creating a strong bond between the glass and the surrounding frame or structure.<br>This type of tape is commonly used in the construction industry for various applications, including curtain walls, skylights, glass facades, and other structural glazing systems. It helps create a seamless and visually appealing appearance by eliminating the need for visible fasteners or mechanical fixings.",
     description: [
       "Also known as the fabricator’s tape.",
       "Extremely durable.",
@@ -1939,13 +1992,13 @@ const productsData = [
         name: "Glass Bonding",
         about:
           "It is extensively used for bonding glass panels to frames in architectural applications such as curtain walls, skylights, canopies, and glass partitions.",
-        icon: color_coding,
+        icon: Glass_Mirrors,
       },
       {
         name: "Weatherproofing",
         about:
           " It helps in weatherproofing building exteriors by sealing gaps between glass panels and frames, preventing water leaks and ensuring energy efficiency.",
-        icon: idenfication,
+        icon: Glass_Mirrors,
       },
       {
         name: "Acoustic Insulation",
@@ -1969,19 +2022,19 @@ const productsData = [
         name: "Interior Design",
         about:
           " It enables the installation of glass features like glass shelves, glass balustrades, and glass artwork, adding a modern and sophisticated touch to residential and commercial spaces.",
-        icon: arts,
+        icon: Glass_Mirrors,
       },
       {
         name: "Transportation",
         about:
           " It is used in the transportation industry for applications such as train windows, bus shelters, and aircraft interiors.",
-        icon: installation,
+        icon: transportation,
       },
       {
         name: "Industrial Equipment",
         about:
           "It can be used for marking stage positions, indicating lighting cues, or securing props or set pieces.",
-        icon: production_design,
+        icon: industrialFacilities,
       },
       {
         name: "Sports and Recreation",
@@ -2001,11 +2054,11 @@ const productsData = [
       },
       {
         name: "Skylights and Canopies",
-        icon: aerospace,
+        icon: skylights,
       },
       {
         name: "Glass Partitions",
-        icon: industrial_equipment,
+        icon: Glass_Mirrors,
       },
       {
         name: "Shopfronts and Storefronts",
@@ -2028,11 +2081,12 @@ const productsData = [
   {
     id: 14,
     title: "MULTI STICK TAPE",
+    name: "Multi stick tape",
     path: "multi-stick-tape",
     productImg: img14,
     image: multiStick,
     about:
-      "Multi-stick tape is a versatile adhesive tape that is designed to provide strong and reliable bonding in various applications. It is called 'multi-stick' because it can adhere to a wide range of surfaces, making it suitable for numerous tasks. This tape typically features a durable adhesive on both sides, allowing it to stick to different materials effectively.<br><br>One unique aspect of multi-stick tape is its ability to bond to both smooth and rough surfaces. Whether it is used on glass, metal, plastic, wood, or fabric, this tape offers reliable adhesion, creating a strong and lasting bond.<br><br>Due to its versatility, multi-stick tape finds applications in various industries and everyday tasks. It can be used for crafting, DIY projects, mounting objects, securing carpets or rugs, temporary repairs, and more. Its strong adhesive properties make it ideal for both indoor and outdoor use, providing reliable performance in different environmental conditions.Furthermore, multi-stick tape is often designed with features like weather resistance, moisture resistance, and heat resistance, enhancing its durability and reliability. It may also offer easy tearability or repositionability, allowing for convenient application and adjustments.",
+      "Multi-stick tape is a versatile adhesive tape that is designed to provide strong and reliable bonding in various applications. It is called 'multi-stick' because it can adhere to a wide range of surfaces, making it suitable for numerous tasks. This tape typically features a durable adhesive on both sides, allowing it to stick to different materials effectively.<br>One unique aspect of multi-stick tape is its ability to bond to both smooth and rough surfaces. Whether it is used on glass, metal, plastic, wood, or fabric, this tape offers reliable adhesion, creating a strong and lasting bond.<br>Due to its versatility, multi-stick tape finds applications in various industries and everyday tasks. It can be used for crafting, DIY projects, mounting objects, securing carpets or rugs, temporary repairs, and more. Its strong adhesive properties make it ideal for both indoor and outdoor use, providing reliable performance in different environmental conditions.Furthermore, multi-stick tape is often designed with features like weather resistance, moisture resistance, and heat resistance, enhancing its durability and reliability. It may also offer easy tearability or repositionability, allowing for convenient application and adjustments.",
     description: [
       "Marble to glass.",
       "Wood to mirror.",
@@ -2083,13 +2137,13 @@ const productsData = [
         name: "Glass Bonding",
         about:
           "It is extensively used for bonding glass panels to frames in architectural applications such as curtain walls, skylights, canopies, and glass partitions.",
-        icon: color_coding,
+        icon: Glass_Mirrors,
       },
       {
         name: "Weatherproofing",
         about:
           " It helps in weatherproofing building exteriors by sealing gaps between glass panels and frames, preventing water leaks and ensuring energy efficiency.",
-        icon: idenfication,
+        icon: Glass_Mirrors,
       },
       {
         name: "Acoustic Insulation",
@@ -2113,19 +2167,19 @@ const productsData = [
         name: "Interior Design",
         about:
           " It enables the installation of glass features like glass shelves, glass balustrades, and glass artwork, adding a modern and sophisticated touch to residential and commercial spaces.",
-        icon: arts,
+        icon: Glass_Mirrors,
       },
       {
         name: "Transportation",
         about:
           " It is used in the transportation industry for applications such as train windows, bus shelters, and aircraft interiors.",
-        icon: installation,
+        icon: transportation,
       },
       {
         name: "Industrial Equipment",
         about:
           "It can be used for marking stage positions, indicating lighting cues, or securing props or set pieces.",
-        icon: production_design,
+        icon: industrial_equipment,
       },
       {
         name: "Sports and Recreation",
@@ -2145,11 +2199,11 @@ const productsData = [
       },
       {
         name: "Skylights and Canopies",
-        icon: aerospace,
+        icon: skylights,
       },
       {
         name: "Glass Partitions",
-        icon: industrial_equipment,
+        icon: Glass_Mirrors,
       },
       {
         name: "Shopfronts and Storefronts",
@@ -2172,11 +2226,12 @@ const productsData = [
   {
     id: 15,
     title: "ANTI-SLIP TAPE",
+    name: "Anti-Slip tape",
     path: "anti-slip-tape",
     productImg: img15,
     image: antiSlip,
     about:
-      "Anti-slip tape is a specialized adhesive tape designed to provide traction and reduce the risk of slipping or falling on various surfaces. It is typically made of a durable material with a textured surface that offers grip and friction, even in wet or slippery conditions. The tape is commonly used in areas where slip hazards may be present, such as stairs, ramps, walkways, and other high-traffic areas.<br><br>The unique properties of anti-slip tape make it an effective solution for enhancing safety in both residential and commercial settings. Its adhesive backing allows for easy application on various surfaces, including wood, concrete, metal, and tiles. The tape is available in different colors, sizes, and patterns, allowing for customization to match the existing aesthetics or safety requirements of the area.<br><br>Whether it's for residential, commercial, or industrial purposes, anti-slip tape is an essential safety tool that helps reduce the risk of accidents on slippery surfaces. Its unique properties, ease of use, and effectiveness in providing traction make it a valuable addition to any space where safety is a priority.",
+      "Anti-slip tape is a specialized adhesive tape designed to provide traction and reduce the risk of slipping or falling on various surfaces. It is typically made of a durable material with a textured surface that offers grip and friction, even in wet or slippery conditions. The tape is commonly used in areas where slip hazards may be present, such as stairs, ramps, walkways, and other high-traffic areas.<br>The unique properties of anti-slip tape make it an effective solution for enhancing safety in both residential and commercial settings. Its adhesive backing allows for easy application on various surfaces, including wood, concrete, metal, and tiles. The tape is available in different colors, sizes, and patterns, allowing for customization to match the existing aesthetics or safety requirements of the area.<br>Whether it's for residential, commercial, or industrial purposes, anti-slip tape is an essential safety tool that helps reduce the risk of accidents on slippery surfaces. Its unique properties, ease of use, and effectiveness in providing traction make it a valuable addition to any space where safety is a priority.",
     description: [
       "Excellent bonding with high adhesive for secure grip.",
       "Highly suitable for public gathering places like offices, factories, Warehouse, cinema halls, shopping centres, malls etc.",
@@ -2231,7 +2286,7 @@ const productsData = [
         name: "Sports and Recreation",
         about:
           "It can be used on gym floors, sports courts, swimming pool decks, and exercise equipment, providing a secure footing and minimizing the risk of injuries caused by slipping.",
-        icon: idenfication,
+        icon: sports,
       },
       {
         name: "Marine and Boating",
@@ -2243,19 +2298,19 @@ const productsData = [
         name: "Automotive and Transportation",
         about:
           "In the automotive industry, anti-slip tape is used on vehicle running boards, steps, and loading ramps to improve traction and prevent accidents during boarding and unloading. ",
-        icon: repairing,
+        icon: automotive,
       },
       {
         name: "Hospitality and Catering",
         about:
           "Hotels, restaurants, and catering services utilize anti-slip tape in areas prone to wetness, such as kitchen floors, food preparation areas, dishwashing stations, and bar countertops.",
-        icon: safety_marking,
+        icon: hospitality,
       },
       {
         name: "Interior Design",
         about:
           " It enables the installation of glass features like glass shelves, glass balustrades, and glass artwork, adding a modern and sophisticated touch to residential and commercial spaces.",
-        icon: arts,
+        icon: residentialConstruction,
       },
       {
         name: "Outdoor Safety",
@@ -2275,7 +2330,7 @@ const productsData = [
     industrialUses: [
       {
         name: "Manufacturing Facilities",
-        icon: electric,
+        icon: electronicManufacturing,
       },
       {
         name: "Warehouses and Distribution Centers",
@@ -2283,11 +2338,11 @@ const productsData = [
       },
       {
         name: "Industrial Stairs and Platforms",
-        icon: aerospace,
+        icon: industrialFacilities,
       },
       {
         name: "Construction Sites",
-        icon: industrial_equipment,
+        icon: construction,
       },
       {
         name: "Oil and Gas Industry",
@@ -2295,22 +2350,23 @@ const productsData = [
       },
       {
         name: "Food Processing and Commercial Kitchens",
-        icon: pipes,
+        icon: food_processing,
       },
       {
         name: "Retail and Public Spaces",
-        icon: quality_control,
+        icon: retail,
       },
     ],
   },
   {
     id: 16,
     title: "SHUTTERING TAPE",
+    name: "Shuttering Tape",
     path: "shuttering-tape",
     productImg: img16,
     image: shutteringTape,
     about:
-      "Shuttering tape is a specialized adhesive tape used in construction and carpentry for various shuttering applications. It is designed to provide a secure and tight seal between different components of formwork or shuttering systems. The tape is typically made of durable materials, such as reinforced fabric or high-strength adhesive, to withstand the rigors of construction work.<br><br>Shuttering tape is commonly used in concrete casting and formwork processes. It helps create a barrier between the formwork and the concrete, preventing leakage and ensuring clean and defined edges in the finished concrete structure. The tape is applied to the joints and seams of the formwork to seal them tightly, preventing any leakage of concrete during the pouring and curing stages.<br><br>One unique aspect of shuttering tape is its ability to adhere well to various surfaces, including wood, metal, and plastic. This ensures that the tape remains firmly in place throughout the entire construction process, even in demanding conditions.",
+      "Shuttering tape is a specialized adhesive tape used in construction and carpentry for various shuttering applications. It is designed to provide a secure and tight seal between different components of formwork or shuttering systems. The tape is typically made of durable materials, such as reinforced fabric or high-strength adhesive, to withstand the rigors of construction work.<br>Shuttering tape is commonly used in concrete casting and formwork processes. It helps create a barrier between the formwork and the concrete, preventing leakage and ensuring clean and defined edges in the finished concrete structure. The tape is applied to the joints and seams of the formwork to seal them tightly, preventing any leakage of concrete during the pouring and curing stages.<br>One unique aspect of shuttering tape is its ability to adhere well to various surfaces, including wood, metal, and plastic. This ensures that the tape remains firmly in place throughout the entire construction process, even in demanding conditions.",
     description: [
       "Very strong and high adhesive product.",
       "Specially designed for shuttering purposes before slab cast.",
@@ -2381,13 +2437,13 @@ const productsData = [
         name: "Column and Beam Construction",
         about:
           "It helps in achieving smooth and clean edges, ensuring precise formwork alignment and preventing concrete seepage. ",
-        icon: idenfication,
+        icon: construction,
       },
       {
         name: "Slab Construction",
         about:
           " It helps in creating a level and even surface, preventing any concrete leakage at the joints. ",
-        icon: securing,
+        icon: construction,
       },
       {
         name: "Wall Construction",
@@ -2423,7 +2479,7 @@ const productsData = [
         name: "Repair and Renovation",
         about:
           "Shuttering tape is useful in repair and renovation projects where existing concrete structures need to be reinforced or modified. ",
-        icon: production_design,
+        icon: renovationRemodelling,
       },
       {
         name: "DIY Projects",
@@ -2435,7 +2491,7 @@ const productsData = [
     industrialUses: [
       {
         name: "Construction Industry",
-        icon: electric,
+        icon: construction,
       },
       {
         name: "Civil Engineering Projects",
@@ -2443,19 +2499,19 @@ const productsData = [
       },
       {
         name: "High-rise Building Construction",
-        icon: aerospace,
+        icon: construction,
       },
       {
         name: "Residential and Commercial Construction",
-        icon: industrial_equipment,
+        icon: residentialConstruction,
       },
       {
         name: "Industrial Infrastructure",
-        icon: warehouse,
+        icon: industrialFacilities,
       },
       {
         name: "Bridge and Dam Construction",
-        icon: pipes,
+        icon: construction,
       },
       {
         name: "Pre-cast Concrete Elements",
@@ -2471,18 +2527,19 @@ const productsData = [
       },
       {
         name: "Temporary Structures and Event Installations",
-        icon: quality_control,
+        icon: exihibition,
       },
     ],
   },
   {
     id: 17,
     title: "LAMINATE FIXING TAPE",
+    name: "Laminate fixing tape",
     path: "laminating-fixing-tape",
     productImg: img17,
     image: laminateFixing,
     about:
-      "Laminate Fixing Tape is a specialized adhesive tape designed for fixing laminate flooring and other laminate materials securely in place. It is a double-sided tape with a strong adhesive on both sides, typically with a foam or film backing that provides cushioning and stability. The tape is specifically engineered to withstand the demands of laminate installation and provide a long-lasting bond between the laminate and the subfloor.<br><br>Laminate Fixing Tape offers several advantages over traditional methods of laminate installation. It eliminates the need for messy glues or nails, making the installation process faster, easier, and cleaner. The tape's strong adhesive properties ensure that the laminate stays firmly in place, even under heavy foot traffic and other stresses. Additionally, the foam or film backing helps to absorb sound, reduce vibrations, and provide a more comfortable walking surface.<br><br>One of the key features of Laminate Fixing Tape is its versatility. It can be used with various types of laminate flooring, including wood, laminate tiles, and planks. It adheres to a variety of subfloor materials, such as concrete, plywood, and existing flooring, providing a reliable bond in different installation scenarios.",
+      "Laminate Fixing Tape is a specialized adhesive tape designed for fixing laminate flooring and other laminate materials securely in place. It is a double-sided tape with a strong adhesive on both sides, typically with a foam or film backing that provides cushioning and stability. The tape is specifically engineered to withstand the demands of laminate installation and provide a long-lasting bond between the laminate and the subfloor.<br>Laminate Fixing Tape offers several advantages over traditional methods of laminate installation. It eliminates the need for messy glues or nails, making the installation process faster, easier, and cleaner. The tape's strong adhesive properties ensure that the laminate stays firmly in place, even under heavy foot traffic and other stresses. Additionally, the foam or film backing helps to absorb sound, reduce vibrations, and provide a more comfortable walking surface.<br>One of the key features of Laminate Fixing Tape is its versatility. It can be used with various types of laminate flooring, including wood, laminate tiles, and planks. It adheres to a variety of subfloor materials, such as concrete, plywood, and existing flooring, providing a reliable bond in different installation scenarios.",
     description: [
       "No white glue/gum required.",
       "Saves time.",
@@ -2545,19 +2602,19 @@ const productsData = [
         name: "Column and Beam Construction",
         about:
           "It helps in achieving smooth and clean edges, ensuring precise formwork alignment and preventing concrete seepage. ",
-        icon: idenfication,
+        icon: construction,
       },
       {
         name: "Slab Construction",
         about:
           " It helps in creating a level and even surface, preventing any concrete leakage at the joints. ",
-        icon: securing,
+        icon: construction,
       },
       {
         name: "Wall Construction",
         about:
           " It is applied to the formwork panels to ensure that the concrete sets evenly and does not leak or seep through the joints.",
-        icon: repairing,
+        icon: construction,
       },
       {
         name: "Foundation Work",
@@ -2569,7 +2626,7 @@ const productsData = [
         name: "Staircase Construction",
         about:
           "It helps in achieving crisp and well-defined edges, ensuring that each step is accurately formed. ",
-        icon: arts,
+        icon: construction,
       },
       {
         name: "Retaining Walls",
@@ -2587,7 +2644,7 @@ const productsData = [
         name: "Repair and Renovation",
         about:
           "Shuttering tape is useful in repair and renovation projects where existing concrete structures need to be reinforced or modified. ",
-        icon: production_design,
+        icon: renovationRemodelling,
       },
       {
         name: "DIY Projects",
@@ -2599,7 +2656,7 @@ const productsData = [
     industrialUses: [
       {
         name: "Construction Industry",
-        icon: electric,
+        icon: construction,
       },
       {
         name: "Civil Engineering Projects",
@@ -2607,19 +2664,19 @@ const productsData = [
       },
       {
         name: "High-rise Building Construction",
-        icon: aerospace,
+        icon: construction,
       },
       {
         name: "Residential and Commercial Construction",
-        icon: industrial_equipment,
+        icon: residentialConstruction,
       },
       {
         name: "Industrial Infrastructure",
-        icon: warehouse,
+        icon: industrialFacilities,
       },
       {
         name: "Bridge and Dam Construction",
-        icon: pipes,
+        icon: construction,
       },
       {
         name: "Pre-cast Concrete Elements",
@@ -2635,13 +2692,14 @@ const productsData = [
       },
       {
         name: "Temporary Structures and Event Installations",
-        icon: quality_control,
+        icon: exihibition,
       },
     ],
   },
   {
     id: 18,
     title: "EDGE BANDING FIXING TAPE",
+    name: "Edge banding tape",
     path: "edge-banding-fixing-tape",
     productImg: img18,
     image: edgeBanding,
@@ -2712,7 +2770,7 @@ const productsData = [
         name: "Cabinet and Furniture Edge Banding",
         about:
           "One of the primary application uses of edge banding fixing tape is for attaching edge banding to cabinets, furniture, and other woodworking projects. ",
-        icon: color_coding,
+        icon: woodWorking,
       },
       {
         name: "DIY Home Projects",
@@ -2724,19 +2782,19 @@ const productsData = [
         name: "Renovations and Remodeling",
         about:
           "During renovations or remodeling projects, it is utilized to update or repair existing edges of furniture, cabinetry, or other wooden elements. ",
-        icon: securing,
+        icon: renovationRemodelling,
       },
       {
         name: "Display and Exhibition Construction",
         about:
           "Edge banding fixing tape finds application in the construction of displays, exhibition stands, and trade show booths.",
-        icon: repairing,
+        icon: residentialConstruction,
       },
       {
         name: "Retail Fixtures and Shelving",
         about:
           " It is commonly used for constructing store fixtures, shelving units, and display racks. ",
-        icon: safety_marking,
+        icon: retail,
       },
       {
         name: "Commercial Interiors",
@@ -2748,7 +2806,7 @@ const productsData = [
         name: "School and Institutional Furniture",
         about:
           "It is employed in the manufacturing and repair of school furniture, such as desks, tables, and chairs. ",
-        icon: installation,
+        icon: educational,
       },
       {
         name: "Boat and RV Interior Refurbishment",
@@ -2771,11 +2829,11 @@ const productsData = [
     industrialUses: [
       {
         name: "Furniture Manufacturing",
-        icon: electric,
+        icon: furniture,
       },
       {
         name: "Cabinetry and Millwork",
-        icon: automotive,
+        icon: cabinetry,
       },
       {
         name: "Interior Design and Architectural Millwork",
@@ -2783,15 +2841,15 @@ const productsData = [
       },
       {
         name: "Store Fixtures and Displays",
-        icon: industrial_equipment,
+        icon: Glass_Mirrors,
       },
       {
         name: "Office Furniture and Partitions",
-        icon: warehouse,
+        icon: furniture,
       },
       {
         name: "Automotive Interior Components",
-        icon: pipes,
+        icon: automotive,
       },
       {
         name: "Exhibition Stands and Trade Show Booths",
@@ -2803,22 +2861,23 @@ const productsData = [
       },
       {
         name: "Panel and Door Manufacturing",
-        icon: quality_control,
+        icon: furniture,
       },
       {
         name: "Industrial Equipment and Machinery",
-        icon: quality_control,
+        icon: industrial_equipment,
       },
     ],
   },
   {
     id: 19,
     title: "ROOF REPAIR FLASHING TAPE",
+    name: "Roof repair tape",
     path: "roof-repair-flashing-tape",
     productImg: img19,
     image: roofRepair,
     about:
-      "Roof repair flashing tape is a specialized adhesive tape designed for repairing and sealing various types of roof flashing. It is commonly used to seal gaps, cracks, and joints in roofing materials, such as metal, asphalt shingles, rubber, and more. The tape is typically made from a durable and weather-resistant material, such as bitumen or butyl rubber, which provides excellent adhesion and protection against water infiltration.<br><br>The primary purpose of roof repair flashing tape is to create a watertight seal and prevent leaks in areas vulnerable to water penetration, such as roof valleys, chimney flashings, skylights, and vents. It adheres tightly to the surface and forms a flexible barrier that withstands temperature changes, UV exposure, and other environmental factors.",
+      "Roof repair flashing tape is a specialized adhesive tape designed for repairing and sealing various types of roof flashing. It is commonly used to seal gaps, cracks, and joints in roofing materials, such as metal, asphalt shingles, rubber, and more. The tape is typically made from a durable and weather-resistant material, such as bitumen or butyl rubber, which provides excellent adhesion and protection against water infiltration.<br>The primary purpose of roof repair flashing tape is to create a watertight seal and prevent leaks in areas vulnerable to water penetration, such as roof valleys, chimney flashings, skylights, and vents. It adheres tightly to the surface and forms a flexible barrier that withstands temperature changes, UV exposure, and other environmental factors.",
     description: [
       "Say no to leakage.",
       "The ultimate leak and seam repair tape.",
@@ -2874,7 +2933,7 @@ const productsData = [
         name: "Cabinet and Furniture Edge Banding",
         about:
           "One of the primary application uses of edge banding fixing tape is for attaching edge banding to cabinets, furniture, and other woodworking projects. ",
-        icon: color_coding,
+        icon: woodWorking,
       },
       {
         name: "DIY Home Projects",
@@ -2886,7 +2945,7 @@ const productsData = [
         name: "Renovations and Remodeling",
         about:
           "During renovations or remodeling projects, it is utilized to update or repair existing edges of furniture, cabinetry, or other wooden elements. ",
-        icon: securing,
+        icon: renovationRemodelling,
       },
       {
         name: "Display and Exhibition Construction",
@@ -2898,7 +2957,7 @@ const productsData = [
         name: "Retail Fixtures and Shelving",
         about:
           " It is commonly used for constructing store fixtures, shelving units, and display racks. ",
-        icon: safety_marking,
+        icon: retail,
       },
       {
         name: "Commercial Interiors",
@@ -2910,7 +2969,7 @@ const productsData = [
         name: "School and Institutional Furniture",
         about:
           "It is employed in the manufacturing and repair of school furniture, such as desks, tables, and chairs. ",
-        icon: installation,
+        icon: educational,
       },
       {
         name: "Boat and RV Interior Refurbishment",
@@ -2933,11 +2992,11 @@ const productsData = [
     industrialUses: [
       {
         name: "Furniture Manufacturing",
-        icon: electric,
+        icon: furniture,
       },
       {
         name: "Cabinetry and Millwork",
-        icon: automotive,
+        icon: cabinetry,
       },
       {
         name: "Interior Design and Architectural Millwork",
@@ -2945,15 +3004,15 @@ const productsData = [
       },
       {
         name: "Store Fixtures and Displays",
-        icon: industrial_equipment,
+        icon: Glass_Mirrors,
       },
       {
         name: "Office Furniture and Partitions",
-        icon: warehouse,
+        icon: furniture,
       },
       {
         name: "Automotive Interior Components",
-        icon: pipes,
+        icon: automotive,
       },
       {
         name: "Exhibition Stands and Trade Show Booths",
@@ -2965,17 +3024,18 @@ const productsData = [
       },
       {
         name: "Panel and Door Manufacturing",
-        icon: quality_control,
+        icon: furniture,
       },
       {
         name: "Industrial Equipment and Machinery",
-        icon: quality_control,
+        icon: industrial_equipment,
       },
     ],
   },
   {
     id: 20,
     title: "LEAK STOPPER TAPE",
+    name: "Leak stopper tape",
     path: "leak-stopper-tape",
     productImg: img20,
     image: leakStopper,
@@ -3057,13 +3117,13 @@ const productsData = [
         name: "HVAC Systems",
         about:
           " It is utilized in HVAC systems to seal leaks in ductwork, vents, and connections. ",
-        icon: securing,
+        icon: hvac,
       },
       {
         name: "Automotive Repairs",
         about:
           " It can be used to seal leaks in radiator hoses, fuel lines, or other fluid-carrying components.",
-        icon: repairing,
+        icon: automotive,
       },
       {
         name: "Pool and Spa Maintenance",
@@ -3093,7 +3153,7 @@ const productsData = [
         name: "Emergency Repairs",
         about:
           "It is often used in emergency situations to quickly seal leaks and prevent further damage. ",
-        icon: production_design,
+        icon: emergencyRepair,
       },
       {
         name: "DIY Projects",
@@ -3113,7 +3173,7 @@ const productsData = [
       },
       {
         name: "HVAC Systems",
-        icon: aerospace,
+        icon: hvac,
       },
       {
         name: "Industrial Equipment and Machinery",
@@ -3121,11 +3181,11 @@ const productsData = [
       },
       {
         name: "Storage Tanks and Containers",
-        icon: warehouse,
+        icon: storageTank,
       },
       {
         name: "Transportation and Automotive",
-        icon: pipes,
+        icon: transportation,
       },
       {
         name: "Marine and Offshore Applications",
@@ -3141,13 +3201,14 @@ const productsData = [
       },
       {
         name: "Emergency Repairs",
-        icon: quality_control,
+        icon: emergencyRepair,
       },
     ],
   },
   {
     id: 21,
     title: "SURFACE PROTECTION FILM TAPE",
+    name: "Surface protection tape",
     path: "surface-protection-tape",
     productImg: img21,
     image: surfaceProtection,
@@ -3192,13 +3253,13 @@ const productsData = [
         name: "Construction and Remodeling",
         about:
           "It is applied to protect surfaces such as floors, countertops, cabinets, and fixtures from scratches, stains, and spills.",
-        icon: color_coding,
+        icon: renovationRemodelling,
       },
       {
         name: "Painting and Decorating",
         about:
           "It is used in painting and decorating applications to create clean paint lines and prevent paint bleed on surfaces such as walls, trim, windows, and furniture. ",
-        icon: idenfication,
+        icon: furniture,
       },
       {
         name: "DIY and Crafts",
@@ -3210,7 +3271,7 @@ const productsData = [
         name: "Automotive Maintenance",
         about:
           " It can be applied to protect car exteriors, headlights, bumpers, and other vulnerable parts from scratches, chemicals, and UV damage.",
-        icon: repairing,
+        icon: automotive,
       },
       {
         name: "Electronics and Gadgets",
@@ -3222,61 +3283,61 @@ const productsData = [
         name: "Furniture and Appliances",
         about:
           "It is applied to furniture and appliances during storage, transportation, or assembly to prevent surface damage, scuffs, and scratches. ",
-        icon: arts,
+        icon: furniture,
       },
       {
         name: "Exhibition and Trade Shows",
         about:
           "It is used in exhibition and trade show displays to protect graphics, signage, and booth surfaces from damage caused by handling, transportation, or foot traffic.",
-        icon: installation,
+        icon: exihibition,
       },
       {
         name: "Glass and Mirrors",
         about:
           " It is applied to glass surfaces, windows, and mirrors to protect them from scratches, chips, and shattering during handling, transportation, or installation. ",
-        icon: production_design,
+        icon: Glass_Mirrors,
       },
       {
         name: "Appliances and White Goods",
         about:
           " It is used in the manufacturing and transportation of appliances and white goods, such as refrigerators, dishwashers, and washing machines. ",
-        icon: production_design,
+        icon: appliance,
       },
       {
         name: "Renovation and Demolition",
         about:
           "It is applied to protect surfaces like tiles, countertops, and fixtures from damage caused by tools, debris, or chemical agents. ",
-        icon: production_design,
+        icon: renovationRemodelling,
       },
     ],
     industrialUses: [
       {
         name: "Manufacturing and Fabrication",
-        icon: electric,
+        icon: fabrication,
       },
       {
         name: "Construction and Renovation",
-        icon: automotive,
+        icon: renovationRemodelling,
       },
       {
         name: "Automotive and Aerospace",
-        icon: aerospace,
+        icon: automotive,
       },
       {
         name: "Woodworking and Furniture",
-        icon: industrial_equipment,
+        icon: woodWorking,
       },
       {
         name: "Electronics and Appliances",
-        icon: warehouse,
+        icon: appliance,
       },
       {
         name: "Retail and Exhibition",
-        icon: pipes,
+        icon: retail,
       },
       {
         name: "MMedical and Healthcare",
-        icon: quality_control,
+        icon: medicalEquip,
       },
       {
         name: "Marine and Offshore",
@@ -3284,17 +3345,18 @@ const productsData = [
       },
       {
         name: "Glass and Mirrors",
-        icon: quality_control,
+        icon: Glass_Mirrors,
       },
       {
         name: "Custom Fabrication",
-        icon: quality_control,
+        icon: fabrication,
       },
     ],
   },
   {
     id: 22,
     title: "CRAFT PAPER TAPE",
+    name: "Craft paper tape",
     path: "craft-paper-tape",
     productImg: img22,
     image: craftPaper,
@@ -3360,7 +3422,7 @@ const productsData = [
         name: "DIY Home Decor",
         about:
           "It can be used to create wall art, design patterns on furniture, or add decorative elements to household items. ",
-        icon: securing,
+        icon: diy,
       },
       {
         name: "Scrapbooking and Journaling",
@@ -3378,13 +3440,13 @@ const productsData = [
         name: "Classroom and Educational Activities",
         about:
           "It can be used for interactive displays, creating timelines, or securing artwork and projects.",
-        icon: arts,
+        icon: educational,
       },
       {
         name: "Furniture Upcycling and Repair",
         about:
           " It can be used to cover or reinforce damaged areas, create decorative patterns, or add a vintage touch to furniture pieces. ",
-        icon: installation,
+        icon: furniture,
       },
       {
         name: "Temporary Fixing and Marking",
@@ -3396,7 +3458,7 @@ const productsData = [
     industrialUses: [
       {
         name: "Packaging and Shipping",
-        icon: electric,
+        icon: packagingShipping,
       },
       {
         name: "E-commerce and Fulfillment Centers",
@@ -3404,11 +3466,11 @@ const productsData = [
       },
       {
         name: "Manufacturing and Assembly",
-        icon: aerospace,
+        icon: electronicManufacturing,
       },
       {
         name: "Carpentry and Construction",
-        icon: industrial_equipment,
+        icon: construction,
       },
       {
         name: "Arts and Crafts",
@@ -3420,13 +3482,14 @@ const productsData = [
       },
       {
         name: "Stage and Film Productions",
-        icon: quality_control,
+        icon: film,
       },
     ],
   },
   {
     id: 23,
     title: "BOPP PACKAGING TAPE",
+    name: "BOPP packaging tape",
     path: "bopp-packaging-tape",
     productImg: img23,
     image: bopp,
@@ -3516,7 +3579,7 @@ const productsData = [
         name: "Seal for Freshness",
         about:
           "It is commonly used in the food industry to seal packaging and ensure freshness life.",
-        icon: installation,
+        icon: packagingShipping,
       },
       {
         name: "Outdoor and All-Weather Use",
@@ -3533,7 +3596,7 @@ const productsData = [
     industrialUses: [
       {
         name: "E-commerce and Retail",
-        icon: electric,
+        icon: retail,
       },
       {
         name: "Logistics and Shipping",
@@ -3541,15 +3604,15 @@ const productsData = [
       },
       {
         name: "Manufacturing and Assembly",
-        icon: aerospace,
+        icon: electronicManufacturing,
       },
       {
         name: "Warehouse and Storage",
-        icon: industrial_equipment,
+        icon: warehouse,
       },
       {
         name: "Food and Beverage Industry",
-        icon: warehouse,
+        icon: food_processing,
       },
       {
         name: "Pharmaceuticals and Healthcare",
@@ -3561,7 +3624,7 @@ const productsData = [
       },
       {
         name: "Automotive and Aerospace",
-        icon: aerospace,
+        icon: automotive,
       },
       {
         name: "Construction and Building Materials",
@@ -3576,6 +3639,7 @@ const productsData = [
   {
     id: 24,
     title: "FLOOR PROTECTION TAPE",
+    name: "Floor protection tape",
     path: "bopp-packaging-tape",
     productImg: img24,
     image: floorProtection,
@@ -3639,25 +3703,25 @@ const productsData = [
         name: "Construction Sites",
         about:
           "It safeguards floors from scratches, spills, and debris caused by heavy machinery, tools, and construction materials.",
-        icon: color_coding,
+        icon: residentialConstruction,
       },
       {
         name: "Renovations and Remodeling",
         about:
           "It is used to shield floors from damage during painting, sanding, or installation of new fixtures. ",
-        icon: idenfication,
+        icon: renovationRemodelling,
       },
       {
         name: "Moving and Relocation",
         about:
           "When moving furniture, appliances, or other heavy items, it is applied to prevent damage to the floor surface. ",
-        icon: securing,
+        icon: furniture,
       },
       {
         name: "Events and Exhibitions",
         about:
           "It is commonly used in event venues and exhibition spaces, helps protect the floors from heavy foot traffic, equipment, and installations.",
-        icon: repairing,
+        icon: exihibition,
       },
       {
         name: "Trade Shows and Booths",
@@ -3675,19 +3739,19 @@ const productsData = [
         name: "Retail Stores and Showrooms",
         about:
           "Used to safeguard floors from damage caused by carts, trolleys, and customer foot traffic. ",
-        icon: installation,
+        icon: retail,
       },
       {
         name: "Gymnasiums and Fitness Centers",
         about:
           "It is used in gymnasiums and fitness centers to protect the floor during exercise routines and equipment use.",
-        icon: production_design,
+        icon: gym,
       },
       {
         name: "Schools and Educational Facilities",
         about:
           "It is applied in schools and educational institutions during events, performances, or activities that require temporary flooring. ",
-        icon: production_design,
+        icon: educational,
       },
       {
         name: "Temporary Flooring Solutions",
@@ -3699,7 +3763,7 @@ const productsData = [
     industrialUses: [
       {
         name: "Construction and Renovation",
-        icon: construction,
+        icon: renovationRemodelling,
       },
       {
         name: "Manufacturing and Warehousing",
@@ -3711,11 +3775,11 @@ const productsData = [
       },
       {
         name: "Retail and Commercial Spaces",
-        icon: industrial_equipment,
+        icon: retail,
       },
       {
         name: "Hospitality Industry",
-        icon: warehouse,
+        icon: hospitality,
       },
       {
         name: "Healthcare Facilities",
@@ -3723,7 +3787,7 @@ const productsData = [
       },
       {
         name: "Gymnasiums and Sports Facilities",
-        icon: quality_control,
+        icon: gym,
       },
       {
         name: "Automotive Industry",
@@ -3731,7 +3795,7 @@ const productsData = [
       },
       {
         name: "Film and Television Production",
-        icon: construction,
+        icon: television,
       },
       {
         name: "Exhibition and Event Management",
@@ -3742,6 +3806,7 @@ const productsData = [
   {
     id: 25,
     title: "WOOD GUARD TAPE",
+    name: "Wood guard tape",
     path: "wood-guard-tape",
     productImg: img25,
     image: woodGuard,
@@ -3815,7 +3880,7 @@ const productsData = [
         name: "Woodworking and Crafts",
         about:
           "It can be used to temporarily hold pieces together, create jigs or templates, or protect delicate areas during shaping or carving processes. ",
-        icon: repairing,
+        icon: woodWorking,
       },
       {
         name: "Temporary Fixtures and Exhibits",
@@ -3839,7 +3904,7 @@ const productsData = [
         name: "Home Renovations and Moving",
         about:
           "It can safeguard floors from furniture scratches, protect corners and edges from accidental bumps, or secure protective coverings on items being transported to prevent damage.",
-        icon: production_design,
+        icon: renovationRemodelling,
       },
     ],
     industrialUses: [
@@ -3849,19 +3914,19 @@ const productsData = [
       },
       {
         name: "Furniture Manufacturing",
-        icon: warehouse,
+        icon: furniture,
       },
       {
         name: "Woodworking Workshops",
-        icon: aerospace,
+        icon: woodWorking,
       },
       {
         name: "Cabinetry and Joinery",
-        icon: industrial_equipment,
+        icon: cabinetry,
       },
       {
         name: "Transportation",
-        icon: warehouse,
+        icon: transportation,
       },
       {
         name: "Exhibition and Trade Shows",
@@ -3877,13 +3942,14 @@ const productsData = [
       },
       {
         name: "DIY Projects and Home Renovations",
-        icon: construction,
+        icon: diy,
       },
     ],
   },
   {
     id: 26,
     title: "FLOOR MARKING TAPE",
+    name: "Floor markinh tape",
     path: "floor-marking-tape",
     productImg: img26,
     image: floorMarking,
@@ -3942,7 +4008,7 @@ const productsData = [
         name: "Lean Manufacturing",
         about:
           "It is used to implement 5S methodologies, such as Sort, Set in Order, Shine, Standardize, and Sustain. ",
-        icon: color_coding,
+        icon: electronicManufacturing,
       },
       {
         name: "Safety Zones and Hazardous Areas",
@@ -3954,7 +4020,7 @@ const productsData = [
         name: "Traffic Control and Directional Guidance",
         about:
           " It can be used to mark one-way traffic lanes, pedestrian walkways, and emergency exit routes. ",
-        icon: securing,
+        icon: emergencyRepair,
       },
       {
         name: "Workflow Optimization",
@@ -4006,15 +4072,15 @@ const productsData = [
       },
       {
         name: "Manufacturing Facilities",
-        icon: warehouse,
+        icon: electronicManufacturing,
       },
       {
         name: "Logistics and Transportation",
-        icon: aerospace,
+        icon: transportation,
       },
       {
         name: "Laboratories and Cleanrooms",
-        icon: industrial_equipment,
+        icon: labCleanrooms,
       },
       {
         name: "Healthcare Facilities",
@@ -4022,7 +4088,7 @@ const productsData = [
       },
       {
         name: "Food Processing and Manufacturing",
-        icon: pipes,
+        icon: food_processing,
       },
       {
         name: "Aerospace and Automotive",
@@ -4038,13 +4104,14 @@ const productsData = [
       },
       {
         name: "Retail and Commercial Spaces",
-        icon: construction,
+        icon: retail,
       },
     ],
   },
   {
     id: 27,
     title: "SPACER & EVA FOAM TAPE",
+    name: "Space & Eva",
     path: "spacer-eva",
     productImg: img27,
     image: spacerEva,
@@ -4139,7 +4206,7 @@ const productsData = [
         name: "Shoe manufacturing",
         about:
           "It can be applied as an insole padding, providing cushioning and comfort for the wearer.",
-        icon: arts,
+        icon: electronicManufacturing,
       },
       {
         name: "DIY home projects",
@@ -4181,7 +4248,7 @@ const productsData = [
       },
       {
         name: "Appliances and white goods",
-        icon: industrial_equipment,
+        icon: appliance,
       },
       {
         name: "Marine and aerospace",
@@ -4189,187 +4256,190 @@ const productsData = [
       },
       {
         name: "Furniture and woodworking",
-        icon: pipes,
+        icon: furniture,
       },
       {
         name: "HVAC and insulation",
-        icon: aerospace,
+        icon: hvac,
       },
       {
         name: "Medical equipment",
-        icon: sports,
+        icon: medicalEquip,
       },
       {
         name: "Packaging and shipping",
-        icon: hazardous,
+        icon: packagingShipping,
       },
     ],
   },
-  {
-    id: 28,
-    title: "ALUMINIUM FOIL TAPE",
-    path: "aluminium-foil-tape",
-    productImg: img28,
-    // image: aluminiumFoil,
-    about:
-      "Aluminium foil tape is a versatile and durable tape that finds a wide range of applications due to its unique characteristics. The tape consists of a layer of aluminum foil, which provides excellent heat resistance, electrical conductivity, and reflects light and heat. This makes it highly suitable for various industries and applications.<br>The adhesive backing on the tape allows it to adhere to various surfaces, including metals, plastics, and insulation materials. The adhesive is typically strong and capable of providing a secure bond, ensuring that the tape stays in place even under challenging conditions.<br>One of the primary uses of aluminium foil tape is in HVAC (Heating, Ventilation, and Air Conditioning) systems. It is commonly used for sealing joints, seams, and connections in air ducts. The tape's heat resistance and ability to maintain an airtight seal make it ideal for preventing air leaks and improving energy efficiency in HVAC systems.",
-    description: [
-      "For roofing, water proofing, patching and repair.",
-      "For any job requiring tough waterproof protection.",
-      "Reflects heat to keep interiors cool and reduces utility bills.",
-      "Various sizes, thickness and adhesive properties available as per your needs.",
-    ],
-    features: [
-      {
-        name: "Heat Resistance",
-        about:
-          " It reflects both light and heat, making it useful for applications where heat insulation or radiation reflection is required. ",
-      },
-      {
-        name: "Electrical Conductivity",
-        about:
-          "It allows for efficient grounding and can be used for electrical repairs or applications that require conductivity, such as shielding and electromagnetic interference (EMI) protection.",
-      },
-      {
-        name: "Moisture and Chemical Resistance",
-        about:
-          "The aluminium foil backing of the tape provides resistance to moisture, humidity, and some chemicals. This makes it suitable for sealing applications in areas exposed to moisture or where chemical resistance is required.",
-      },
-      {
-        name: "Strong Adhesive Properties",
-        about:
-          "The adhesive is designed to provide long-lasting adhesion and withstand temperature fluctuations, ensuring that the tape remains firmly in place.",
-      },
-      {
-        name: "Flexibility and Conformability",
-        about:
-          "Aluminium foil tape is highly flexible and conformable, allowing it to adhere smoothly to irregular surfaces, corners, and curves..",
-      },
-      {
-        name: "Easy Application and Handling",
-        about:
-          "It can be easily cut to the desired length, and the backing material is typically durable and tear-resistant. ",
-      },
-      {
-        name: "Compatibility with Various Surfaces",
-        about:
-          "Its versatility allows it to be used in different industries and applications where bonding to various substrates is required.",
-      },
-      {
-        name: "Flame Resistance",
-        about:
-          "Aluminium foil tape often exhibits flame resistance properties, which adds an extra layer of safety in applications where fire protection is crucial.",
-      },
-      {
-        name: "Longevity and Durability",
-        about:
-          "It is designed to withstand challenging conditions, such as temperature fluctuations, moisture, and UV exposure. This ensures that the tape maintains its effectiveness and adhesion over an extended period, reducing the need for frequent replacements.",
-      },
-    ],
-    applications: [
-      {
-        name: "HVAC Duct Sealing",
-        about:
-          "It helps prevent air leakage, ensuring efficient airflow and maintaining temperature consistency in heating and cooling systems.",
-        icon: color_coding,
-      },
-      {
-        name: "Pipe Insulation",
-        about:
-          " It is used to seal and secure insulation materials around pipes, preventing heat loss or gain and providing protection against moisture. ",
-        icon: pipes,
-      },
-      {
-        name: "Radiant Barrier Installation",
-        about:
-          "The tape is used to seal and secure the edges of the radiant barrier sheets, ensuring a complete and effective barrier installation.",
-        icon: sports,
-      },
-      {
-        name: "Electrical Wiring and Repairs",
-        about:
-          " It can be used for repairing damaged electrical wires, providing a temporary or permanent solution.",
-        icon: repairing,
-      },
-      {
-        name: "EMI/RFI Shielding",
-        about:
-          "It is used to create a protective barrier around sensitive electronic components, cables, or devices to prevent interference and maintain signal integrity.",
-        icon: arts,
-      },
-      {
-        name: "Sealing and Repairing Reflective Insulation",
-        about:
-          "It is used to seal gaps, seams, and joints in these reflective insulation systems, ensuring maximum thermal efficiency and preventing the ingress of moisture or air.",
-        icon: arts,
-      },
-      {
-        name: "Automotive Repairs",
-        about:
-          " It is utilized for various repair applications. It can be used for sealing exhaust systems, repairing damaged hoses or pipes, or securing insulation materials.",
-        icon: automotive,
-      },
-      {
-        name: "Packaging and Wrapping",
-        about:
-          "It is used for sealing packages, securing boxes, and providing an extra layer of protection for goods during transportation or storage.",
-        icon: production_design,
-      },
-      {
-        name: "Crafts and DIY Projects",
-        about:
-          "It can be used for decorative purposes, such as creating shiny accents or reflective surfaces. ",
-        icon: diy,
-      },
-      {
-        name: "Sealing and Repairing Metal Surfaces",
-        about:
-          "It can be used to patch minor damages or leaks in metal pipes, tanks, or equipment.",
-        icon: production_design,
-      },
-    ],
-    industrialUses: [
-      {
-        name: "Automotive industry",
-        icon: automotive,
-      },
-      {
-        name: "Construction and building",
-        icon: construction,
-      },
-      {
-        name: "Electronics and electrical",
-        icon: electric,
-      },
-      {
-        name: "Appliances and white goods",
-        icon: industrial_equipment,
-      },
-      {
-        name: "Marine and aerospace",
-        icon: aerospace,
-      },
-      {
-        name: "Furniture and woodworking",
-        icon: pipes,
-      },
-      {
-        name: "HVAC and insulation",
-        icon: aerospace,
-      },
-      {
-        name: "Medical equipment",
-        icon: sports,
-      },
-      {
-        name: "Packaging and shipping",
-        icon: hazardous,
-      },
-    ],
-  },
+  // img
+  // {
+  //   id: 28,
+  //   title: "ALUMINIUM FOIL TAPE",
+  //   name: "Aluminium foil tape",
+  //   path: "aluminium-foil-tape",
+  //   productImg: img28,
+  //   // image: aluminiumFoil,
+  //   about:
+  //     "Aluminium foil tape is a versatile and durable tape that finds a wide range of applications due to its unique characteristics. The tape consists of a layer of aluminum foil, which provides excellent heat resistance, electrical conductivity, and reflects light and heat. This makes it highly suitable for various industries and applications.<br>The adhesive backing on the tape allows it to adhere to various surfaces, including metals, plastics, and insulation materials. The adhesive is typically strong and capable of providing a secure bond, ensuring that the tape stays in place even under challenging conditions.<br>One of the primary uses of aluminium foil tape is in HVAC (Heating, Ventilation, and Air Conditioning) systems. It is commonly used for sealing joints, seams, and connections in air ducts. The tape's heat resistance and ability to maintain an airtight seal make it ideal for preventing air leaks and improving energy efficiency in HVAC systems.",
+  //   description: [
+  //     "For roofing, water proofing, patching and repair.",
+  //     "For any job requiring tough waterproof protection.",
+  //     "Reflects heat to keep interiors cool and reduces utility bills.",
+  //     "Various sizes, thickness and adhesive properties available as per your needs.",
+  //   ],
+  //   features: [
+  //     {
+  //       name: "Heat Resistance",
+  //       about:
+  //         " It reflects both light and heat, making it useful for applications where heat insulation or radiation reflection is required. ",
+  //     },
+  //     {
+  //       name: "Electrical Conductivity",
+  //       about:
+  //         "It allows for efficient grounding and can be used for electrical repairs or applications that require conductivity, such as shielding and electromagnetic interference (EMI) protection.",
+  //     },
+  //     {
+  //       name: "Moisture and Chemical Resistance",
+  //       about:
+  //         "The aluminium foil backing of the tape provides resistance to moisture, humidity, and some chemicals. This makes it suitable for sealing applications in areas exposed to moisture or where chemical resistance is required.",
+  //     },
+  //     {
+  //       name: "Strong Adhesive Properties",
+  //       about:
+  //         "The adhesive is designed to provide long-lasting adhesion and withstand temperature fluctuations, ensuring that the tape remains firmly in place.",
+  //     },
+  //     {
+  //       name: "Flexibility and Conformability",
+  //       about:
+  //         "Aluminium foil tape is highly flexible and conformable, allowing it to adhere smoothly to irregular surfaces, corners, and curves..",
+  //     },
+  //     {
+  //       name: "Easy Application and Handling",
+  //       about:
+  //         "It can be easily cut to the desired length, and the backing material is typically durable and tear-resistant. ",
+  //     },
+  //     {
+  //       name: "Compatibility with Various Surfaces",
+  //       about:
+  //         "Its versatility allows it to be used in different industries and applications where bonding to various substrates is required.",
+  //     },
+  //     {
+  //       name: "Flame Resistance",
+  //       about:
+  //         "Aluminium foil tape often exhibits flame resistance properties, which adds an extra layer of safety in applications where fire protection is crucial.",
+  //     },
+  //     {
+  //       name: "Longevity and Durability",
+  //       about:
+  //         "It is designed to withstand challenging conditions, such as temperature fluctuations, moisture, and UV exposure. This ensures that the tape maintains its effectiveness and adhesion over an extended period, reducing the need for frequent replacements.",
+  //     },
+  //   ],
+  //   applications: [
+  //     {
+  //       name: "HVAC Duct Sealing",
+  //       about:
+  //         "It helps prevent air leakage, ensuring efficient airflow and maintaining temperature consistency in heating and cooling systems.",
+  //       icon: hvac,
+  //     },
+  //     {
+  //       name: "Pipe Insulation",
+  //       about:
+  //         " It is used to seal and secure insulation materials around pipes, preventing heat loss or gain and providing protection against moisture. ",
+  //       icon: pipes,
+  //     },
+  //     {
+  //       name: "Radiant Barrier Installation",
+  //       about:
+  //         "The tape is used to seal and secure the edges of the radiant barrier sheets, ensuring a complete and effective barrier installation.",
+  //       icon: sports,
+  //     },
+  //     {
+  //       name: "Electrical Wiring and Repairs",
+  //       about:
+  //         " It can be used for repairing damaged electrical wires, providing a temporary or permanent solution.",
+  //       icon: wiring,
+  //     },
+  //     {
+  //       name: "EMI/RFI Shielding",
+  //       about:
+  //         "It is used to create a protective barrier around sensitive electronic components, cables, or devices to prevent interference and maintain signal integrity.",
+  //       icon: arts,
+  //     },
+  //     {
+  //       name: "Sealing and Repairing Reflective Insulation",
+  //       about:
+  //         "It is used to seal gaps, seams, and joints in these reflective insulation systems, ensuring maximum thermal efficiency and preventing the ingress of moisture or air.",
+  //       icon: arts,
+  //     },
+  //     {
+  //       name: "Automotive Repairs",
+  //       about:
+  //         " It is utilized for various repair applications. It can be used for sealing exhaust systems, repairing damaged hoses or pipes, or securing insulation materials.",
+  //       icon: automotive,
+  //     },
+  //     {
+  //       name: "Packaging and Wrapping",
+  //       about:
+  //         "It is used for sealing packages, securing boxes, and providing an extra layer of protection for goods during transportation or storage.",
+  //       icon: packagingShipping,
+  //     },
+  //     {
+  //       name: "Crafts and DIY Projects",
+  //       about:
+  //         "It can be used for decorative purposes, such as creating shiny accents or reflective surfaces. ",
+  //       icon: diy,
+  //     },
+  //     {
+  //       name: "Sealing and Repairing Metal Surfaces",
+  //       about:
+  //         "It can be used to patch minor damages or leaks in metal pipes, tanks, or equipment.",
+  //       icon: production_design,
+  //     },
+  //   ],
+  //   industrialUses: [
+  //     {
+  //       name: "Automotive industry",
+  //       icon: automotive,
+  //     },
+  //     {
+  //       name: "Construction and building",
+  //       icon: construction,
+  //     },
+  //     {
+  //       name: "Electronics and electrical",
+  //       icon: electric,
+  //     },
+  //     {
+  //       name: "Appliances and white goods",
+  //       icon: industrial_equipment,
+  //     },
+  //     {
+  //       name: "Marine and aerospace",
+  //       icon: aerospace,
+  //     },
+  //     {
+  //       name: "Furniture and woodworking",
+  //       icon: woodWorking,
+  //     },
+  //     {
+  //       name: "HVAC and insulation",
+  //       icon: hvac,
+  //     },
+  //     {
+  //       name: "Medical equipment",
+  //       icon: medicalEquip,
+  //     },
+  //     {
+  //       name: "Packaging and shipping",
+  //       icon: packagingShipping,
+  //     },
+  //   ],
+  // },
   {
     id: 29,
     title: "CLOTH DUCT TAPE",
+    name: "Cloth duct tape",
     path: "cloth-duct-tape",
     productImg: img29,
     image: clothDuct,
@@ -4414,7 +4484,7 @@ const productsData = [
         name: "Home Repairs",
         about:
           "It can be used to patch holes in walls, temporarily fix plumbing leaks, secure loose carpet edges, repair damaged furniture, and reinforce weak or broken parts.",
-        icon: color_coding,
+        icon: furniture,
       },
       {
         name: "Arts and Crafts",
@@ -4470,15 +4540,15 @@ const productsData = [
       },
       {
         name: "HVAC and Ventilation Systems",
-        icon: electric,
+        icon: hvac,
       },
       {
         name: "Automotive Repair",
-        icon: automation,
+        icon: automotive,
       },
       {
         name: "Manufacturing and Industrial Maintenance",
-        icon: industrial_equipment,
+        icon: industrialFacilities,
       },
       {
         name: "Stage and Event Production",
@@ -4486,22 +4556,23 @@ const productsData = [
       },
       {
         name: "Shipping and Packaging",
-        icon: aerospace,
+        icon: packagingShipping,
       },
       {
         name: "Emergency Repairs and Temporary Solutions",
-        icon: sports,
+        icon: emergencyRepair,
       },
     ],
   },
   {
     id: 30,
     title: "Red polyester tape",
+    name: "Red polyster tape",
     path: "Red polyester tape",
     productImg: img30,
     image: redPolyster,
     about:
-      "Red polyester tape is a type of adhesive tape that is made with a polyester backing material and coated with a strong adhesive on one side. It is known for its vibrant red color, which makes it easily visible and distinguishable. This unique tape offers several advantages and is used in various applications where color coding, visibility, and reliable adhesion are important.<br><br>The polyester backing of red polyester tape provides excellent durability, strength, and resistance to tearing or stretching. It can withstand high temperatures, making it suitable for applications where heat resistance is required. The backing material also offers good chemical resistance, making it suitable for use in environments where exposure to solvents, oils, or other chemicals may occur.<br><br>The adhesive used on red polyester tape is typically a high-performance acrylic adhesive. This adhesive provides strong adhesion to a wide range of surfaces, including metals, plastics, glass, and more. It forms a reliable bond that can withstand harsh conditions, including temperature fluctuations, moisture, and UV exposure.",
+      "Red polyester tape is a type of adhesive tape that is made with a polyester backing material and coated with a strong adhesive on one side. It is known for its vibrant red color, which makes it easily visible and distinguishable. This unique tape offers several advantages and is used in various applications where color coding, visibility, and reliable adhesion are important.<br>The polyester backing of red polyester tape provides excellent durability, strength, and resistance to tearing or stretching. It can withstand high temperatures, making it suitable for applications where heat resistance is required. The backing material also offers good chemical resistance, making it suitable for use in environments where exposure to solvents, oils, or other chemicals may occur.<br>The adhesive used on red polyester tape is typically a high-performance acrylic adhesive. This adhesive provides strong adhesion to a wide range of surfaces, including metals, plastics, glass, and more. It forms a reliable bond that can withstand harsh conditions, including temperature fluctuations, moisture, and UV exposure.",
     description: [
       "Very strong adhesive fap, suitable for high fensile and long time aging applications.",
       "Provides a strong rigid bond for the most demanding external applications.",
@@ -4564,7 +4635,7 @@ const productsData = [
       {
         name: "Marking and Color Coding",
         about: "Used in manufacturing, construction, and warehouse management.",
-        icon: color_coding,
+        icon: warehouse,
       },
       {
         name: "Identification and Labeling",
@@ -4655,7 +4726,7 @@ const productsData = [
       },
       {
         name: "Manufacturing and Assembly",
-        icon: automation,
+        icon: electronicManufacturing,
       },
       {
         name: "Hazardous Environments",

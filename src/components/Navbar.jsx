@@ -129,20 +129,18 @@ const Navbar = () => {
               <Menu key={key} as="div" className="relative z-50">
                 <Menu.Button className="flex items-center justify-center capitalize text-sm font-bold">
                   {menu.name}
-                  {menu.type === "dropdown" && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="w-5 h-5"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  )}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="w-5 h-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
                 </Menu.Button>
 
                 <Transition
@@ -154,8 +152,8 @@ const Navbar = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95"
                 >
-                  <Menu.Items className="absolute left-0 mt-2 w-96 origin-top-left divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
-                    <div className="p-2 grid grid-cols-2 gap-2 ">
+                  <Menu.Items className="absolute left-1/2 -translate-x-1/2  mt-10 w-[60rem] origin-top divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-10">
+                    <div className="p-2 grid grid-cols-3 gap-2 ">
                       {menu?.submenu?.map((submenu) => {
                         return (
                           <Menu.Item key={submenu.id}>
@@ -169,9 +167,11 @@ const Navbar = () => {
                               >
                                 <Link
                                   to={`product/${submenu.id}`}
-                                  className="inline-block h-full w-full text-start capitalize px-2 py-2 text-sm capitalize"
+                                  className="flex items-center h-full w-full text-start px-2 py-2 text-sm capitalize hover:tracking-wider transition-all"
                                 >
-                                  {submenu.title.toLowerCase()}
+                                  {submenu.id === 11
+                                    ? "plate mounting tape"
+                                    : submenu.title.toLowerCase()}
                                 </Link>
                               </button>
                             )}
@@ -192,7 +192,7 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ right: isNavOpened ? "0%" : "100%", opacity: 1 }}
         transition={{ ease: "easeIn", duration: 0.2 }}
-        className={`block md:hidden lg:hidden absolute top-full w-full h-screen bg-primary transition-all z-20`}
+        className={`block md:hidden lg:hidden absolute top-full w-full min-h-screen bg-primary transition-all z-20`}
       >
         <ul className="flex-box-col-start gap-2 w-full h-full">
           {navList.map((menu, key) => {

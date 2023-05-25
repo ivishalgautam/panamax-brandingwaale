@@ -19,9 +19,7 @@ const Products = () => {
           Panamax provides a range of tapes and adhesives that can be
           incorporated in the manufacturing processes of white goods.
         </p>
-        <Link to="/products" className="btn-secondary">
-          View more
-        </Link>
+        {/* <Link className="btn-secondary-product">View more</Link> */}
       </div>
 
       {/* products */}

@@ -26,13 +26,14 @@ const Blogs = ({ blogs }) => {
                   />
                 </figure>
                 <div className="px-4 py-6 pb-10">
-                  <h2 className="font-bold">{title}</h2>
+                  <h2 className="font-bold">
+                    {title.substring(0, 60) + "..."}
+                  </h2>
                   <small className="text-xs text-primary">
                     {" "}
-                    <FaPenNib className="inline-block mr-[3px]" /> Vizen
-                    Solutions
+                    <FaPenNib className="inline-block mr-[3px]" /> Admin
                   </small>
-                  <p className="text-sm">{desc}</p>
+                  <p className="text-sm">{desc.substring(0, 150) + "..."}</p>
                 </div>
                 <button className="absolute left-1/2 -translate-x-1/2 -bottom-5 btn-primary">
                   Read More
