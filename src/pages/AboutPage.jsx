@@ -10,6 +10,7 @@ import heroImage from "../assets/hero-image.png";
 import BreadCrumb_common from "../components/BreadCrumb_common";
 import Footer from "../components/Footer";
 import { useLocation } from "react-router-dom";
+import Directors from "../components/Directors";
 
 const AboutPage = () => {
   const { pathname } = useLocation();
@@ -33,13 +34,13 @@ const AboutPage = () => {
       </Helmet>
       {/* breadcrumb */}
       <BreadCrumb_common />
-      <section className="bg-white w-full grid grid-cols-1 lg:grid-cols-2 gap-5 p-4 mt-4 md:p-10 relative after:absolute after:top-0 after:right-0 after:bg-primary after:w-1/6 after:h-full after:-z-10 z-0 after:hidden after:lg:block">
+      <section className="bg-white w-full grid grid-cols-1 lg:grid-cols-12 place-items-start gap-5 p-4 mt-4 md:p-10 relative after:absolute after:top-0 after:right-0 after:bg-primary after:w-1/6 after:h-full after:-z-10 z-0 after:hidden after:lg:block">
         {/* content */}
         <motion.div
           initial="hidden"
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className="px-2 md:px-8 lg:px-10 col-span-1"
+          className="px-2 md:px-8 lg:px-10 col-span-1 lg:col-span-8"
         >
           <h2 className="text-2xl font-bold ">
             About{" "}
@@ -49,15 +50,44 @@ const AboutPage = () => {
           </h2>
           <div className="my-6 text-sm">
             <p className="mt-4 text-lg">
-              Panamax a name synonym to trust and relation. Little did we know
-              when we the Panamax Family questioned ourselves about what is that
-              single factor that keeps us together, binds us with our customers
-              and differentiate us vis-Ã -vis our competitors. Together we
-              concluded that it is nothing else but our ability and our passion
-              to live every single day of our life to win the trust of our
-              customers and build a relation with every single of our
-              stakeholder that leads us together to the path of success and
-              prosperity.
+              Panamax is built on trust and forging enduring relationships.
+              Trust sets us apart and propels us towards success. Our mission is
+              to help everyone achieve greatness and create remarkable stories
+              together. We have the solutions to transform your dreams into
+              reality. With pride, we declare, "We Make Things Stick," and we
+              commit to sticking with you on your journey towards fulfilling
+              your aspirations.
+            </p>
+            <p className="mt-4 text-lg">
+              In 1996, Mr. Chetan Singla founded Panamax, fueled by unwavering
+              perseverance and passion. His vision has driven the growth and
+              evolution of the Panamax family. Supporting him is our exceptional
+              Managing Partner, Mrs. Monika Singla, who provides inspiration and
+              strength. We are immensely grateful for their invaluable
+              contributions, fortifying the Panamax family tree, and making it
+              stronger and more resilient.
+            </p>
+            <p className="mt-4 text-lg">
+              We are a leading manufacturer and supplier of adhesive tapes,
+              specializing in customized industrial solutions. As a preferred
+              OEM partner, we offer comprehensive services. Our commitment to
+              quality, design, and packaging differentiates us, as we aim to
+              surpass customer expectations, providing a holistic experience and
+              fostering enduring relationships.
+            </p>
+            <p className="mt-4 text-lg">
+              To ensure success, we invest in capabilities, meeting global
+              quality standards and embracing advanced technology. Our aim is to
+              earn customer trust through exceptional products and friendly,
+              forthcoming customer service.
+            </p>
+            <p className="mt-4 text-lg">
+              We are proud to have earned the trust and partnership of esteemed
+              enterprises in diverse industries such as PSUs, automotive,
+              healthcare, telecommunications, hospitality, electrical,
+              electronics, fabrication, and packaging. As your one-stop solution
+              for adhesive tapes, we invite you to connect with us for a
+              mutually beneficial journey.
             </p>
           </div>
         </motion.div>
@@ -67,13 +97,14 @@ const AboutPage = () => {
           initial="hidden"
           animate={{ opacity: 1 }}
           transition={{ duration: 2 }}
-          className="flex-box-center col-span-1"
+          className="flex-box-center col-span-1 lg:col-span-4"
         >
           <figure>
             <img src={heroImage} alt="" />
           </figure>
         </motion.div>
       </section>
+      {/* <Directors /> */}
       <Statements />
       <Testimonial />
       <Map />

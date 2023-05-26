@@ -14,9 +14,8 @@ const Statements = () => {
           </div>
           <h2 className="text-2xl font-bold mb-2">Vision</h2>
           <p className="text-lg">
-            To become a leading supplier of Tapes and Adhesives. To be the best
-            solution provider for accessories of Tapes by providing unmatched
-            quality products at the most competitive prices.
+            To be the premier global adhesive tape company, driving innovation
+            and creating enduring value for our customers and stakeholders.
           </p>
         </div>
         <div className="relative p-5 border rounded-xl text-center">
@@ -25,9 +24,9 @@ const Statements = () => {
           </div>
           <h2 className="text-2xl font-bold mb-2">Principles</h2>
           <p className="text-lg">
-            To become a leading supplier of Tapes and Adhesives. To be the best
-            solution provider for accessories of Tapes by providing unmatched
-            quality products at the most competitive prices.
+            Quality-driven manufacturing, customer-centric approach, continuous
+            innovation, sustainable practices, and fostering long-term
+            partnerships.
           </p>
         </div>
         <div className="relative p-5 border rounded-xl text-center">
@@ -36,9 +35,9 @@ const Statements = () => {
           </div>
           <h2 className="text-2xl font-bold mb-2">Values</h2>
           <p className="text-lg">
-            To become a leading supplier of Tapes and Adhesives. To be the best
-            solution provider for accessories of Tapes by providing unmatched
-            quality products at the most competitive prices.
+            At Panamax Ltd., our core values of trust, integrity, excellence,
+            collaboration, and agility guide us in delivering exceptional
+            adhesive tape solutions.
           </p>
         </div>
       </div>

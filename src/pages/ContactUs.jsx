@@ -24,17 +24,17 @@ const ContactUs = () => {
   // console.log(watch("example"), errors); // watch input value by passing the name of it
   return (
     <>
-      <section className="p-8 h-auto mx-4 lg:mx-12">
+      <section className="py-4 h-auto mx-4">
         <Helmet>
           <title>Contact Us</title>
         </Helmet>
-        <div className="h-full bg-white rounded-xl overflow-hidden grid md:grid-cols-2 gap-10 gap-y-12 py-8 px-12 shadow-sm relative after:absolute after:right-0 after:top-0 after:w-1/5 after:h-full after:bg-primary after:hidden after:md:block">
+        <div className="h-full w-full bg-white rounded-xl overflow-hidden grid md:grid-cols-2 gap-10 gap-y-12 py-8 px-4 md:px-10 lg:px-12 shadow-sm relative after:absolute after:right-0 after:top-0 after:w-1/5 after:h-full after:bg-primary after:hidden after:md:block">
           {/* form */}
-          <div className="form">
+          <div className="form w-full col-span-2 md:col-span-1">
             <form
               method="post"
               action="https://magnitecorp.com/panamax-backend/form.php"
-              className="col-span-2 md:col-span-1"
+              className="col-span-2 md:col-span-1 w-full"
             >
               <div className="flex flex-col justify-center items-center h-full gap-6">
                 {/* headings */}
@@ -51,7 +51,7 @@ const ContactUs = () => {
                 <div className="grid grid-cols-2 gap-6 w-full">
                   <div className="relative col-span-2 md:col-span-1">
                     <input
-                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full focus:border-primary transition-colors"
                       type="text"
                       name="name"
                       placeholder="Full Name"
@@ -60,7 +60,7 @@ const ContactUs = () => {
                   </div>
                   <div className="relative col-span-2 md:col-span-1">
                     <input
-                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full focus:border-primary transition-colors"
                       type="email"
                       name="email"
                       placeholder="Email"
@@ -69,7 +69,7 @@ const ContactUs = () => {
                   </div>
                   <div className="relative col-span-2 md:col-span-1">
                     <input
-                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full focus:border-primary transition-colors"
                       type="tel"
                       name="number"
                       placeholder="Phone Number"
@@ -78,7 +78,7 @@ const ContactUs = () => {
                   </div>
                   <div className="relative col-span-2 md:col-span-1">
                     <input
-                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full focus:border-primary transition-colors"
                       type="text"
                       name="company"
                       placeholder="Company"
@@ -87,7 +87,7 @@ const ContactUs = () => {
                   </div>
                   <div className="relative col-span-2 ">
                     <input
-                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                      className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full focus:border-primary transition-colors"
                       type="text"
                       name="product"
                       placeholder="product"

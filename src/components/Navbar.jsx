@@ -8,6 +8,7 @@ import logo from "../assets/logo.png";
 import { useSelector } from "react-redux";
 import AutoCompleteBox from "./AutoCompleteBox";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
   const { products } = useSelector((store) => store.products);
@@ -102,6 +103,13 @@ const Navbar = () => {
     }
   };
 
+  function handleHamClick() {
+    setIsNavOpened(!isNavOpened);
+    document
+      .getElementsByTagName("body")[0]
+      .classList.toggle("body-scroll-stop");
+  }
+
   return (
     <motion.header
       initial={{ top: -100, opacity: 0 }}
@@ -185,9 +193,14 @@ const Navbar = () => {
         initial={{ opacity: 0 }}
         animate={{ right: isNavOpened ? "0%" : "100%", opacity: 1 }}
         transition={{ ease: "easeIn", duration: 0.2 }}
-        className={`block md:hidden lg:hidden absolute top-full w-full min-h-screen bg-primary transition-all z-20`}
+        className={`mobile-nav block md:hidden lg:hidden absolute top-0 w-full h-screen overflow-scroll bg-primary transition-all z-20`}
       >
-        <ul className="flex-box-col-start gap-2 w-full h-full">
+        <RxCross2
+          size={30}
+          className="absolute top-4 right-4 text-white"
+          onClick={() => handleHamClick()}
+        />
+        <ul className="flex-box-col-start gap-2 w-full h-full pt-10">
           {navList.map((menu, key) => {
             return menu.type !== "dropdown" ? (
               <li
@@ -197,7 +210,8 @@ const Navbar = () => {
               >
                 <Link
                   to={menu.path}
-                  className="text-d capitalize inline-block py-2"
+                  className="text-white capitalize inline-block py-2 w-full"
+                  onClick={() => handleHamClick()}
                 >
                   {menu.name}
                 </Link>
@@ -208,7 +222,7 @@ const Navbar = () => {
                 className="relative w-full py-2 px-4 text-start capitalize border-b border-red-700 cursor-pointer"
                 onClick={() => handleClick(menu.id)}
               >
-                <div className="flex-box-start py-2 text-lg font-bold">
+                <div className="flex-box-start py-2 text-lg font-bold text-white">
                   {menu.name}
                   <span className="inline-block">
                     <svg
@@ -229,18 +243,21 @@ const Navbar = () => {
                 <ul
                   className={` ${
                     activeIndex === menu.id ? "block" : "hidden"
-                  } transition-all w-full px-4`}
+                  } transition-all w-full p-[15px] bg-white rounded-lg`}
                 >
                   {menu.submenu?.map((submenu, key) => {
                     return (
                       <li
                         key={key}
-                        className="text-white text-start text-sm mb-2"
+                        className="text-black text-start text-sm mb-2"
                       >
                         <Link
                           to={`product/${submenu.id}`}
                           className="inline-block h-full w-full"
-                          onClick={() => setIsNavOpened(false)}
+                          onClick={() => {
+                            setIsNavOpened(false);
+                            handleHamClick();
+                          }}
                         >
                           {submenu.title}
                         </Link>
@@ -261,10 +278,10 @@ const Navbar = () => {
             type="text"
             value={inputVal}
             placeholder="Search tape type"
-            className="bg-pink-light px-4 pr-14 text-xs md:text-md py-2 rounded-md w-full border border-[#0000] focus:bg-white focus:border focus:border-primary"
+            className="bg-pink-light px-4 pr-14 text-sm md:text-md py-3 rounded-md w-40 md:w-56 lg:w-64 !border !border-[#0000] focus:!bg-white focus:!border focus:!border-primary transition-all"
             onChange={(e) => setInputVal(e.target.value)}
           />
-          <button className=" bg-white text-primary h-[30px] w-8  m-[1px] rounded-md flex items-center justify-center absolute right-0 top-0">
+          <button className=" bg-white text-primary h-[44px] w-[44px] m-[1px] rounded-md flex items-center justify-center absolute right-0 top-0">
             <BsSearch size={20} />
           </button>
           {/* autocomplete box */}
@@ -277,10 +294,7 @@ const Navbar = () => {
       </div>
 
       {/* hamburger */}
-      <button
-        className="block lg:hidden ml-4"
-        onClick={() => setIsNavOpened(!isNavOpened)}
-      >
+      <button className="block lg:hidden ml-4" onClick={() => handleHamClick()}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"

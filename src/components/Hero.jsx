@@ -16,7 +16,7 @@ import banner4 from "../assets/Banner-4.jpg";
 const Hero = () => {
   SwiperCore.use([Autoplay]);
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-9 my-4 px-4 sm:px-8 md:px-12 gap-4">
+    <section className="grid grid-cols-1 lg:grid-cols-9 my-4 px-4 gap-4">
       <motion.div
         initial={{ x: -1000, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -86,35 +86,75 @@ const Hero = () => {
           action="https://magnitecorp.com/panamax-backend/form.php"
           className="flex items-center justify-center flex-col gap-4 w-full"
         >
-          <input
+          <div class="input-group">
+            <input
+              required
+              type="text"
+              name="name"
+              autocomplete="off"
+              className="input"
+            />
+            <label class="user-label">Full Name</label>
+          </div>
+          <div class="input-group">
+            <input
+              required
+              type="tel"
+              name="number"
+              autocomplete="off"
+              className="input"
+            />
+            <label class="user-label">Phone</label>
+          </div>
+          <div class="input-group">
+            <input
+              required
+              type="email"
+              name="email"
+              autocomplete="off"
+              className="input"
+            />
+            <label class="user-label">Email</label>
+          </div>
+          <div class="input-group">
+            <input
+              required
+              type="text"
+              name="company"
+              autocomplete="off"
+              className="input"
+            />
+            <label class="user-label">Company</label>
+          </div>
+          {/* <input
             type="text"
             name="name"
             placeholder="Full Name"
             required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-          />
-          <input
+            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
+          /> */}
+          {/* <input
             type="email"
             name="email"
             placeholder="Email"
             required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-          />
-          <input
+            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
+          /> */}
+          {/* <input
             type="tel"
             name="number"
             placeholder="Phone Number"
             required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-          />
+            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
+          /> */}
 
-          <input
+          {/* <input
             type="text"
             name="company"
             placeholder="Company"
             required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-          />
+            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
+          /> */}
         </form>
         <button className="btn-primary">Send Enquiry</button>
       </motion.div>

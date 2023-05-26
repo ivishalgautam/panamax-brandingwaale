@@ -133,7 +133,7 @@ const ProductPage = () => {
             </SwiperSlide>
           </Swiper>
 
-          <div className="col-span-12 md:col-span-7 py-4 flex-box-col-start items-start">
+          <div className="col-span-12 md:col-span-7 py-4 flex-box-col-center items-start transition-all">
             <h3 className="text-2xl font-bold text-gray-900 capitalize border-l-[3px] mb-4 border-primary pl-2">
               {title}
             </h3>
@@ -181,17 +181,17 @@ const ProductPage = () => {
         {/* product specs */}
         <motion.div
           variants={item}
-          className="bg-white px-4 md:px-4 lg:px-12 py-8"
+          className="bg-white px-4 md:px-4 lg:px-12 py-4"
         >
           {/* description */}
           <div className="bg-pink-light rounded-xl overflow-hidden px-12 py-10">
-            <ul className="pt-10 border-t-2 border-dashed border-gray-300 relative">
+            <ul className="pt-10 border-t-2 border-dashed border-gray-300 relative ul-list-tick">
               <div className="text-white bg-primary rounded-full px-4 py-1 absolute -top-4 left-1/2 -translate-x-1/2 after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:rotate-45 after:w-5 after:h-5 after:bg-primary z-10 after:-z-[1]">
                 Description
               </div>
               {description?.map((item, key) => {
                 return (
-                  <li className="mb-1 list-disc" key={key}>
+                  <li className="mb-1" key={key}>
                     {item}
                   </li>
                 );
@@ -219,33 +219,35 @@ const ProductPage = () => {
                 })}
               </tbody>
             </table>
-            <button
-              className="text-primary mx-auto w-full font-bold flex-box-col-center"
-              onClick={() =>
-                setShowFeatures((prev) =>
-                  features.length > prev
-                    ? prev + features.length - slice
-                    : prev - (features.length - slice)
-                )
-              }
-            >
-              {features.length <= showFeatures ? (
-                <>
-                  <BsChevronUp /> show less
-                </>
-              ) : (
-                <>
-                  show more <BsChevronDown />
-                </>
-              )}
-            </button>
+            {features.length > slice && (
+              <button
+                className="text-primary mx-auto w-full font-bold flex-box-col-center"
+                onClick={() =>
+                  setShowFeatures((prev) =>
+                    features.length > prev
+                      ? prev + features.length - slice
+                      : prev - (features.length - slice)
+                  )
+                }
+              >
+                {features.length <= showFeatures ? (
+                  <>
+                    <BsChevronUp /> show less
+                  </>
+                ) : (
+                  <>
+                    show more <BsChevronDown />
+                  </>
+                )}
+              </button>
+            )}
           </div>
         </motion.div>
 
         {/* product application */}
         <motion.div
           variants={item}
-          className="bg-white my-10 relative overflow-hidden pt-14 pb-4 after:absolute after:-top-[1.25rem] after:right-0 after:h-[300%] after:w-1/3 after:bg-pink-light after:rotate-[50deg]"
+          className="bg-white my-10 relative overflow-hidden  pb-4 after:absolute after:-top-[1.25rem] after:right-0 after:h-[300%] after:w-1/3 after:bg-pink-light after:rotate-[50deg]"
         >
           <h2 className="text-3xl font-thin text-primary capitalize text-center">
             product{" "}
@@ -254,34 +256,36 @@ const ProductPage = () => {
 
           <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 relative z-10 ">
             <div className="col-span-12 md:col-span-12">
-              <ul className="pt-8 px-4">
+              <ul className={`px-4 ul-list-tick`}>
                 {applications?.slice(0, showApplications).map((item, key) => {
                   return (
-                    <li className="mb-2 list-disc" key={key}>
+                    <li className="mb-2" key={key}>
                       {item.about}
                     </li>
                   );
                 })}
-                <button
-                  className="text-primary font-bold w-full flex-box-col-center"
-                  onClick={() =>
-                    setShowApplications((prev) =>
-                      applications.length > prev
-                        ? prev + applications.length - slice
-                        : prev - (applications.length - slice)
-                    )
-                  }
-                >
-                  {applications.length <= showApplications ? (
-                    <>
-                      <BsChevronUp /> show less
-                    </>
-                  ) : (
-                    <>
-                      show more <BsChevronDown />
-                    </>
-                  )}
-                </button>
+                {applications.length > slice && (
+                  <button
+                    className="text-primary font-bold w-full flex-box-col-center"
+                    onClick={() =>
+                      setShowApplications((prev) =>
+                        applications.length > prev
+                          ? prev + applications.length - slice
+                          : prev - (applications.length - slice)
+                      )
+                    }
+                  >
+                    {applications.length <= showApplications ? (
+                      <>
+                        <BsChevronUp /> show less
+                      </>
+                    ) : (
+                      <>
+                        show more <BsChevronDown />
+                      </>
+                    )}
+                  </button>
+                )}
               </ul>
             </div>
             {/* below section hidden might show later */}
@@ -317,7 +321,7 @@ const ProductPage = () => {
         </motion.div>
 
         {/* industries */}
-        <motion.div variants={item} className="my-20 px-4 md:px-10 lg:px-12">
+        <motion.div variants={item} className="my-10 px-4 md:px-10 lg:px-12">
           <h2 className="font-thin text-3xl text-primary capitalize text-center">
             used by{" "}
             <span className="font-bold italic text-shadow"> industries</span>
