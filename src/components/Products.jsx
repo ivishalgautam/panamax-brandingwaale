@@ -1,10 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
 import heroImage from "../assets/hero-image.png";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 const Products = () => {
+  SwiperCore.use([Autoplay]);
   const { products } = useSelector((state) => state.products);
   return (
     <section className="bg-gradient-to-r from-[#001234] to-[#000123] w-full grid grid-cols-9 px-8 py-12 gap-4">
@@ -26,6 +28,12 @@ const Products = () => {
       <div className="col-span-9 md:col-span-6 flex-box-center gap-4 flex-wrap md:flex-nowrap">
         <Swiper
           slidesPerView={2.5}
+          loop={true}
+          spaceBetween={20}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             320: { slidesPerView: 1 },
             640: { slidesPerView: 2 },
@@ -35,8 +43,8 @@ const Products = () => {
         >
           {products.map((product, key) => {
             return (
-              <SwiperSlide key={key} className="mr-4">
-                <Link to={`product/${product.id}`} className="w-full">
+              <SwiperSlide key={key}>
+                <Link to={`product/${product.id}`}>
                   <figure className="w-full">
                     <img src={product?.image} alt="" className="rounded-lg" />
                   </figure>

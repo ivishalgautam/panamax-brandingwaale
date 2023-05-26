@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Statements from "../components/Statements";
 import Map from "../components/Map";
 import Testimonial from "../components/Testimonial";
@@ -9,8 +9,14 @@ import heroImage from "../assets/hero-image.png";
 
 import BreadCrumb_common from "../components/BreadCrumb_common";
 import Footer from "../components/Footer";
+import { useLocation } from "react-router-dom";
 
 const AboutPage = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
   return (
     <motion.div
       initial={{ x: "100%", opacity: 0 }}

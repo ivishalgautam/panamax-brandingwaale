@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
-import { Link, useParams } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import Footer from "../components/Footer";
 import {
   FacebookIcon,
@@ -17,6 +17,12 @@ const BlogPage = ({ blogs }) => {
   const { title, desc, image, postedOn, brief } = blog[0];
   const { name, userImg, profession } = blog[0].approvedBy[0];
 
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
+
   const shareUrl = "https://panamax.magnitecorp.com/";
   return (
     <>
@@ -27,9 +33,9 @@ const BlogPage = ({ blogs }) => {
         {/* blog */}
         <div className="col-span-12 lg:col-span-8 bg-white p-5 rounded-md box-shadow-card">
           {/* breadcrumbs */}
-          <h2 className="text-3xl font-bold">{title}</h2>
-          <div className="flex items-center justify-between border-y-2 border-[#EEEEEE] p-4  my-4">
-            <figure className="w-[80px] h-[80px] mr-3">
+          <h2 className="text-lg md:text-3xl font-bold">{title}</h2>
+          <div className="flex items-center justify-between border-y-2 border-[#EEEEEE] py-4 my-4">
+            <figure className="w-[50px] md:w-[80px] mr-3">
               <img
                 src={userImg}
                 alt=""
@@ -39,19 +45,25 @@ const BlogPage = ({ blogs }) => {
 
             {/* user info */}
             <div className="mr-auto font-sm font-bold text-slate-900 capitalize">
-              <span>Aprroved by:</span>
-              <h2 className="text-md text-primary">{name}</h2>
+              <span className="text-xs md:text-lg md:text-md">
+                Aprroved by:
+              </span>
+              <h2 className="text-xs md:text-lg text-primary">{name}</h2>
             </div>
 
             <div>
-              <h2 className="text-sm font-bold">Posted on:</h2>
+              <h2 className="text-xs md:text-lg font-bold">Posted on:</h2>
               <p>{postedOn}</p>
             </div>
           </div>
 
           <div>
             <figure>
-              <img src={image} alt="" className="rounded-xl" />
+              <img
+                src={image}
+                alt=""
+                className="rounded-xl object-cover object-center w-full h-full"
+              />
             </figure>
             <p className="mt-4 mb-8">{desc}</p>
 
@@ -125,22 +137,21 @@ const BlogPage = ({ blogs }) => {
             <div className="flex-box-col-center gap-3">
               {blogs.map((e) => {
                 return (
-                  <div
-                    className="flex-box-start gap-3 border rounded-md w-full p-3 "
-                    key={e.id}
-                  >
-                    <img
-                      src={e.image}
-                      alt=""
-                      className="w-[50px] h-[50px] object-cover object-right rounded-[5px] shadow"
-                    />
-                    <div className="text-sm">
-                      <h2 className="text-ellipsis overflow-hidden">
-                        {e.title}
-                      </h2>
-                      <p>{e.createOn}</p>
+                  <Link key={e.id} to={`/blog/${e.id}`}>
+                    <div className="flex-box-start gap-3 border rounded-md w-full p-3 ">
+                      <img
+                        src={e.image}
+                        alt=""
+                        className="w-[50px] h-[50px] object-cover object-right rounded-[5px] shadow"
+                      />
+                      <div className="text-sm">
+                        <h2 className="text-ellipsis overflow-hidden">
+                          {e.title}
+                        </h2>
+                        <p>{e.createOn}</p>
+                      </div>
                     </div>
-                  </div>
+                  </Link>
                 );
               })}
             </div>

@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaPenNib } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Blogs = ({ blogs }) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
   return (
     <section className="bg-white mt-14 px-4 md:px-16 py-20">
       <h2 className="font-thin text-3xl text-primary text-center mb-4">
@@ -13,11 +18,7 @@ const Blogs = ({ blogs }) => {
         {blogs.map(({ id, title, desc, image, postedOn }) => {
           return (
             <Link key={id} to={`/blog/${id}`}>
-              <div className="rounded-xl shadow-md relative pb-10 md:pb-0">
-                <div
-                  className="absolute top-0 left-8 bg-white text-primary font-bold shadow-md rounded-b-lg py-1 px-2 text-center"
-                  dangerouslySetInnerHTML={{ __html: postedOn }}
-                />
+              <div className="rounded-xl shadow-md pb-10 relative md:pb-0">
                 <figure className="">
                   <img
                     src={image}
@@ -33,7 +34,7 @@ const Blogs = ({ blogs }) => {
                     {" "}
                     <FaPenNib className="inline-block mr-[3px]" /> Admin
                   </small>
-                  <p className="text-sm">{desc.substring(0, 150) + "..."}</p>
+                  <p className="text-sm">{desc.substring(0, 145) + "..."}</p>
                 </div>
                 <button className="absolute left-1/2 -translate-x-1/2 -bottom-5 btn-primary">
                   Read More

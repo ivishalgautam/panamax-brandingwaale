@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, useParams } from "react-router-dom";
+import { Link, NavLink, useLocation, useParams } from "react-router-dom";
 import image from "../assets/hero-image.png";
 import { useDispatch, useSelector } from "react-redux";
 import { RiSendPlaneFill } from "react-icons/ri";
@@ -14,6 +14,7 @@ import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import "../swiper.css";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const ProductPage = () => {
   let slice = 5;
@@ -25,9 +26,9 @@ const ProductPage = () => {
   const { products } = useSelector((store) => store.products);
 
   const filteredProduct = products.filter((e) => e.id === +productId);
-  // console.log(filteredProduct);
   const {
     title,
+    name,
     about,
     features,
     description,
@@ -57,6 +58,12 @@ const ProductPage = () => {
     },
   };
 
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
+
   return (
     <>
       <motion.section
@@ -66,13 +73,15 @@ const ProductPage = () => {
         className="bg-white overflow-hidden"
       >
         <Helmet>
-          <title>Product</title>
+          <title className="">
+            {title.charAt(0).toUpperCase() + title.slice(1).toLowerCase()}
+          </title>
         </Helmet>
 
         {/* breadcrumb */}
         <motion.div variants={item} className="breadcommon">
           <h2 className="text-[24px] font-bold text-primary relative z-10 capitalize ">
-            {title}
+            {name}
           </h2>
           <ul className="breadLinks flex-box-start text-white text-xs md:text-sm relative z-10 gap-1">
             <li>
@@ -84,7 +93,7 @@ const ProductPage = () => {
             </li>
             <VscChevronRight className="inline-block" />
             <li className="">
-              <NavLink>{title}</NavLink>
+              <NavLink>{name}</NavLink>
             </li>
           </ul>
         </motion.div>
@@ -135,14 +144,16 @@ const ProductPage = () => {
                 }}
                 className="inline"
               />
-              <button
-                onClick={() => {
-                  setShowMore(!showMore);
-                }}
-                className="text-primary text-sm font-bold ml-2"
-              >
-                {showMore ? " show less" : " show more..."}
-              </button>
+              {about.length > 700 && (
+                <button
+                  onClick={() => {
+                    setShowMore(!showMore);
+                  }}
+                  className="text-primary text-sm font-bold ml-2"
+                >
+                  {showMore ? " show less" : " show more..."}
+                </button>
+              )}
             </div>
             {/* <p className="mt-2">
             <span className="font-bold capitalize">Color :</span> Creamish
@@ -241,7 +252,7 @@ const ProductPage = () => {
             <span className="font-bold italic text-shadow"> application</span>
           </h2>
 
-          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 gap-10 relative z-10 ">
+          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 relative z-10 ">
             <div className="col-span-12 md:col-span-12">
               <ul className="pt-8 px-4">
                 {applications?.slice(0, showApplications).map((item, key) => {

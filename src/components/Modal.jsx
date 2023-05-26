@@ -19,9 +19,7 @@ export default function Modal({ productTitle }) {
   let { isOpen } = useSelector((state) => state.modal);
   let dispatch = useDispatch();
 
-  const handleClose = (e) => {
-    if (errors.email && errors.phone) return;
-
+  const handleClose = async (e) => {
     dispatch(closeModal());
   };
 
@@ -72,7 +70,9 @@ export default function Modal({ productTitle }) {
                   </Dialog.Title>
                   <div className="mt-2">
                     <form
-                      onSubmit={handleSubmit(handleClose)}
+                      method="post"
+                      action="https://magnitecorp.com/panamax-backend/form.php"
+                      // onSubmit={handleSubmit(handleClose)}
                       className="col-span-1"
                     >
                       <div className="flex flex-col justify-center items-center h-full gap-y-6">
@@ -84,69 +84,41 @@ export default function Modal({ productTitle }) {
                               type="text"
                               name="name"
                               placeholder="Enter your name"
-                              {...register("name")}
+                              required
                               className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                             />
                           </div>
                           {/* email */}
                           <div className="relative md:col-span-1">
                             <input
-                              type="text"
+                              type="email"
                               name="email"
+                              required
                               placeholder="Enter you email"
-                              {...register("email", {
-                                required: true,
-                                pattern: /^[^@ ]+@[^@ ]+\.[^@ .]{2,}$/,
-                              })}
                               className={`border ${
                                 errors.email
                                   ? "border-red-700"
                                   : "border-[#EEEEEE]"
                               }  text-sm p-2 rounded-md w-full`}
                             />
-                            {errors.email &&
-                            errors?.email?.type === "required" ? (
-                              <span className="absolute top-full left-1 text-xs text-red-700">
-                                This field is required*
-                              </span>
-                            ) : errors?.email?.type === "pattern" ? (
-                              <span className="absolute top-full left-1 text-xs text-red-700">
-                                Enter correct email
-                              </span>
-                            ) : (
-                              ""
-                            )}
                           </div>
                           {/* phone number */}
                           <div className="relative md:col-span-1">
                             <input
-                              type="text"
-                              name="phone"
+                              type="tel"
+                              name="number"
+                              required
                               placeholder="Enter your contact no."
                               className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
-                              {...register("phone", {
-                                required: true,
-                                pattern: /^[6-9]\d{9}$/,
-                              })}
                             />
-                            {errors.phone &&
-                            errors?.phone?.type === "required" ? (
-                              <span className="absolute top-full left-1 text-xs text-red-700">
-                                This field is required*
-                              </span>
-                            ) : errors?.phone?.type === "pattern" ? (
-                              <span className="absolute top-full left-1 text-xs text-red-700">
-                                Enter correct number
-                              </span>
-                            ) : (
-                              ""
-                            )}
                           </div>
 
                           {/* company */}
                           <div className="relative">
                             <input
+                              name="company"
                               type="text"
+                              required
                               placeholder="company"
                               className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
                             />
@@ -155,13 +127,12 @@ export default function Modal({ productTitle }) {
                           {/* product */}
                           <div className="">
                             <input
-                              disabled
+                              type="text"
                               name="product"
-                              id="message"
-                              // cols="30"
+                              required
                               rows="4"
                               placeholder="Product"
-                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full capitalize cursor-not-allowed"
+                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full capitalize cursor-not-allowed pointer-events-none bg-gray-100"
                               value={productTitle}
                             />
                           </div>
@@ -171,6 +142,7 @@ export default function Modal({ productTitle }) {
                         <div className="w-full">
                           <button
                             type="submit"
+                            name="submit"
                             className="btn-primary cursor-pointer w-full"
                             onClick={handleClose}
                           >

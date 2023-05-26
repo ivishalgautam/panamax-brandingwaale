@@ -24,11 +24,11 @@ const ContactUs = () => {
   // console.log(watch("example"), errors); // watch input value by passing the name of it
   return (
     <>
-      <section className="p-8 pb-12 h-auto mx-4 lg:mx-12">
+      <section className="p-8 h-auto mx-4 lg:mx-12">
         <Helmet>
           <title>Contact Us</title>
         </Helmet>
-        <div className="h-full bg-white rounded-xl overflow-hidden grid md:grid-cols-2 gap-10 gap-y-12 py-8 px-12 relative after:absolute after:right-0 after:top-0 after:w-1/5 after:h-full after:bg-primary after:hidden after:md:block">
+        <div className="h-full bg-white rounded-xl overflow-hidden grid md:grid-cols-2 gap-10 gap-y-12 py-8 px-12 shadow-sm relative after:absolute after:right-0 after:top-0 after:w-1/5 after:h-full after:bg-primary after:hidden after:md:block">
           {/* form */}
           <div className="form">
             <form

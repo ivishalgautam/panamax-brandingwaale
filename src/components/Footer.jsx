@@ -1,14 +1,14 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { MdKeyboardArrowRight } from "react-icons/md";
 import {
   BsFillTelephoneFill,
   BsFillEnvelopeFill,
   BsPinMapFill,
 } from "react-icons/bs";
 
-import logo from "../assets/logo.png";
-import building from "../assets/building.png";
+import logo from "../assets/panamax-footer-logo.png";
 import { useSelector } from "react-redux";
 
 const navList = [
@@ -30,21 +30,23 @@ const navList = [
   },
 ];
 const Footer = () => {
+  let navigate = useNavigate();
   const { products } = useSelector((store) => store.products);
+
   return (
     <footer className="bg-gradient-to-r from-[#001234] to-[#000123] w-full px-4 md:px-12">
       {/* logo and address */}
-      <div className="flex-box-evenly flex-wrap max-w-[1200px] mx-auto bg-white rounded-b-xl">
-        {/* logo */}
-        <figure className="w-52">
-          <img src={logo} alt="" />
-        </figure>
+      <div className="flex-box-center flex-wrap max-w-[1200px] mx-auto bg-white rounded-b-xl py-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-4">
+          {/* logo */}
+          <figure>
+            <img src={logo} alt="" className="w-48" />
+          </figure>
 
-        {/* address */}
-        <div className="flex-box-start flex-wrap gap-y-4 pb-4">
-          <div className="flex items-center justify-center gap-2 px-4 border-none md:border-l border-[#777777]">
+          {/* address */}
+          <div className="flex items-center justify-start md:justify-center gap-2 px-4 border-l-0 lg:border-l lg:border-[#777777]">
             <figure className="w-8">
-              <BsFillEnvelopeFill size={50} />
+              <BsFillEnvelopeFill size={50} className="text-primary" />
             </figure>
             <div className="">
               <p className="text-xs text-gray-500">Mail us at:</p>
@@ -52,9 +54,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 px-4 border-none md:border-l border-[#777777]">
+          <div className="flex items-center justify-start md:justify-center gap-2 px-4 border-l-0 lg:border-l lg:border-[#777777]">
             <figure className="w-8">
-              <BsFillTelephoneFill size={50} />
+              <BsFillTelephoneFill size={50} className="text-primary" />
             </figure>
             <div className="">
               <p className="text-xs text-gray-500">Call us at:</p>
@@ -62,9 +64,9 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex items-center justify-center gap-2 px-4 border-none md:border-l border-[#777777]">
+          <div className="flex items-center justify-start md:justify-center gap-2 px-4 border-l-0 lg:border-l lg:border-[#777777]">
             <figure className="w-8">
-              <BsPinMapFill size={50} />
+              <BsPinMapFill size={50} className="text-primary" />
             </figure>
             <div className="">
               <p className="text-xs text-gray-500">Address:</p>
@@ -86,15 +88,18 @@ const Footer = () => {
                 Product Categories
               </h2>
               {/* categories */}
-              <div className="grid grid-cols-1 md:grid-cols-3  items-start gap-4 gap-y-6 ">
+              <div className="grid grid-cols-1 md:grid-cols-3  items-start gap-4 gap-y-6">
                 <ul className="">
                   {products.slice(0, 10).map((item, key) => {
                     return (
                       <li
                         key={key}
-                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1"
+                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1 nav-list overflow-x-hidden hover:overflow-x-visible relative"
                       >
-                        <Link to={`product/${item.id}`}>{item.name}</Link>
+                        <span className="inline-block  transition-all absolute -left-10 top-0">
+                          <MdKeyboardArrowRight size={20} className="inline" />
+                        </span>
+                        <Link to={`/product/${item.id}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -104,9 +109,12 @@ const Footer = () => {
                     return (
                       <li
                         key={key}
-                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1"
+                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1 nav-list overflow-x-hidden hover:overflow-x-visible relative"
                       >
-                        <Link to={`product/${item.id}`}>{item.name}</Link>
+                        <span className="inline-block  transition-all absolute -left-10 top-0">
+                          <MdKeyboardArrowRight size={20} className="inline" />
+                        </span>
+                        <Link to={`/product/${item.id}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -116,9 +124,12 @@ const Footer = () => {
                     return (
                       <li
                         key={key}
-                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1"
+                        className="text-sm md:text-md lg:text-[14px] capitalize mb-1 nav-list overflow-x-hidden hover:overflow-x-visible relative"
                       >
-                        <Link to={`product/${item.id}`}>{item.name}</Link>
+                        <span className="inline-block  transition-all absolute -left-10 top-0">
+                          <MdKeyboardArrowRight size={20} className="inline" />
+                        </span>
+                        <Link to={`/product/${item.id}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -167,18 +178,30 @@ const Footer = () => {
       </div>
 
       {/* social links */}
-      <div className="flex-box-center gap-2 md:flex-box-between flex-wrap max-w-[1200px] mx-auto border-t border-[#00051c] py-2 mt-8">
+      <div className="flex-box-between gap-2 flex-col md:flex-row items-center max-w-[1200px] mx-auto border-t border-[#00051c] py-3 mt-8">
         {/* socials */}
         <div className="flex-box-center gap-2">
-          <span className="flex-box-center bg-white w-8 h-8 rounded-full">
-            <FaFacebookF size={15} className="m-auto text-secondary" />
-          </span>
-          <span className="flex-box-center bg-white w-8 h-8 rounded-full">
-            <FaInstagram size={15} className="m-auto text-secondary" />
-          </span>
-          <span className="flex-box-center bg-white w-8 h-8 rounded-full">
-            <FaLinkedinIn size={15} className="m-auto text-secondary" />
-          </span>
+          <a
+            href="https://www.facebook.com/profile.php?id=100064000752424"
+            target="_blank"
+            className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
+          >
+            <FaFacebookF size={15} className="m-auto" />
+          </a>
+          <a
+            href="https://www.instagram.com/panamax_ltd/"
+            target="_blank"
+            className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
+          >
+            <FaInstagram size={15} className="m-auto" />
+          </a>
+          <a
+            href="https://www.linkedin.com/company/panamaxltd/"
+            target="_blank"
+            className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
+          >
+            <FaLinkedinIn size={15} className="m-auto" />
+          </a>
         </div>
 
         <ul className="flex-box-center gap-2">

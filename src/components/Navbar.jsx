@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { BsSearch } from "react-icons/bs";
 import { Menu, Transition } from "@headlessui/react";
@@ -7,10 +7,13 @@ import { motion } from "framer-motion";
 import logo from "../assets/logo.png";
 import { useSelector } from "react-redux";
 import AutoCompleteBox from "./AutoCompleteBox";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Navbar = () => {
   const { products } = useSelector((store) => store.products);
-  // console.log(products);
+  useEffect(() => {
+    window.addEventListener("scroll", () => setInputVal(""));
+  }, [window.scrollY]);
   const navList = [
     {
       id: 1,
@@ -157,24 +160,14 @@ const Navbar = () => {
                       {menu?.submenu?.map((submenu) => {
                         return (
                           <Menu.Item key={submenu.id}>
-                            {({ active }) => (
-                              <button
-                                className={`${
-                                  active
-                                    ? "bg-primary text-white"
-                                    : "text-gray-900"
-                                } group flex w-full items-center rounded-md  text-sm`}
-                              >
-                                <Link
-                                  to={`product/${submenu.id}`}
-                                  className="flex items-center h-full w-full text-start px-2 py-2 text-sm capitalize hover:tracking-wider transition-all"
-                                >
-                                  {submenu.id === 11
-                                    ? "plate mounting tape"
-                                    : submenu.title.toLowerCase()}
-                                </Link>
-                              </button>
-                            )}
+                            <Link
+                              to={`product/${submenu.id}`}
+                              className={`flex items-center h-full w-full text-start px-2 py-2 text-sm capitalize hover:tracking-wider hover:bg-primary hover:text-white rounded-md transition-all `}
+                            >
+                              {submenu.id === 11
+                                ? "plate mounting tape"
+                                : submenu.title.toLowerCase()}
+                            </Link>
                           </Menu.Item>
                         );
                       })}
@@ -266,8 +259,9 @@ const Navbar = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            value={inputVal}
             placeholder="Search tape type"
-            className="bg-pink-light px-4 pr-14 text-xs md:text-md py-2 rounded-md w-full"
+            className="bg-pink-light px-4 pr-14 text-xs md:text-md py-2 rounded-md w-full border border-[#0000] focus:bg-white focus:border focus:border-primary"
             onChange={(e) => setInputVal(e.target.value)}
           />
           <button className=" bg-white text-primary h-[30px] w-8  m-[1px] rounded-md flex items-center justify-center absolute right-0 top-0">

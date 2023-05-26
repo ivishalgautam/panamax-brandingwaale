@@ -9,9 +9,16 @@ import Blogs from "./Blogs";
 import Products from "./Products";
 import { FadeInWhenVisible } from "../utils/FadeInWhenInView";
 import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const HomePage = ({ blogs }) => {
   const container = useRef(null);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
 
   return (
     <div ref={container} className="bg-pink-light">

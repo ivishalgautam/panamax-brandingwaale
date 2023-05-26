@@ -3,7 +3,7 @@ import mapImg from "../assets/map.png";
 
 const Map = () => {
   return (
-    <section className="px-4 md:px-12 flex flex-col lg:flex-row gap-4">
+    <section className="px-4 md:px-12 flex flex-col lg:flex-row gap-4 py-10 lg:py-0">
       {/* content */}
       <div className="flex-box-center lg:items-start flex-col">
         <h3 className="text-3xl font-thin text-primary capitalize">
@@ -16,7 +16,7 @@ const Map = () => {
           to diverse markets and meeting various industrial and consumer
           demands.
         </p>
-        <div className="flex-box-center gap-y-6 mt-10 gap-4 hidden md:flex">
+        <div className="flex-box-center gap-y-6 mt-10 gap-4 hidden lg:flex">
           <div className="relative bg-white rounded-lg px-3 py-2 text-center shadow-lg">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary rounded-full px-2 text-white text-sm font-bold">
               25489+
@@ -50,10 +50,10 @@ const Map = () => {
       </div>
 
       {/* map */}
-      <div className="h-full flex flex-col-reverse lg:flex-col">
+      <div className="h-full flex-box-center">
         <div className="mapSite">
           <img src={mapImg} alt="" />
-          <div className="flex-box-center  gap-y-6 mt-10 gap-4 block md:hidden">
+          <div className="flex-box-center gap-y-6 mt-10 gap-4 lg:hidden">
             <div className="relative bg-white rounded-lg px-3 py-2 text-center shadow-lg">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-primary rounded-full px-2 text-white text-sm font-bold">
                 25489+

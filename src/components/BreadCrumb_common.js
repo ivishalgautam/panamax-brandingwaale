@@ -7,10 +7,10 @@ function BreadCrumb_common() {
   return (
     <>
       <div className="breadcommon">
-        <h2 className="text-[36px] font-bold text-primary relative z-10">
+        <h2 className="text-[36px] font-bold text-primary relative z-10 text-center w-full">
           About Us
         </h2>
-        <ul className="breadLinks flex-box-start text-white relative z-10 gap-1">
+        <ul className="breadLinks text-white relative z-10 gap-1 text-center w-full flex-box-center">
           <li>
             <AiFillHome className="inline-block" /> <Link to="/">Home</Link>
           </li>

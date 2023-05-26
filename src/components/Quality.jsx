@@ -91,7 +91,7 @@ const Quality = () => {
               hoveredIndex === item.id
                 ? "before:scale-100 !text-white"
                 : "before:scale-0"
-            }   before:transition-transform before:duration-500 before:ease-in-out overflow-hidden why-card`}
+            }  before:transition-transform before:duration-500 before:ease-in-out overflow-hidden why-card`}
             onMouseEnter={() => setHoveredIndex(item.id)}
             onMouseLeave={() => setHoveredIndex(5)}
             key={item.id}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, { Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -13,6 +14,7 @@ import banner3 from "../assets/Banner-3.jpg";
 import banner4 from "../assets/Banner-4.jpg";
 
 const Hero = () => {
+  SwiperCore.use([Autoplay]);
   return (
     <section className="grid grid-cols-1 lg:grid-cols-9 my-4 px-4 sm:px-8 md:px-12 gap-4">
       <motion.div
@@ -23,6 +25,10 @@ const Hero = () => {
       >
         <Swiper
           modules={[Pagination]}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
           slidesPerView={1}
           pagination={{ clickable: true }}
         >

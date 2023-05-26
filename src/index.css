@@ -88,6 +88,10 @@ video {
   height: 100%;
 } */
 
+.nav-list:hover span {
+  left: -20px;
+}
+
 .search-suggestion::-webkit-scrollbar {
   width: 5px;
   margin-left: 10px;
