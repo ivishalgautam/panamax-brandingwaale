@@ -85,7 +85,7 @@ export default function Modal({ productTitle }) {
                               name="name"
                               placeholder="Enter your name"
                               required
-                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                              className="border border-[#EEEEEE] focus:border-primary text-sm p-2 rounded-md w-full transition-colors"
                             />
                           </div>
                           {/* email */}
@@ -95,11 +95,7 @@ export default function Modal({ productTitle }) {
                               name="email"
                               required
                               placeholder="Enter you email"
-                              className={`border ${
-                                errors.email
-                                  ? "border-red-700"
-                                  : "border-[#EEEEEE]"
-                              }  text-sm p-2 rounded-md w-full`}
+                              className={`border border-[#EEEEEE] focus:border-primary text-sm p-2 rounded-md w-full transition-colors`}
                             />
                           </div>
                           {/* phone number */}
@@ -109,7 +105,7 @@ export default function Modal({ productTitle }) {
                               name="number"
                               required
                               placeholder="Enter your contact no."
-                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                              className="border border-[#EEEEEE] focus:border-primary text-sm p-2 rounded-md w-full transition-colors"
                             />
                           </div>
 
@@ -120,7 +116,7 @@ export default function Modal({ productTitle }) {
                               type="text"
                               required
                               placeholder="company"
-                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full"
+                              className="border border-[#EEEEEE] focus:border-primary text-sm p-2 rounded-md w-full transition-colors"
                             />
                           </div>
 
@@ -132,7 +128,7 @@ export default function Modal({ productTitle }) {
                               required
                               rows="4"
                               placeholder="Product"
-                              className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full capitalize cursor-not-allowed pointer-events-none bg-gray-100"
+                              className="border !border-[#EEEEEE] text-sm p-2 rounded-md w-full h-full capitalize cursor-not-allowed pointer-events-none bg-gray-100"
                               value={productTitle}
                             />
                           </div>

@@ -7,7 +7,6 @@ import { AiFillHome } from "react-icons/ai";
 import { VscChevronRight } from "react-icons/vsc";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import tapeVideo from "../assets/videos/tape.mp4";
 import Modal from "../components/Modal";
 import { openModal } from "../store/features/modalSlice";
 import { Helmet } from "react-helmet-async";
@@ -15,6 +14,7 @@ import { motion } from "framer-motion";
 import "../swiper.css";
 import Footer from "../components/Footer";
 import { useEffect } from "react";
+import productBanner from "../assets/product_banner.jpg";
 
 const ProductPage = () => {
   let slice = 5;
@@ -98,7 +98,7 @@ const ProductPage = () => {
           </ul>
         </motion.div>
 
-        {/* banner */}
+        {/* product details */}
         <motion.div
           variants={item}
           className="bg-white p-8 px-4 md:px-10 lg:px-12 rounded-lg grid grid-cols-12 gap-6 relative before:absolute before:left-0 before:top-0 before:bg-pink-light before:w-1/5 before:h-full before:hidden before:md:block"
@@ -312,13 +312,13 @@ const ProductPage = () => {
         </div>
 
         {/* video section */}
-        <motion.div variants={item} className="hidden my-20 px-4">
+        {/* <motion.div variants={item} className="hidden my-20 px-4">
           <video
             src={tapeVideo}
             controls={true}
             className="aspect-video bg-gray-500 mx-auto w-[1048px] rounded-2xl mt-10 shadow-2xl"
           ></video>
-        </motion.div>
+        </motion.div> */}
 
         {/* industries */}
         <motion.div variants={item} className="my-10 px-4 md:px-10 lg:px-12">
@@ -331,10 +331,10 @@ const ProductPage = () => {
               return (
                 <div
                   key={key}
-                  className="rounded-xl px-4 py-2 w-[200px] h-[150px] flex flex-col items-center justify-around box-shadow-card"
+                  className="rounded-xl p-4 w-[150px] md:w-[200px] h-[120px] md:h-[150px] flex flex-col items-center justify-around box-shadow-card"
                 >
                   <img src={item.icon} alt="" className="w-[50px]" />
-                  <span className="capitalize text-center text-sm">
+                  <span className="capitalize text-center text-xs md:text-sm">
                     {item.name}
                   </span>
                 </div>

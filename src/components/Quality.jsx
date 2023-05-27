@@ -66,7 +66,7 @@ const Quality = () => {
   const [hoveredIndex, setHoveredIndex] = useState(5);
 
   return (
-    <section className="bg-white w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 px-4 md:px-12 py-12 mt-10">
+    <section className="bg-white w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 gap-y-8 px-4 md:px-12 py-12">
       <div className="px-1 py-2 rounded-xl transition-all flex-box-col-start gap-y-4">
         <h2 className="text-primary capitalize text-3xl font-thin">
           doing{" "}

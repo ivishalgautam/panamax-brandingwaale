@@ -18,6 +18,7 @@ import blog1 from "./assets/blogs-images/Blog-1.jpg";
 import blog2 from "./assets/blogs-images/Blog-2.jpg";
 import blog3 from "./assets/blogs-images/Blog-3.jpg";
 import avatar from "./assets/icon-logo.png";
+import AllBlogs from "./pages/AllBlogs";
 
 const products = [
   {
@@ -258,6 +259,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
               <Route path="/contact-us" element={<ContactUs />} />
               <Route path="/blog/:id" element={<BlogPage blogs={blogs} />} />
               <Route path="/industries" element={<IndustriesPage />} />
+              <Route path="/blogs" element={<AllBlogs blogs={blogs} />} />
               {/* <Route path="/products" element={<ProductsPage />} /> */}
             </Routes>
           </div>

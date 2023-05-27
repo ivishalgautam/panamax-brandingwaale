@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { FaPenNib } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const Blogs = ({ blogs }) => {
   const { pathname } = useLocation();
@@ -9,7 +10,7 @@ const Blogs = ({ blogs }) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [pathname]);
   return (
-    <section className="bg-white mt-14 px-4 md:px-16 py-20">
+    <section className="bg-white mt-14 px-4 md:px-16 py-10">
       <h2 className="font-thin text-3xl text-primary text-center mb-4">
         Our{" "}
         <span className="inline-block italic font-bold text-shadow">Blogs</span>
@@ -18,7 +19,7 @@ const Blogs = ({ blogs }) => {
         {blogs.map(({ id, title, desc, image, postedOn }) => {
           return (
             <Link key={id} to={`/blog/${id}`}>
-              <div className="rounded-xl shadow-md pb-10 relative md:pb-0">
+              <div className="rounded-xl shadow-md  relative md:pb-0">
                 <figure className="">
                   <img
                     src={image}
@@ -26,7 +27,7 @@ const Blogs = ({ blogs }) => {
                     className="w-full h-[200px] object-cover object-center rounded-xl"
                   />
                 </figure>
-                <div className="px-4 py-6 pb-10">
+                <div className="px-4 py-6 pb-8">
                   <h2 className="font-bold">
                     {title.substring(0, 60) + "..."}
                   </h2>

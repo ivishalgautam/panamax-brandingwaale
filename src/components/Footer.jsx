@@ -28,6 +28,10 @@ const navList = [
     name: "contact",
     path: "/contact",
   },
+  {
+    name: "blogs",
+    path: "/blogs",
+  },
 ];
 const Footer = () => {
   let navigate = useNavigate();
@@ -78,7 +82,7 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* navigation and form */}
+      {/* navigation*/}
       <div className="grid grid-cols-4 mt-6 mx-auto max-w-[1200px] gap-y-8">
         <div className="col-span-4 lg:col-span-3 text-white flex-box-start flex-col items-start md:flex-row gap-4 md:gap-10">
           <div className="grid grid-cols-12 w-full gap-8 md:gap-0">
@@ -138,87 +142,61 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        {/* form */}
-        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-center justify-center flex-col bg-white rounded-lg px-4 py-3 gap-2 md:gap-4">
-          <h2 className="text-2xl font-bold text-secondary text-shadow">
-            Enquire Now
-          </h2>
-          <form className="flex items-center justify-center flex-col gap-2 w-full">
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              required
-              className="border rounded-lg py-2 px-4 text-sm w-full"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Email"
-              required
-              className="border rounded-lg py-2 px-4 text-sm w-full"
-            />
-            <input
-              type="tel"
-              name="number"
-              placeholder="Phone Number"
-              required
-              className="border rounded-lg py-2 px-4 text-sm w-full"
-            />
-            <input
-              type="text"
-              name="company"
-              placeholder="Company"
-              required
-              className="border rounded-lg py-2 px-4 text-sm w-full"
-            />
-            <button className="btn-secondary mt-2">Send Enquiry</button>
-          </form>
+        {/* nav list */}
+        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-start justify-center flex-col rounded-lg px-4 py-3 gap-2 md:gap-4">
+          <ul className="flex-box-col-start gap-2">
+            {navList.map((item, key) => {
+              return (
+                <li
+                  key={key}
+                  className="text-white text-sm md:text-md lg:text-[14px] capitalize mb-1 nav-list overflow-x-hidden hover:overflow-x-visible relative"
+                >
+                  <span className="inline-block  transition-all absolute -left-10 top-0">
+                    <MdKeyboardArrowRight size={20} className="inline" />
+                  </span>
+                  <Link to={item.path}>{item.name}</Link>
+                </li>
+              );
+            })}
+          </ul>
+          {/* socials */}
+          <div>
+            <h3 className="text-white text-xl mb-2 relative before:absolute before:top-0 before:left-0 before:w-8 before:h-1 before:rounded-full before:bg-primary">
+              Quick links
+            </h3>
+
+            <div className="flex-box-center gap-2">
+              <a
+                href="https://www.facebook.com/profile.php?id=100064000752424"
+                target="_blank"
+                className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
+              >
+                <FaFacebookF size={15} className="m-auto" />
+              </a>
+              <a
+                href="https://www.instagram.com/panamax_ltd/"
+                target="_blank"
+                className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
+              >
+                <FaInstagram size={15} className="m-auto" />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/panamaxltd/"
+                target="_blank"
+                className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
+              >
+                <FaLinkedinIn size={15} className="m-auto" />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* social links */}
-      <div className="flex-box-between gap-2 flex-col md:flex-row items-center max-w-[1200px] mx-auto border-t border-[#00051c] py-3 mt-8">
-        {/* socials */}
-        <div className="flex-box-center gap-2">
-          <a
-            href="https://www.facebook.com/profile.php?id=100064000752424"
-            target="_blank"
-            className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
-          >
-            <FaFacebookF size={15} className="m-auto" />
-          </a>
-          <a
-            href="https://www.instagram.com/panamax_ltd/"
-            target="_blank"
-            className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
-          >
-            <FaInstagram size={15} className="m-auto" />
-          </a>
-          <a
-            href="https://www.linkedin.com/company/panamaxltd/"
-            target="_blank"
-            className="flex-box-center bg-white hover:bg-secondary text-secondary hover:text-white w-8 h-8 rounded-full transition-colors cursor-pointer"
-          >
-            <FaLinkedinIn size={15} className="m-auto" />
-          </a>
-        </div>
-
-        <ul className="flex-box-center gap-2">
-          {navList.map((item, key) => {
-            return (
-              <li
-                key={key}
-                className="capitalize text-sm md:text-md lg:text-[14px] mb-1 text-white"
-              >
-                <Link to={item.path}>{item.name}</Link>
-              </li>
-            );
-          })}
-        </ul>
-
+      <div className="max-w-[1200px] mx-auto border-t border-[#00051c] py-3 mt-8">
         {/* copyright */}
-        <p className="text-sm text-white">Copyright 2023 All right Reserved</p>
+        <p className="text-sm text-white text-right">
+          Copyright 2023 All right Reserved
+        </p>
       </div>
     </footer>
   );

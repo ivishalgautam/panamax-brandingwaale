@@ -8,7 +8,7 @@ import logo from "../assets/logo.png";
 import { useSelector } from "react-redux";
 import AutoCompleteBox from "./AutoCompleteBox";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import { RxCross2 } from "react-icons/rx";
+import { RxCross2, RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const { products } = useSelector((store) => store.products);
@@ -35,38 +35,14 @@ const Navbar = () => {
       type: "dropdown",
       submenu: products,
     },
-    // {
-    //   id: 4,
-    //   name: "solutions",
-    //   path: "/solutions",
-    //   type: "dropdown",
-    //   submenu: [
-    //     {
-    //       name: "xyz",
-    //       path: "solution/solution-1",
-    //     },
-    //     {
-    //       name: "xyz",
-    //       path: "solution/solution-2",
-    //     },
-    //     {
-    //       name: "xyz",
-    //       path: "solution/solution-3",
-    //     },
-    //     {
-    //       name: "xyz",
-    //       path: "solution/solution-4",
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 5,
-    //   name: "clientele",
-    //   path: "/clientele",
-    //   type: "link",
-    // },
     {
-      id: 6,
+      id: 4,
+      name: "blogs",
+      path: "/blogs",
+      type: "link",
+    },
+    {
+      id: 5,
       name: "contact",
       path: "/contact-us",
       type: "link",
@@ -282,7 +258,7 @@ const Navbar = () => {
             onChange={(e) => setInputVal(e.target.value)}
           />
           <button className=" bg-white text-primary h-[44px] w-[44px] m-[1px] rounded-md flex items-center justify-center absolute right-0 top-0">
-            <BsSearch size={20} />
+            <BsSearch size={15} />
           </button>
           {/* autocomplete box */}
           <AutoCompleteBox
@@ -295,18 +271,7 @@ const Navbar = () => {
 
       {/* hamburger */}
       <button className="block lg:hidden ml-4" onClick={() => handleHamClick()}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="w-5 h-5"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm7 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z"
-            clipRule="evenodd"
-          />
-        </svg>
+        <RxHamburgerMenu size={30} />
       </button>
     </motion.header>
   );

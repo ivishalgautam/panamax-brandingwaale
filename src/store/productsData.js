@@ -62,6 +62,13 @@ import textile from "../assets/icons/Textile-Apparel-Industry.png";
 import transportation from "../assets/icons/Transportation-Logistics.png";
 import wasteWater from "../assets/icons/waste-water.png";
 import woodWorking from "../assets/icons/Woodworking-Workshops.png";
+import marine from "../assets/icons/marine.png";
+import flooringMaintenance from "../assets/icons/flooring-maintenance.png";
+import socialDistance from "../assets/icons/social-distance.png";
+import pictureFraming from "../assets/icons/picture-framing.png";
+import gardening from "../assets/icons/gardening-horticulture.png";
+import bondingMounting from "../assets/icons/bonding-mounting.png";
+import productAssembly from "../assets/icons/product-assembly.png";
 
 // products
 import maskingTape from "../assets/product-images/masking-tape.jpg";
@@ -224,7 +231,7 @@ const productsData = [
         name: "Temporary Fixes and Repairs",
         about:
           "Masking tape can serve as a temporary fix or repair solution. It can hold together broken items, provide temporary sealing for leaks or cracks, or secure loose wires or cables until a permanent solution is implemented.",
-        icon: installation,
+        icon: repairing,
       },
       {
         name: "Photography and Filmmaking",
@@ -341,7 +348,7 @@ const productsData = [
         name: "Arts and crafts",
         about:
           "They are used by artists and crafters to create clean edges, geometric designs, or precise patterns in various mediums such as painting, collage, mixed media, or decorative arts.",
-        icon: securing,
+        icon: arts,
       },
       {
         name: "Stenciling and lettering",
@@ -365,7 +372,7 @@ const productsData = [
         name: "Industrial marking and labeling",
         about:
           "They can be used to create temporary lines, grids, or markers on floors, walls, or equipment, providing visual guidance or safety indicators in warehouses, factories, or production facilities.",
-        icon: industrialFacilities,
+        icon: safety_marking,
       },
       {
         name: "Stage and Production Design",
@@ -409,7 +416,7 @@ const productsData = [
       },
       {
         name: "Marine industry",
-        icon: pipes,
+        icon: marine,
       },
       {
         name: "Industrial surface protection",
@@ -482,7 +489,7 @@ const productsData = [
         name: "Bonding and Mounting",
         about:
           "The tape is commonly used for bonding and mounting applications in industries like automotive, construction, and electronics.",
-        icon: diy,
+        icon: bondingMounting,
       },
       {
         name: "Sealing and Gasketing",
@@ -524,7 +531,7 @@ const productsData = [
         name: "Panel Bonding",
         about:
           "It is employed for bonding large panels or composite materials in industries such as automotive, aerospace, and construction.",
-        icon: production_design,
+        icon: bondingMounting,
       },
       {
         name: "Surface Protection",
@@ -536,7 +543,7 @@ const productsData = [
         name: "Product Assembly",
         about:
           "It is utilized in various product assembly processes across industries.",
-        icon: production_design,
+        icon: productAssembly,
       },
     ],
     industrialUses: [
@@ -558,7 +565,7 @@ const productsData = [
       },
       {
         name: "Manufacturing and Assembly",
-        icon: electronicManufacturing,
+        icon: productAssembly,
       },
       {
         name: "Renewable Energy",
@@ -566,7 +573,7 @@ const productsData = [
       },
       {
         name: "Marine Industry",
-        icon: quality_control,
+        icon: marine,
       },
       {
         name: "HVAC and Plumbing",
@@ -649,7 +656,7 @@ const productsData = [
         name: "Arts and Crafts",
         about:
           "Nano-Sil tape is popular among artists and crafters due to its vibrant colors, easy tearability, and ability to adhere to various surfaces. It can be used for creating colorful designs, decorative borders, and collage work. The tape's flexibility allows for intricate designs and precise applications, making it a versatile tool for artistic expressions.",
-        icon: idenfication,
+        icon: arts,
       },
       {
         name: "Scrapbooking and Journaling",
@@ -679,7 +686,7 @@ const productsData = [
         name: "Temporary Repairs and Quick Fixes",
         about:
           "Nano-Sil tape provides a temporary fix for various household items and equipment. Whether it's repairing a torn item, securing loose parts, or reinforcing weak joints, the tape offers a quick and reliable solution until a permanent fix can be implemented.",
-        icon: installation,
+        icon: repairing,
       },
     ],
     industrialUses: [
@@ -701,11 +708,11 @@ const productsData = [
       },
       {
         name: "Marine and Offshore Applications",
-        icon: warehouse,
+        icon: marine,
       },
       {
         name: "General Maintenance and Repair",
-        icon: pipes,
+        icon: repairing,
       },
     ],
   },
@@ -928,7 +935,7 @@ const productsData = [
         name: "Product Assembly",
         about:
           "PMX Double-sided tapes are commonly used in product assembly processes. They provide a reliable and efficient bonding solution for joining components, securing parts, and attaching various materials together. From electronics to automotive parts, PMX Double-sided tapes ensure secure and durable assembly.",
-        icon: diy,
+        icon: productAssembly,
       },
       {
         name: "Graphic and Signage Installation",
@@ -946,7 +953,7 @@ const productsData = [
         name: "Arts and Crafts",
         about:
           "PMX Double-sided tapes are popular among artists and crafters. They are used in a wide range of art and craft projects, such as collage making, photo mounting, and artwork assembly. These tapes offer precise and secure bonding, allowing for creative and professional-looking results.",
-        icon: repairing,
+        icon: arts,
       },
       {
         name: "Home Improvement and Decor",
@@ -958,7 +965,7 @@ const productsData = [
         name: "Exhibition and Trade Show Displays",
         about:
           "PMX Double-sided tapes play a significant role in creating impressive exhibition and trade show displays. They are used for mounting panels, graphics, signage, and other promotional materials. These tapes offer strong adhesion and ensure that the displays remain securely in place during the entire event.",
-        icon: arts,
+        icon: exihibition,
       },
       {
         name: "Automotive Interior Applications",
@@ -976,7 +983,7 @@ const productsData = [
         name: "Electronic Device Repairs",
         about:
           "PMX Double-sided tapes are valuable in electronic device repairs. They are commonly used for securing components, attaching batteries, bonding LCD screens, and securing cables within devices. These tapes provide reliable adhesion and help ensure the proper functioning and stability of repaired electronic devices.",
-        icon: installation,
+        icon: repairing,
       },
       {
         name: "Medical and Healthcare Applications",
@@ -1102,13 +1109,13 @@ const productsData = [
         name: "Bundle and Harness Management",
         about:
           "PMX Double-sided tapes are popular among artists and crafters. They are used in a wide range of art and craft projects, such as collage making, photo mounting, and artwork assembly. These tapes offer precise and secure bonding, allowing for creative and professional-looking results.",
-        icon: safety_marking,
+        icon: bondingMounting,
       },
       {
         name: "Temporary Repairs",
         about:
           "It can be used to mend damaged wires or insulate exposed electrical parts.",
-        icon: production_design,
+        icon: repairing,
       },
       {
         name: "DIY and Craft Projects",
@@ -1172,7 +1179,7 @@ const productsData = [
       },
       {
         name: "Marine and Shipbuilding",
-        icon: diy,
+        icon: marine,
       },
       {
         name: "Data Centers and IT Facilities",
@@ -1180,7 +1187,7 @@ const productsData = [
       },
       {
         name: "Electrical Maintenance and Repair",
-        icon: electric,
+        icon: repairing,
       },
     ],
   },
@@ -1256,13 +1263,13 @@ const productsData = [
         name: "Sealing Drywall Joints",
         about:
           "The primary application of drywall joint tapes is to seal and reinforce joints between drywall panels. ",
-        icon: diy,
+        icon: dryWall,
       },
       {
         name: "Repairing Damaged Drywall",
         about:
           "Drywall joint tapes are used for repairing damaged drywall surfaces. They can be applied over cracks, holes, or other imperfections.",
-        icon: arts,
+        icon: repairing,
       },
       {
         name: "Corner Bead Reinforcement",
@@ -1286,7 +1293,7 @@ const productsData = [
         name: "Artistic Designs",
         about:
           "It can be creatively used to create decorative or artistic designs on walls and ceilings.",
-        icon: diy,
+        icon: arts,
       },
       {
         name: "Soundproofing",
@@ -1459,7 +1466,7 @@ const productsData = [
         name: "Marine Industry",
         about:
           "These tapes are utilized in the marine industry for sealing connections in plumbing systems, pumps, valves, and fittings on boats and ships.",
-        icon: installation,
+        icon: marine,
       },
       {
         name: "Renewable Energy",
@@ -1477,7 +1484,7 @@ const productsData = [
     industrialUses: [
       {
         name: "Pipe and Valve Connections",
-        icon: electric,
+        icon: pipes,
       },
       {
         name: "Hydraulic and Pneumatic Systems",
@@ -1493,7 +1500,7 @@ const productsData = [
       },
       {
         name: "Food and Beverage Industry",
-        icon: food_processing,
+        icon: food_beverage,
       },
       {
         name: "HVAC Systems",
@@ -1568,7 +1575,7 @@ const productsData = [
   //       name: "Food Packaging",
   //       about:
   //         "Packseal Tape is commonly used in the food industry for sealing bags, pouches, and containers containing perishable and non-perishable food items. ",
-  //       icon: packagingShipping,
+  //       icon: food_processing,
   //     },
   //     {
   //       name: "Household Storage",
@@ -1586,7 +1593,7 @@ const productsData = [
   //       name: "Arts and Crafts",
   //       about:
   //         "It is commonly used for sealing and protecting artwork, mounting photographs, and creating custom packaging for handmade products.",
-  //       icon: safety_marking,
+  //       icon: arts,
   //     },
   //     {
   //       name: "Shipping and Mailing",
@@ -1598,7 +1605,7 @@ const productsData = [
   //       name: "Industrial and Warehouse Operations",
   //       about:
   //         "It is utilized in industrial and warehouse settings for sealing bags, pallets, and containers holding various goods and materials.",
-  //       icon: diy,
+  //       icon: warehouse,
   //     },
   //     {
   //       name: "Retail and Packaging",
@@ -1616,7 +1623,7 @@ const productsData = [
   //   industrialUses: [
   //     {
   //       name: "Food Packaging",
-  //       icon: packagingShipping,
+  //       icon: food_processing,
   //     },
   //     {
   //       name: "Pharmaceutical Packaging",
@@ -1632,15 +1639,15 @@ const productsData = [
   //     },
   //     {
   //       name: "Agricultural and Horticultural Packaging",
-  //       icon: industrialPackaging,
+  //       icon: gardening,
   //     },
   //     {
   //       name: "Chemical and Hazardous Material Packaging",
-  //       icon: packagingShipping,
+  //       icon: hazardous,
   //     },
   //     {
   //       name: "Logistics and Shipping",
-  //       icon: pipes,
+  //       icon: marine,
   //     },
   //     {
   //       name: "Scientific and Laboratory Equipment",
@@ -1767,7 +1774,7 @@ const productsData = [
       },
       {
         name: "Folding Cartons",
-        icon: construction,
+        icon: packagingShipping,
       },
       {
         name: "Corrugated Board Printing",
@@ -1895,7 +1902,7 @@ const productsData = [
       },
       {
         name: "Folding Cartons",
-        icon: construction,
+        icon: packagingShipping,
       },
       {
         name: "Corrugated Board Printing",
@@ -2066,15 +2073,15 @@ const productsData = [
       },
       {
         name: "Museums and Exhibition Spaces",
-        icon: pipes,
+        icon: exihibition,
       },
       {
         name: "Sports Complexes and Stadiums",
-        icon: quality_control,
+        icon: sports,
       },
       {
         name: "Transport Infrastructure",
-        icon: construction,
+        icon: marine,
       },
     ],
   },
@@ -2211,11 +2218,11 @@ const productsData = [
       },
       {
         name: "Museums and Exhibition Spaces",
-        icon: pipes,
+        icon: exihibition,
       },
       {
         name: "Sports Complexes and Stadiums",
-        icon: quality_control,
+        icon: sports,
       },
       {
         name: "Transport Infrastructure",
@@ -2292,7 +2299,7 @@ const productsData = [
         name: "Marine and Boating",
         about:
           "It is applied on decks, steps, gangways, and other areas where water or moisture may create slippery conditions, ensuring the safety of passengers and crew.",
-        icon: securing,
+        icon: marine,
       },
       {
         name: "Automotive and Transportation",
@@ -2449,7 +2456,7 @@ const productsData = [
         name: "Wall Construction",
         about:
           " It is applied to the formwork panels to ensure that the concrete sets evenly and does not leak or seep through the joints.",
-        icon: repairing,
+        icon: construction,
       },
       {
         name: "Foundation Work",
@@ -2461,7 +2468,7 @@ const productsData = [
         name: "Staircase Construction",
         about:
           "It helps in achieving crisp and well-defined edges, ensuring that each step is accurately formed. ",
-        icon: arts,
+        icon: construction,
       },
       {
         name: "Retaining Walls",
@@ -2479,7 +2486,7 @@ const productsData = [
         name: "Repair and Renovation",
         about:
           "Shuttering tape is useful in repair and renovation projects where existing concrete structures need to be reinforced or modified. ",
-        icon: renovationRemodelling,
+        icon: repairing,
       },
       {
         name: "DIY Projects",
@@ -2644,7 +2651,7 @@ const productsData = [
         name: "Repair and Renovation",
         about:
           "Shuttering tape is useful in repair and renovation projects where existing concrete structures need to be reinforced or modified. ",
-        icon: renovationRemodelling,
+        icon: repairing,
       },
       {
         name: "DIY Projects",
@@ -2776,7 +2783,7 @@ const productsData = [
         name: "DIY Home Projects",
         about:
           "Edge banding fixing tape is commonly used in DIY home improvement projects. ",
-        icon: idenfication,
+        icon: diy,
       },
       {
         name: "Renovations and Remodeling",
@@ -2853,11 +2860,11 @@ const productsData = [
       },
       {
         name: "Exhibition Stands and Trade Show Booths",
-        icon: quality_control,
+        icon: exihibition,
       },
       {
         name: "Marine and RV Industry",
-        icon: quality_control,
+        icon: marine,
       },
       {
         name: "Panel and Door Manufacturing",
@@ -2939,7 +2946,7 @@ const productsData = [
         name: "DIY Home Projects",
         about:
           "Edge banding fixing tape is commonly used in DIY home improvement projects. ",
-        icon: idenfication,
+        icon: diy,
       },
       {
         name: "Renovations and Remodeling",
@@ -3016,11 +3023,11 @@ const productsData = [
       },
       {
         name: "Exhibition Stands and Trade Show Booths",
-        icon: quality_control,
+        icon: exihibition,
       },
       {
         name: "Marine and RV Industry",
-        icon: quality_control,
+        icon: marine,
       },
       {
         name: "Panel and Door Manufacturing",
@@ -3105,13 +3112,13 @@ const productsData = [
         name: "Plumbing Repairs",
         about:
           " It is commonly used in plumbing repairs to seal leaks in pipes, joints, and fittings. ",
-        icon: color_coding,
+        icon: repairing,
       },
       {
         name: "Roof Repairs",
         about:
           " It can be applied to seal leaks in roofing materials, such as shingles, tiles, or metal panels.",
-        icon: idenfication,
+        icon: repairing,
       },
       {
         name: "HVAC Systems",
@@ -3147,7 +3154,7 @@ const productsData = [
         name: "Boat and Marine Repairs",
         about:
           "It is beneficial in boat and marine repairs for sealing leaks in hulls, hatches, or through-hull fittings. ",
-        icon: production_design,
+        icon: marine,
       },
       {
         name: "Emergency Repairs",
@@ -3159,7 +3166,7 @@ const productsData = [
         name: "DIY Projects",
         about:
           " It can be used in home repairs, outdoor projects, or even temporary fixes around the house.",
-        icon: production_design,
+        icon: diy,
       },
     ],
     industrialUses: [
@@ -3189,7 +3196,7 @@ const productsData = [
       },
       {
         name: "Marine and Offshore Applications",
-        icon: quality_control,
+        icon: marine,
       },
       {
         name: "Facilities Maintenance",
@@ -3197,7 +3204,7 @@ const productsData = [
       },
       {
         name: "Electrical Systems",
-        icon: quality_control,
+        icon: electric,
       },
       {
         name: "Emergency Repairs",
@@ -3265,7 +3272,7 @@ const productsData = [
         name: "DIY and Crafts",
         about:
           "It can be used for various creative projects like scrapbooking, card making, and stencil designs.",
-        icon: securing,
+        icon: diy,
       },
       {
         name: "Automotive Maintenance",
@@ -3277,7 +3284,7 @@ const productsData = [
         name: "Electronics and Gadgets",
         about:
           "It is commonly used to protect screens and surfaces of electronic devices, such as smartphones, tablets, laptops, and gaming consoles. ",
-        icon: safety_marking,
+        icon: electronicManufacturing,
       },
       {
         name: "Furniture and Appliances",
@@ -3341,7 +3348,7 @@ const productsData = [
       },
       {
         name: "Marine and Offshore",
-        icon: quality_control,
+        icon: marine,
       },
       {
         name: "Glass and Mirrors",
@@ -3474,11 +3481,11 @@ const productsData = [
       },
       {
         name: "Arts and Crafts",
-        icon: warehouse,
+        icon: arts,
       },
       {
         name: "Exhibition and Trade Shows",
-        icon: pipes,
+        icon: exihibition,
       },
       {
         name: "Stage and Film Productions",
@@ -3555,7 +3562,7 @@ const productsData = [
       {
         name: "Temporary Repairs",
         about: "It can be used for temporary repairs. ",
-        icon: securing,
+        icon: repairing,
       },
       {
         name: "Bundling and Strapping",
@@ -3567,13 +3574,13 @@ const productsData = [
         name: "Crafts and DIY Projects",
         about:
           "It can be utilized in various crafts and do-it-yourself (DIY) projects. ",
-        icon: safety_marking,
+        icon: diy,
       },
       {
         name: "Bookbinding and Repair",
         about:
           "It can help reinforce book spines, repair torn pages, or secure loose bindings, providing a temporary or interim fix until proper restoration can be done.",
-        icon: arts,
+        icon: repairing,
       },
       {
         name: "Seal for Freshness",
@@ -3620,7 +3627,7 @@ const productsData = [
       },
       {
         name: "Electronics and Technology",
-        icon: quality_control,
+        icon: electronicManufacturing,
       },
       {
         name: "Automotive and Aerospace",
@@ -3757,7 +3764,7 @@ const productsData = [
         name: "Temporary Flooring Solutions",
         about:
           "It can be used to create temporary flooring solutions for outdoor events, construction sites, or other temporary setups.",
-        icon: production_design,
+        icon: floorMarking,
       },
     ],
     industrialUses: [
@@ -3874,7 +3881,7 @@ const productsData = [
         name: "Repair and Restoration",
         about:
           "It can be used to reinforce cracked or split wood, hold loose joints together, or temporarily secure pieces during repair work. ",
-        icon: securing,
+        icon: repairing,
       },
       {
         name: "Woodworking and Crafts",
@@ -3892,7 +3899,7 @@ const productsData = [
         name: "Flooring Maintenance",
         about:
           "It can mark off areas that need repair or refinishing, temporarily cover gaps or cracks, or protect flooring edges during waxing or polishing. ",
-        icon: arts,
+        icon: flooringMaintenance,
       },
       {
         name: "Carpentry and Joinery",
@@ -3930,11 +3937,11 @@ const productsData = [
       },
       {
         name: "Exhibition and Trade Shows",
-        icon: pipes,
+        icon: exihibition,
       },
       {
         name: "Flooring Installations",
-        icon: quality_control,
+        icon: flooringMaintenance,
       },
       {
         name: "Shipping and Logistics",
@@ -4032,19 +4039,19 @@ const productsData = [
         name: "Quality Control and Inspection Areas",
         about:
           " It is used to designate areas for quality control and inspection processes. It helps separate incoming, in-process, and outgoing inspection zones.",
-        icon: safety_marking,
+        icon: quality_control,
       },
       {
         name: "Social Distancing and Crowd Control",
         about:
           "It is applied in retail stores, banks, airports, and other public spaces to indicate safe distances between individuals in queues or waiting areas.",
-        icon: arts,
+        icon: socialDistance,
       },
       {
         name: "Tool and Equipment Placement",
         about:
           " It is used to create designated areas for tools, equipment, and machinery. ",
-        icon: installation,
+        icon: industrial_equipment,
       },
       {
         name: "Inventory Management",
@@ -4176,7 +4183,7 @@ const productsData = [
         name: "Picture framing",
         about:
           "It is used in the framing industry to create a space between the artwork and the frame.",
-        icon: color_coding,
+        icon: pictureFraming,
       },
       {
         name: "Automotive detailing",
@@ -4224,7 +4231,7 @@ const productsData = [
         name: "Gardening and horticulture",
         about:
           "It can be used to secure plant stems to stakes or trellises, provide protection to delicate plant parts, or create cushioning for gardening tools and handles.",
-        icon: production_design,
+        icon: gardening,
       },
       {
         name: "Household repairs and maintenance",
@@ -4252,7 +4259,7 @@ const productsData = [
       },
       {
         name: "Marine and aerospace",
-        icon: aerospace,
+        icon: marine,
       },
       {
         name: "Furniture and woodworking",
@@ -4358,7 +4365,7 @@ const productsData = [
   //       name: "Electrical Wiring and Repairs",
   //       about:
   //         " It can be used for repairing damaged electrical wires, providing a temporary or permanent solution.",
-  //       icon: wiring,
+  //       icon: electric,
   //     },
   //     {
   //       name: "EMI/RFI Shielding",
@@ -4370,7 +4377,7 @@ const productsData = [
   //       name: "Sealing and Repairing Reflective Insulation",
   //       about:
   //         "It is used to seal gaps, seams, and joints in these reflective insulation systems, ensuring maximum thermal efficiency and preventing the ingress of moisture or air.",
-  //       icon: arts,
+  //       icon: repairing,
   //     },
   //     {
   //       name: "Automotive Repairs",
@@ -4394,7 +4401,7 @@ const productsData = [
   //       name: "Sealing and Repairing Metal Surfaces",
   //       about:
   //         "It can be used to patch minor damages or leaks in metal pipes, tanks, or equipment.",
-  //       icon: production_design,
+  //       icon: repairing,
   //     },
   //   ],
   //   industrialUses: [
@@ -4416,7 +4423,7 @@ const productsData = [
   //     },
   //     {
   //       name: "Marine and aerospace",
-  //       icon: aerospace,
+  //       icon: marine,
   //     },
   //     {
   //       name: "Furniture and woodworking",
@@ -4484,7 +4491,7 @@ const productsData = [
         name: "Home Repairs",
         about:
           "It can be used to patch holes in walls, temporarily fix plumbing leaks, secure loose carpet edges, repair damaged furniture, and reinforce weak or broken parts.",
-        icon: furniture,
+        icon: repairing,
       },
       {
         name: "Arts and Crafts",
@@ -4514,7 +4521,7 @@ const productsData = [
         name: "Gardening and Outdoor Maintenance",
         about:
           "It can be used to secure plant stems, repair garden tools, fix fences, and provide temporary support for plants. ",
-        icon: arts,
+        icon: gardening,
       },
       {
         name: "Automotive Maintenance",
@@ -4635,7 +4642,7 @@ const productsData = [
       {
         name: "Marking and Color Coding",
         about: "Used in manufacturing, construction, and warehouse management.",
-        icon: warehouse,
+        icon: color_coding,
       },
       {
         name: "Identification and Labeling",

@@ -14,6 +14,7 @@ import img9 from "../assets/Indusrty-Images/1-09.jpg";
 import img10 from "../assets/Indusrty-Images/1-10.jpg";
 import img11 from "../assets/Indusrty-Images/1-11.jpg";
 import img12 from "../assets/Indusrty-Images/1-12.jpg";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 let industryImages = [
   {
@@ -79,39 +80,56 @@ const Industries = () => {
       </h2>
 
       <div className="flex-box-center flex-wrap gap-5 px-4 md:px-12 lg:px-16">
-        {industryImages.map((item, key) => {
-          return (
-            <Link to={"/industries"} key={key}>
-              <div
-                className="relative shadow-xl rounded-xl overflow-hidden"
-                onMouseOver={() => setHoveredIndex(key)}
-                onMouseLeave={() => setHoveredIndex(null)}
-              >
-                <figure className="w-[250px] h-[300px] relative z-0 before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-t before:from-black hover:before:from-primary before:z-10">
-                  <img
-                    src={item.path}
-                    alt=""
-                    className="w-full h-full object-cover object-center"
-                  />
-                </figure>
-                {/* <button
+        <Swiper
+          loop={true}
+          spaceBetween={20}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
+          }}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 2 },
+            900: { slidesPerView: 3 },
+            1280: { slidesPerView: 4 },
+          }}
+        >
+          {industryImages.map((item, key) => {
+            return (
+              <SwiperSlide>
+                <Link key={key}>
+                  <div
+                    className="relative shadow-xl rounded-xl overflow-hidden"
+                    onMouseOver={() => setHoveredIndex(key)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    <figure className="w-[250px] h-[300px] relative z-0 before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-t before:from-black hover:before:from-primary before:z-10">
+                      <img
+                        src={item.path}
+                        alt=""
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </figure>
+                    {/* <button
                   className={` ${
                     hoveredIndex === key ? "opacity-100" : "opacity-0"
                   } absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 btn-primary rounded-xl transition-none`}
                 >
                   View More
                 </button> */}
-                <h2
-                  className={`py-2 absolute ${
-                    hoveredIndex === key ? "bottom-8" : "bottom-4"
-                  } w-2/3 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none rounded-full border border-white text-white transition-all`}
-                >
-                  {item.title}
-                </h2>
-              </div>
-            </Link>
-          );
-        })}
+                    <h2
+                      className={`py-2 absolute ${
+                        hoveredIndex === key ? "bottom-8" : "bottom-4"
+                      } w-2/3 left-1/2 -translate-x-1/2 z-10 text-center pointer-events-none rounded-full border border-white text-white transition-all`}
+                    >
+                      {item.title}
+                    </h2>
+                  </div>
+                </Link>
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
       </div>
     </section>
   );

@@ -97,12 +97,12 @@ const ContactUs = () => {
                 </div>
 
                 {/* cta */}
-                <div className="w-full col-span-2">
+                <div className="w-full col-span-2 flex-box-center">
                   <button
                     type="submit"
                     name="submit"
                     // value="Send Enquiry"
-                    className="btn-primary cursor-pointer w-full capitalize"
+                    className="btn-primary cursor-pointer w-full md:w-[80%] lg:w-1/3 mx-auto capitalize"
                   >
                     send enquiry
                   </button>

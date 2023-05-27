@@ -25,15 +25,13 @@ const About = () => {
           </h2>
           <div className="my-6 text-sm">
             <p className="mt-4">
-              Panamax a name synonym to trust and relation. Little did we know
-              when we the Panamax Family questioned ourselves about what is that
-              single factor that keeps us together, binds us with our customers
-              and differentiate us vis-Ã -vis our competitors. Together we
-              concluded that it is nothing else but our ability and our passion
-              to live every single day of our life to win the trust of our
-              customers and build a relation with every single of our
-              stakeholder that leads us together to the path of success and
-              prosperity.
+              Panamax is built on trust and forging enduring relationships.
+              Trust sets us apart and propels us towards success. Our mission is
+              to help everyone achieve greatness and create remarkable stories
+              together. We have the solutions to transform your dreams into
+              reality. With pride, we declare, "We Make Things Stick," and we
+              commit to sticking with you on your journey towards fulfilling
+              your aspirations.
             </p>
           </div>
           <Link to="/about" className="btn-primary">

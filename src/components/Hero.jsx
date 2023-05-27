@@ -86,45 +86,45 @@ const Hero = () => {
           action="https://magnitecorp.com/panamax-backend/form.php"
           className="flex items-center justify-center flex-col gap-4 w-full"
         >
-          <div class="input-group">
+          <div className="input-group">
             <input
               required
               type="text"
               name="name"
-              autocomplete="off"
+              autoComplete="off"
               className="input"
             />
-            <label class="user-label">Full Name</label>
+            <label className="user-label">Full Name</label>
           </div>
-          <div class="input-group">
+          <div className="input-group">
             <input
               required
               type="tel"
               name="number"
-              autocomplete="off"
+              autoComplete="off"
               className="input"
             />
-            <label class="user-label">Phone</label>
+            <label className="user-label">Phone</label>
           </div>
-          <div class="input-group">
+          <div className="input-group">
             <input
               required
               type="email"
               name="email"
-              autocomplete="off"
+              autoComplete="off"
               className="input"
             />
-            <label class="user-label">Email</label>
+            <label className="user-label">Email</label>
           </div>
-          <div class="input-group">
+          <div className="input-group">
             <input
               required
               type="text"
               name="company"
-              autocomplete="off"
+              autoComplete="off"
               className="input"
             />
-            <label class="user-label">Company</label>
+            <label className="user-label">Company</label>
           </div>
           {/* <input
             type="text"

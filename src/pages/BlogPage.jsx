@@ -26,7 +26,7 @@ const BlogPage = ({ blogs }) => {
   const shareUrl = "https://panamax.magnitecorp.com/";
   return (
     <>
-      <section className="grid grid-cols-12 px-4 md:px-12 mt-4 gap-4 mb-4">
+      <section className="grid grid-cols-12 px-4 mt-4 gap-4 mb-4">
         <Helmet>
           <title>{`Blog ${id}`}</title>
         </Helmet>
@@ -97,47 +97,16 @@ const BlogPage = ({ blogs }) => {
           </div>
         </div>
 
-        {/* form and recent blogs */}
-        <div className="col-span-12 lg:col-span-4 grid md:block  grid-cols-2 lg:grid-cols-1 gap-y-4 gap-4">
-          {/* form */}
-          <div className="flex-box-col-center mb-4 box-shadow-card justify-start gap-4 bg-white col-span-2 md:col-span-1 row-span-1 p-4 rounded-md">
-            <h2 className="text-2xl font-bold text-primary text-shadow">
-              Enquire Now
-            </h2>
-            <form className="flex items-center justify-center flex-col gap-4 w-full">
-              <input
-                type="text"
-                placeholder="Contact Number"
-                className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-              />
-              <input
-                type="text"
-                placeholder="Contact Number"
-                className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-              />
-              <input
-                type="text"
-                placeholder="Contact Number"
-                className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-              />
-              <input
-                type="text"
-                placeholder="Product You Want"
-                className="border border-[#EEEEEE] caret-primary rounded-lg py-2 px-4 text-sm w-full"
-              />
-            </form>
-            <button className="btn-primary">Send Enquiry</button>
-          </div>
-
+        <div className="col-span-12 lg:col-span-4 grid md:block grid-cols-2 lg:grid-cols-1 gap-y-4 gap-4">
           {/* recent blogs */}
-          <div className="p-4 row-span-1 bg-white box-shadow-card rounded-md col-span-2 md:col-span-1">
+          <div className="p-4 row-span-1 bg-white box-shadow-card rounded-md col-span-2">
             <h2 className="text-2xl text-center font-bold text-primary mb-3 capitalize">
               recent articles
             </h2>
             <div className="flex-box-col-center gap-3">
               {blogs.map((e) => {
                 return (
-                  <Link key={e.id} to={`/blog/${e.id}`}>
+                  <Link key={e.id} to={`/blog/${e.id}`} className="w-full">
                     <div className="flex-box-start gap-3 border rounded-md w-full p-3 ">
                       <img
                         src={e.image}

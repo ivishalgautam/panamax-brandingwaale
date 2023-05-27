@@ -128,7 +128,7 @@
           name="name"
           placeholder="Full Name"
           required
-          class="form-control"
+          className="form-control"
         />
       </div>
       <div className="relative col-span-2 md:col-span-1">
@@ -138,7 +138,7 @@
           name="email"
           placeholder="Email"
           required
-          class="form-control"
+          className="form-control"
         />
       </div>
       <div className="relative col-span-2 md:col-span-1">
@@ -148,7 +148,7 @@
           name="number"
           placeholder="Phone Number"
           required
-          class="form-control"
+          className="form-control"
         />
       </div>
       <div className="relative col-span-2 md:col-span-1">
@@ -158,7 +158,7 @@
           name="company"
           placeholder="Company"
           required
-          class="form-control"
+          className="form-control"
         />
       </div>
       <div className="relative col-span-2 md:col-span-1">
@@ -168,7 +168,7 @@
           name="product"
           placeholder="product"
           required
-          class="form-control"
+          className="form-control"
         />
       </div>
     </div>
