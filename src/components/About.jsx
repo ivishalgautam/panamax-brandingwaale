@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useRef } from "react";
-import heroImage from "../assets/image.png";
+import aboutBanner from "../assets/about-banner.png";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -49,7 +49,7 @@ const About = () => {
         >
           <figure>
             <img
-              src={heroImage}
+              src={aboutBanner}
               alt=""
               className="sm:w-full lg:w-[85%] rounded-xl"
             />

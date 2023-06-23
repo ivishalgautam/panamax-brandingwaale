@@ -43,8 +43,8 @@ const Footer = () => {
       <div className="flex-box-center flex-wrap max-w-[1200px] mx-auto bg-white rounded-b-xl py-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-4">
           {/* logo */}
-          <figure>
-            <img src={logo} alt="" className="w-48" />
+          <figure className="flex-box-center">
+            <img src={logo} alt="" className="w-40 object-center" />
           </figure>
 
           {/* address */}
@@ -75,7 +75,8 @@ const Footer = () => {
             <div className="">
               <p className="text-xs text-gray-500">Address:</p>
               <h2 className="font-bold text-sm">
-                Panamax House <br /> 594-595/154 Pooth Khurd
+                Panamax House 594-595/154 <br /> Pooth Khurd Bawana, Delhi,
+                110039
               </h2>
             </div>
           </div>
@@ -92,8 +93,8 @@ const Footer = () => {
                 Product Categories
               </h2>
               {/* categories */}
-              <div className="grid grid-cols-1 md:grid-cols-3  items-start gap-4 gap-y-6">
-                <ul className="">
+              <div className="grid grid-cols-1 md:grid-cols-3 items-start gap-4 gap-y-6">
+                <ul>
                   {products.slice(0, 10).map((item, key) => {
                     return (
                       <li
@@ -108,7 +109,7 @@ const Footer = () => {
                     );
                   })}
                 </ul>
-                <ul className="">
+                <ul>
                   {products.slice(10, 20).map((item, key) => {
                     return (
                       <li
@@ -123,7 +124,7 @@ const Footer = () => {
                     );
                   })}
                 </ul>
-                <ul className="">
+                <ul>
                   {products.slice(20, 30).map((item, key) => {
                     return (
                       <li
@@ -143,13 +144,16 @@ const Footer = () => {
           </div>
         </div>
         {/* nav list */}
-        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-start justify-center flex-col rounded-lg px-4 py-3 gap-2 md:gap-4">
-          <ul className="flex-box-col-start gap-2">
+        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-start justify-start flex-col rounded-lg px-4 gap-2 md:gap-4">
+          <h3 className="text-white text-xl relative before:absolute before:top-0 before:left-0 before:w-8 before:h-1 before:rounded-full before:bg-primary">
+            Quick links
+          </h3>
+          <ul>
             {navList.map((item, key) => {
               return (
                 <li
                   key={key}
-                  className="text-white text-sm md:text-md lg:text-[14px] capitalize mb-1 nav-list overflow-x-hidden hover:overflow-x-visible relative"
+                  className="text-white mb-1 text-sm md:text-md lg:text-[14px] capitalize nav-list overflow-x-hidden hover:overflow-x-visible relative"
                 >
                   <span className="inline-block  transition-all absolute -left-10 top-0">
                     <MdKeyboardArrowRight size={20} className="inline" />
@@ -160,9 +164,9 @@ const Footer = () => {
             })}
           </ul>
           {/* socials */}
-          <div>
+          <div className="mt-auto">
             <h3 className="text-white text-xl mb-2 relative before:absolute before:top-0 before:left-0 before:w-8 before:h-1 before:rounded-full before:bg-primary">
-              Quick links
+              Socials
             </h3>
 
             <div className="flex-box-center gap-2">

@@ -30,6 +30,7 @@ const BlogPage = ({ blogs }) => {
         <Helmet>
           <title>{`Blog ${id}`}</title>
         </Helmet>
+
         {/* blog */}
         <div className="col-span-12 lg:col-span-8 bg-white p-5 rounded-md box-shadow-card">
           {/* breadcrumbs */}
@@ -46,7 +47,7 @@ const BlogPage = ({ blogs }) => {
             {/* user info */}
             <div className="mr-auto font-sm font-bold text-slate-900 capitalize">
               <span className="text-xs md:text-lg md:text-md">
-                Aprroved by:
+                Approved by:
               </span>
               <h2 className="text-xs md:text-lg text-primary">{name}</h2>
             </div>

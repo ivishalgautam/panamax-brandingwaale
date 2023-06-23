@@ -138,7 +138,7 @@ const blogs = [
     postedOn: "21 march",
     approvedBy: [
       {
-        name: "shubham solanki",
+        name: "Admin",
         userImg: avatar,
       },
     ],
@@ -230,7 +230,7 @@ const blogs = [
     postedOn: "3 feb",
     approvedBy: [
       {
-        name: "shubham solanki",
+        name: "Admin",
         userImg: avatar,
         profession: "developer",
       },

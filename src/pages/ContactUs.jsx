@@ -114,7 +114,7 @@ const ContactUs = () => {
           {/* maps */}
           <div className="relative z-10 flex-box-center col-span-2 md:col-span-1">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10483.74731842555!2d77.30566071299634!3d28.463682969310977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1684386457209!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3497.4026318216456!2d77.05306507456281!3d28.767247377952103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0763f2494e39%3A0x1f7a1f8962e6b110!2sPANAMAX%20LIMITED!5e0!3m2!1sen!2sin!4v1685341572680!5m2!1sen!2sin"
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

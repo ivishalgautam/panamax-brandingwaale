@@ -146,11 +146,9 @@ const Navbar = () => {
                           <Menu.Item key={submenu.id}>
                             <Link
                               to={`product/${submenu.id}`}
-                              className={`flex items-center h-full w-full text-start px-2 py-2 text-sm capitalize hover:tracking-wider hover:bg-primary hover:text-white rounded-md transition-all `}
+                              className={`flex items-center h-full w-full text-start px-2 py-2 text-sm hover:tracking-wider hover:bg-primary hover:text-white rounded-md transition-all `}
                             >
-                              {submenu.id === 11
-                                ? "plate mounting tape"
-                                : submenu.title.toLowerCase()}
+                              {submenu.name}
                             </Link>
                           </Menu.Item>
                         );

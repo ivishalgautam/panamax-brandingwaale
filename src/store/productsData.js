@@ -3956,7 +3956,7 @@ const productsData = [
   {
     id: 26,
     title: "FLOOR MARKING TAPE",
-    name: "Floor markinh tape",
+    name: "Floor marking tape",
     path: "floor-marking-tape",
     productImg: img26,
     image: floorMarking,
@@ -4118,7 +4118,7 @@ const productsData = [
   {
     id: 27,
     title: "SPACER & EVA FOAM TAPE",
-    name: "Space & Eva",
+    name: "Spacer & Eva",
     path: "spacer-eva",
     productImg: img27,
     image: spacerEva,
