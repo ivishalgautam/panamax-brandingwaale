@@ -240,6 +240,7 @@ const productsData = [
         icon: film,
       },
     ],
+    videoPath: "ZIAWRHlA8E8?feature=share",
     industrialUses: [
       {
         name: "Automotive Industry",
@@ -393,6 +394,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Automotive industry",
@@ -546,6 +548,7 @@ const productsData = [
         icon: productAssembly,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Automotive Industry",
@@ -689,6 +692,7 @@ const productsData = [
         icon: repairing,
       },
     ],
+    videoPath: "jS3ohWeRQfo?feature=share",
     industrialUses: [
       {
         name: "Construction and Building",
@@ -825,6 +829,7 @@ const productsData = [
         icon: gym,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Interior Design and Decor",
@@ -992,6 +997,7 @@ const productsData = [
         icon: medicalEquip,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Automotive Industry",
@@ -1148,6 +1154,7 @@ const productsData = [
         icon: installation,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Electrical and Electronics Industry",
@@ -1320,6 +1327,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Commercial Construction",
@@ -1481,6 +1489,7 @@ const productsData = [
         icon: food_processing,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Pipe and Valve Connections",
@@ -1620,6 +1629,7 @@ const productsData = [
   //       icon: medicalEquip,
   //     },
   //   ],
+  // videoPath:"",
   //   industrialUses: [
   //     {
   //       name: "Food Packaging",
@@ -1763,6 +1773,7 @@ const productsData = [
         icon: printingCircuit,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Packaging and Labeling",
@@ -1891,6 +1902,7 @@ const productsData = [
         icon: printingCircuit,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Packaging and Labeling",
@@ -2050,6 +2062,7 @@ const productsData = [
         icon: sports,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Architectural Façades",
@@ -2195,6 +2208,7 @@ const productsData = [
         icon: sports,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Architectural Façades",
@@ -2334,6 +2348,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Manufacturing Facilities",
@@ -2495,6 +2510,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Construction Industry",
@@ -2660,6 +2676,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Construction Industry",
@@ -2833,6 +2850,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Furniture Manufacturing",
@@ -2996,6 +3014,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Furniture Manufacturing",
@@ -3169,6 +3188,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "hecE_m3h1gY?feature=share",
     industrialUses: [
       {
         name: "Roofing and Waterproofing",
@@ -3317,6 +3337,7 @@ const productsData = [
         icon: renovationRemodelling,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Manufacturing and Fabrication",
@@ -3462,6 +3483,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Packaging and Shipping",
@@ -3600,6 +3622,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "E-commerce and Retail",
@@ -3767,6 +3790,7 @@ const productsData = [
         icon: floorMarking,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Construction and Renovation",
@@ -3914,6 +3938,7 @@ const productsData = [
         icon: renovationRemodelling,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Construction Industry",
@@ -4072,6 +4097,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Warehouses and Distribution Centers",
@@ -4240,6 +4266,7 @@ const productsData = [
         icon: production_design,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Automotive industry",
@@ -4404,6 +4431,7 @@ const productsData = [
   //       icon: repairing,
   //     },
   //   ],
+  // videoPath:"",
   //   industrialUses: [
   //     {
   //       name: "Automotive industry",
@@ -4536,6 +4564,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Construction and Building Maintenance",
@@ -4698,6 +4727,7 @@ const productsData = [
         icon: diy,
       },
     ],
+    videoPath: "",
     industrialUses: [
       {
         name: "Electrical and Electronics Industry",

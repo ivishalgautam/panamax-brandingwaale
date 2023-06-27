@@ -35,6 +35,7 @@ const ProductPage = () => {
     applications,
     industrialUses,
     productImg,
+    videoPath,
   } = filteredProduct[0];
   let dispatch = useDispatch();
 
@@ -294,6 +295,7 @@ const ProductPage = () => {
             </div>
           </div>
         </motion.div>
+
         {/* icons */}
         <div className="flex-box-center mt-4 gap-6 flex-wrap relative z-10 px-4 md:px-10 lg:px-20 gap-y-20 hidden">
           {applications.map((item, key) => {
@@ -312,13 +314,17 @@ const ProductPage = () => {
         </div>
 
         {/* video section */}
-        {/* <motion.div variants={item} className="hidden my-20 px-4">
-          <video
-            src={tapeVideo}
-            controls={true}
-            className="aspect-video bg-gray-500 mx-auto w-[1048px] rounded-2xl mt-10 shadow-2xl"
-          ></video>
-        </motion.div> */}
+        <motion.div variants={item} className="my-20 px-4 flex-box-center">
+          <iframe
+            width="315"
+            height="560"
+            src={`https://www.youtube.com/embed/${videoPath}`}
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="rounded-xl shadow-lg"
+          ></iframe>
+        </motion.div>
 
         {/* industries */}
         <motion.div variants={item} className="my-10 px-4 md:px-10 lg:px-12">
