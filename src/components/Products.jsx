@@ -31,7 +31,7 @@ const Products = () => {
           loop={true}
           spaceBetween={20}
           autoplay={{
-            delay: 1000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           breakpoints={{
@@ -44,7 +44,7 @@ const Products = () => {
           {products.map((product, key) => {
             return (
               <SwiperSlide key={key}>
-                <Link to={`product/${product.id}`}>
+                <Link to={`product/${product.path}`}>
                   <figure className="w-full">
                     <img src={product?.image} alt="" className="rounded-lg" />
                   </figure>

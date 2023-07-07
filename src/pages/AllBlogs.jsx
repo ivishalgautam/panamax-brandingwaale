@@ -3,10 +3,16 @@ import { Helmet } from "react-helmet-async";
 import { AiFillHome } from "react-icons/ai";
 import { FaPenNib } from "react-icons/fa";
 import { VscChevronRight } from "react-icons/vsc";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const AllBlogs = ({ blogs }) => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
   return (
     <>
       <Helmet>
@@ -29,9 +35,9 @@ const AllBlogs = ({ blogs }) => {
       </div>
       <section className="bg-white px-4 md:px-16 py-10">
         <div className="flex-box-center flex-wrap lg:flex-nowrap gap-8 gap-y-12 py-4 px-2 md:px-8">
-          {blogs.map(({ id, title, desc, image, postedOn }) => {
+          {blogs.map(({ id, title, desc, image, postedOn, path }) => {
             return (
-              <Link key={id} to={`/blog/${id}`}>
+              <Link key={id} to={`/blog/${path}`}>
                 <div className="rounded-xl shadow-md  relative md:pb-0">
                   <figure className="">
                     <img

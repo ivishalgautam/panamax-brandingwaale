@@ -16,9 +16,9 @@ const Blogs = ({ blogs }) => {
         <span className="inline-block italic font-bold text-shadow">Blogs</span>
       </h2>
       <div className="flex-box-center flex-wrap lg:flex-nowrap gap-8 gap-y-12 py-4 px-2 md:px-8">
-        {blogs.map(({ id, title, desc, image, postedOn }) => {
+        {blogs.map(({ id, title, desc, image, postedOn, path }) => {
           return (
-            <Link key={id} to={`/blog/${id}`}>
+            <Link key={id} to={`/blog/${path}`}>
               <div className="rounded-xl shadow-md  relative md:pb-0">
                 <figure className="">
                   <img

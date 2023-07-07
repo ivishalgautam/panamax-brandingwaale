@@ -430,7 +430,7 @@ const productsData = [
     id: 5,
     title: "THB Acrylic Foam Tape",
     name: "THB Acrylic",
-    path: "THB-Acrylic-Foam-Tape",
+    path: "thb-acrylic-foam-tape",
     productImg: img5,
     image: tbh,
     about:
@@ -596,7 +596,7 @@ const productsData = [
     id: 3,
     title: "NANO-SIL TAPE",
     name: "Nano-Sil tape",
-    path: "Nano-Sil-tape",
+    path: "nano-sil-tape",
     productImg: img3,
     image: nanoSil,
     about:
@@ -1375,7 +1375,7 @@ const productsData = [
     id: 9,
     title: "PTFE THREAD SEAL TAPE",
     name: "PTFE thread seal tape",
-    path: "PTFE-thread-seal-tape",
+    path: "ptfe-thread-seal-tape",
     productImg: img9,
     image: ptfe,
     about:
@@ -1669,7 +1669,7 @@ const productsData = [
     id: 11,
     title: "PLATE MOUNTING TAPE FOR FLEXO-GRAPHIC PRINTING",
     name: "Plate mounting tape",
-    path: "plate-mounting-tape",
+    path: "plate-mounting-tape-for-flexo-graphic-printing",
     productImg: img11,
     image: plateMounting,
     about:
@@ -1813,7 +1813,7 @@ const productsData = [
     id: 12,
     title: "PTFE fiber glass cloth tape",
     name: "PTFE fiber tape",
-    path: "PTFE-fiber-glass-cloth",
+    path: "ptfe-fiber-glass-cloth-tape",
     productImg: img12,
     image: ptfeFiber,
     about:
@@ -1942,7 +1942,7 @@ const productsData = [
     id: 13,
     title: "STRUCTURAL GLAZING TAPE",
     name: "Structural glazing tape",
-    path: "structural-gazing-tape",
+    path: "structural-glazing-tape",
     productImg: img13,
     image: structuralGazing,
     about:
@@ -2558,7 +2558,7 @@ const productsData = [
     id: 17,
     title: "LAMINATE FIXING TAPE",
     name: "Laminate fixing tape",
-    path: "laminating-fixing-tape",
+    path: "laminate-fixing-tape",
     productImg: img17,
     image: laminateFixing,
     about:
@@ -3236,7 +3236,7 @@ const productsData = [
     id: 21,
     title: "SURFACE PROTECTION FILM TAPE",
     name: "Surface protection tape",
-    path: "surface-protection-tape",
+    path: "surface-protection-film-tape",
     productImg: img21,
     image: surfaceProtection,
     about:
@@ -3670,7 +3670,7 @@ const productsData = [
     id: 24,
     title: "FLOOR PROTECTION TAPE",
     name: "Floor protection tape",
-    path: "bopp-packaging-tape",
+    path: "floor-protection-tape",
     productImg: img24,
     image: floorProtection,
     about:
@@ -4145,7 +4145,7 @@ const productsData = [
     id: 27,
     title: "SPACER & EVA FOAM TAPE",
     name: "Spacer & Eva",
-    path: "spacer-eva",
+    path: "spacer-and-eva-foam-tape",
     productImg: img27,
     image: spacerEva,
     about:
@@ -4604,7 +4604,7 @@ const productsData = [
     id: 30,
     title: "Red polyester tape",
     name: "Red polyster tape",
-    path: "Red polyester tape",
+    path: "red-polyester-tape",
     productImg: img30,
     image: redPolyster,
     about:

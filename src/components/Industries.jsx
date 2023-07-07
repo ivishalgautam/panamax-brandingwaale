@@ -96,8 +96,8 @@ const Industries = () => {
         >
           {industryImages.map((item, key) => {
             return (
-              <SwiperSlide>
-                <Link key={key}>
+              <SwiperSlide key={key}>
+                <Link>
                   <div
                     className="relative shadow-xl rounded-xl overflow-hidden"
                     onMouseOver={() => setHoveredIndex(key)}

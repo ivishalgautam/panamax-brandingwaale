@@ -1,27 +1,18 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SelectBox from "../components/SelectBox";
 import { Helmet } from "react-helmet-async";
 import Footer from "../components/Footer";
+import { useEffect } from "react";
 
 const ContactUs = () => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm();
+  const { pathname } = useLocation();
+  useEffect(() => {
+    // 👇️ scroll to top on page load
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, [pathname]);
 
-  // const onSubmit = async (data) => {
-  //   let resp = await fetch("https://magnitecorp.com/panamax-backend/form.php", {
-  //     method: "POST",
-  //   });
-  //   let result = await resp.json();
-  //   console.log(result);
-  // };
-
-  // console.log(watch("example"), errors); // watch input value by passing the name of it
   return (
     <>
       <section className="py-4 h-auto mx-4">

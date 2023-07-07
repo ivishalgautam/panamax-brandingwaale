@@ -13,7 +13,7 @@ import {
 
 const BlogPage = ({ blogs }) => {
   const { id } = useParams();
-  const blog = blogs.filter((e) => e.id === +id);
+  const blog = blogs.filter((e) => e.path === id);
   const { title, desc, image, postedOn, brief } = blog[0];
   const { name, userImg, profession } = blog[0].approvedBy[0];
 
@@ -23,7 +23,7 @@ const BlogPage = ({ blogs }) => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, [pathname]);
 
-  const shareUrl = "https://panamax.magnitecorp.com/";
+  const shareUrl = "https://panamax.co.in/";
   return (
     <>
       <section className="grid grid-cols-12 px-4 mt-4 gap-4 mb-4">
@@ -107,7 +107,7 @@ const BlogPage = ({ blogs }) => {
             <div className="flex-box-col-center gap-3">
               {blogs.map((e) => {
                 return (
-                  <Link key={e.id} to={`/blog/${e.id}`} className="w-full">
+                  <Link key={e.id} to={`/blog/${e.path}`} className="w-full">
                     <div className="flex-box-start gap-3 border rounded-md w-full p-3 ">
                       <img
                         src={e.image}

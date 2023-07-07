@@ -20,13 +20,13 @@ const Hero = () => {
       <motion.div
         initial={{ x: -1000, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
         className="col-span-1 lg:col-span-6 flex items-center justify-center"
       >
         <Swiper
           modules={[Pagination]}
           autoplay={{
-            delay: 1000,
+            delay: 2000,
             disableOnInteraction: false,
           }}
           slidesPerView={1}

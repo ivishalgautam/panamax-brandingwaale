@@ -145,7 +145,7 @@ const Navbar = () => {
                         return (
                           <Menu.Item key={submenu.id}>
                             <Link
-                              to={`product/${submenu.id}`}
+                              to={`product/${submenu.path}`}
                               className={`flex items-center h-full w-full text-start px-2 py-2 text-sm hover:tracking-wider hover:bg-primary hover:text-white rounded-md transition-all `}
                             >
                               {submenu.name}

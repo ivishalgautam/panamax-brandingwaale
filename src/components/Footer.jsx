@@ -26,7 +26,7 @@ const navList = [
   // },
   {
     name: "contact",
-    path: "/contact",
+    path: "/contact-us",
   },
   {
     name: "blogs",
@@ -104,7 +104,7 @@ const Footer = () => {
                         <span className="inline-block  transition-all absolute -left-10 top-0">
                           <MdKeyboardArrowRight size={20} className="inline" />
                         </span>
-                        <Link to={`/product/${item.id}`}>{item.name}</Link>
+                        <Link to={`/product/${item.path}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -119,7 +119,7 @@ const Footer = () => {
                         <span className="inline-block  transition-all absolute -left-10 top-0">
                           <MdKeyboardArrowRight size={20} className="inline" />
                         </span>
-                        <Link to={`/product/${item.id}`}>{item.name}</Link>
+                        <Link to={`/product/${item.path}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -134,7 +134,7 @@ const Footer = () => {
                         <span className="inline-block  transition-all absolute -left-10 top-0">
                           <MdKeyboardArrowRight size={20} className="inline" />
                         </span>
-                        <Link to={`/product/${item.id}`}>{item.name}</Link>
+                        <Link to={`/product/${item.path}`}>{item.name}</Link>
                       </li>
                     );
                   })}
@@ -144,7 +144,7 @@ const Footer = () => {
           </div>
         </div>
         {/* nav list */}
-        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-start justify-start flex-col rounded-lg px-4 gap-2 md:gap-4">
+        <div className="col-span-4 lg:col-span-1 !h-auto mt-8 md:mt-0 flex items-start justify-start flex-col rounded-lg gap-2 md:gap-4">
           <h3 className="text-white text-xl relative before:absolute before:top-0 before:left-0 before:w-8 before:h-1 before:rounded-full before:bg-primary">
             Quick links
           </h3>

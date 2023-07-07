@@ -31,7 +31,7 @@ const AutoCompleteBox = ({ inputVal, setInputVal }) => {
         ) : (
           filteredProducts?.map((product, key) => {
             return (
-              <Link to={`product/${product.id}`} className="mb-2" key={key}>
+              <Link to={`product/${product.path}`} className="mb-2" key={key}>
                 <li
                   key={product.id}
                   onClick={(e) => handleInputSuggestion(e)}

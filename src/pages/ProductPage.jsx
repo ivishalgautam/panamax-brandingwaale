@@ -25,7 +25,7 @@ const ProductPage = () => {
   const { productId } = useParams();
   const { products } = useSelector((store) => store.products);
 
-  const filteredProduct = products.filter((e) => e.id === +productId);
+  const filteredProduct = products.filter((e) => e.path === productId);
   const {
     title,
     name,
@@ -255,8 +255,12 @@ const ProductPage = () => {
             <span className="font-bold italic text-shadow"> application</span>
           </h2>
 
-          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 relative z-10 ">
-            <div className="col-span-12 md:col-span-12">
+          <div className="grid grid-cols-12 px-4 md:px-10 lg:px-20 py-10 relative z-10 gap-y-8">
+            <div
+              className={`col-span-12 ${
+                videoPath === "" ? "lg:col-span-12" : "lg:col-span-8"
+              }`}
+            >
               <ul className={`px-4 ul-list-tick`}>
                 {applications?.slice(0, showApplications).map((item, key) => {
                   return (
@@ -290,9 +294,24 @@ const ProductPage = () => {
               </ul>
             </div>
             {/* below section hidden might show later */}
-            <div className="hidden col-span-12 md:col-span-4 rounded-xl overflow-hidden flex-box-center">
-              <img src={image} alt="" className="w-full !h-auto" />
-            </div>
+            {videoPath !== "" && (
+              <div
+                className={`col-span-12 lg:col-span-4 rounded-xl overflow-hidden flex-box-center md:items-start`}
+              >
+                {/* video section */}
+                <motion.div variants={item} className="px-4 flex-box-center">
+                  <iframe
+                    width="315"
+                    height="560"
+                    src={`https://www.youtube.com/embed/${videoPath}`}
+                    title="YouTube video player"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                    className="rounded-xl shadow-lg"
+                  ></iframe>
+                </motion.div>
+              </div>
+            )}
           </div>
         </motion.div>
 
@@ -312,19 +331,6 @@ const ProductPage = () => {
             );
           })}
         </div>
-
-        {/* video section */}
-        <motion.div variants={item} className="my-20 px-4 flex-box-center">
-          <iframe
-            width="315"
-            height="560"
-            src={`https://www.youtube.com/embed/${videoPath}`}
-            title="YouTube video player"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="rounded-xl shadow-lg"
-          ></iframe>
-        </motion.div>
 
         {/* industries */}
         <motion.div variants={item} className="my-10 px-4 md:px-10 lg:px-12">
