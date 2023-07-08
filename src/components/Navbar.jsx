@@ -226,7 +226,7 @@ const Navbar = () => {
                         className="text-black text-start text-sm mb-2"
                       >
                         <Link
-                          to={`product/${submenu.id}`}
+                          to={`product/${submenu.path}`}
                           className="inline-block h-full w-full"
                           onClick={() => {
                             setIsNavOpened(false);
