@@ -83,7 +83,7 @@ const Hero = () => {
         </h2>
         <form
           method="post"
-          action="https://magnitecorp.com/panamax-backend/form.php"
+          action="https://panamax.co.in/portal/form.php"
           className="flex items-center justify-center flex-col gap-4 w-full"
         >
           <div className="input-group">
@@ -116,6 +116,14 @@ const Hero = () => {
             />
             <label className="user-label">Email</label>
           </div>
+          <input
+            required
+            type="hidden"
+            name="product"
+            autoComplete="off"
+            className="input"
+            value="homepage form"
+          />
           <div className="input-group">
             <input
               required
@@ -126,37 +134,11 @@ const Hero = () => {
             />
             <label className="user-label">Company</label>
           </div>
-          {/* <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
-          /> */}
-          {/* <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
-          /> */}
-          {/* <input
-            type="tel"
-            name="number"
-            placeholder="Phone Number"
-            required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
-          /> */}
 
-          {/* <input
-            type="text"
-            name="company"
-            placeholder="Company"
-            required
-            className="border border-[#EEEEEE] caret-primary rounded-lg py-3 px-4 text-sm w-full focus:border-primary transition-colors"
-          /> */}
+          <button type="submit" name="submit" className="btn-primary">
+            Send Enquiry
+          </button>
         </form>
-        <button className="btn-primary">Send Enquiry</button>
       </motion.div>
     </section>
   );

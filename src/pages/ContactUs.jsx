@@ -24,7 +24,7 @@ const ContactUs = () => {
           <div className="form w-full col-span-2 md:col-span-1">
             <form
               method="post"
-              action="https://magnitecorp.com/panamax-backend/form.php"
+              action="https://panamax.co.in/portal/form.php"
               className="col-span-2 md:col-span-1 w-full"
             >
               <div className="flex flex-col justify-center items-center h-full gap-6">
@@ -81,7 +81,7 @@ const ContactUs = () => {
                       className="border border-[#EEEEEE] text-sm p-2 rounded-md w-full focus:border-primary transition-colors"
                       type="text"
                       name="product"
-                      placeholder="product"
+                      placeholder="Product"
                       required
                     />
                   </div>
