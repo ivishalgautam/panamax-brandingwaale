@@ -11,6 +11,7 @@ import { FadeInWhenVisible } from "../utils/FadeInWhenInView";
 import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import InvitationModal from "./InvitationModal";
 
 const HomePage = ({ blogs }) => {
   const container = useRef(null);
@@ -25,7 +26,12 @@ const HomePage = ({ blogs }) => {
       <Helmet>
         <title>Panamax</title>
       </Helmet>
-      <Hero />
+
+      <InvitationModal />
+
+      <FadeInWhenVisible>
+        <Hero />
+      </FadeInWhenVisible>
       <FadeInWhenVisible>
         <About />
       </FadeInWhenVisible>
