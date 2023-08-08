@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { useEffect } from "react";
 import { Fragment, useState } from "react";
 import invitationImg from "../assets/Invitation-card.jpg";
+import { RxCross2 } from "react-icons/rx";
 
 export default function InvitationModal() {
   let [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,7 @@ export default function InvitationModal() {
           </Transition.Child>
 
           <div className="fixed inset-0 overflow-y-auto">
-            <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <div className="flex min-h-full items-center justify-center text-center">
               <Transition.Child
                 as={Fragment}
                 enter="ease-out duration-500"
@@ -45,10 +46,22 @@ export default function InvitationModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-sm lg:max-w-md transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-sm lg:max-w-md transform rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                   <figure>
-                    <img src={invitationImg} alt="invitation" width="100%" />
+                    <img
+                      src={invitationImg}
+                      alt="invitation"
+                      width="100%"
+                      className="rounded-md"
+                    />
                   </figure>
+                  <button
+                    type="button"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-red-600 absolute top-0 right-0"
+                    onClick={closeModal}
+                  >
+                    <RxCross2 />
+                  </button>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
