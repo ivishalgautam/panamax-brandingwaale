@@ -8,10 +8,9 @@ import Quality from "./Quality";
 import Blogs from "./Blogs";
 import Products from "./Products";
 import { FadeInWhenVisible } from "../utils/FadeInWhenInView";
-import { Helmet } from "react-helmet-async";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import InvitationModal from "./InvitationModal";
+// import InvitationModal from "./InvitationModal";
 
 const HomePage = ({ blogs }) => {
   const container = useRef(null);
@@ -22,42 +21,41 @@ const HomePage = ({ blogs }) => {
   }, [pathname]);
 
   return (
-    <div ref={container} className="bg-pink-light">
-      <Helmet>
-        <title>Panamax</title>
-        <meta
-          name="keyword"
-          content="Masking Tape,  Pre-Masking Tape, THB Acrylic Nano-Sil Tape, Mirror Mounting Tape, PMX 5000 Electrical Insulation Tape, Dry Wall Joint Tape, PTFE Thread Seal Tape, Plate Mounting Tape, PTFE Fiber Tape, Structural Glazing Tape, Multi Stick Tape, Anti-Slip Tape, Shuttering Tape, Laminate Fixing Tape, Edge Banding Tape, Roof Repair Tape, Leak Stopper Tape, Surface Protection Tape, Craft Paper Tape, BOPP Packaging Tape, Floor Protection Tape, Wood Guard Tape, Floor Marking Tape, Spacer & Eva Cloth Duct Tape, Red Polyster Tape, adhesive tape, mask tape, tape manufacture, self adhesive tape"
-        />
-      </Helmet>
+    <>
+      <div ref={container} className="bg-pink-light">
+        <FadeInWhenVisible>
+          <Hero />
+        </FadeInWhenVisible>
 
-      <InvitationModal />
+        <FadeInWhenVisible>
+          <About />
+        </FadeInWhenVisible>
 
-      <FadeInWhenVisible>
-        <Hero />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <About />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Products />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Map />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Quality />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Industries />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Blogs blogs={blogs} />
-      </FadeInWhenVisible>
-      <FadeInWhenVisible>
-        <Footer />
-      </FadeInWhenVisible>
-    </div>
+        <FadeInWhenVisible>
+          <Products />
+        </FadeInWhenVisible>
+
+        <FadeInWhenVisible>
+          <Map />
+        </FadeInWhenVisible>
+
+        <FadeInWhenVisible>
+          <Quality />
+        </FadeInWhenVisible>
+
+        <FadeInWhenVisible>
+          <Industries />
+        </FadeInWhenVisible>
+
+        <FadeInWhenVisible>
+          <Blogs blogs={blogs} />
+        </FadeInWhenVisible>
+
+        <FadeInWhenVisible>
+          <Footer />
+        </FadeInWhenVisible>
+      </div>
+    </>
   );
 };
 
